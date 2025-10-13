@@ -17,6 +17,7 @@ uv run ./configure.py
 # 빌드 & 실행
 
 ```powershell
+Remove-Item -Recurse -Force .\install\*
 uv run ./install.py
 Copy-Item -Recurse -Force .\deps\MFAAvalonia\* .\install\
 .\install\MFAAvalonia.exe
