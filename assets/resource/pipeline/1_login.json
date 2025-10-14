@@ -1,0 +1,335 @@
+{
+    /* 가정: 인게임 들어가기 전의 공지사항 뜬 화면 or 로그인 화면 */
+    "Start_Login": {
+        "next": [
+            "Login_Check_Announcement",
+            "Login_Check_Already_Login"
+        ]
+    },
+    "Login_Check_Announcement": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/1_announcement.png",
+                "roi": [
+                    325,
+                    486,
+                    627,
+                    123
+                ] /*"origin roi" : [375,536,527,23]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Login_Check_Already_Login"
+    },
+    "Login_Check_Already_Login": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/2_already_login.png",
+                "roi": [
+                    1156,
+                    287,
+                    124,
+                    238
+                ] /*"origin roi" : [1206,337,59,138]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1234,
+                    444,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Change_Account",
+        "on_error": "Login_Login"
+    },
+    "Login_Change_Account": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/3_change_account.png",
+                "roi": [
+                    641,
+                    343,
+                    214,
+                    134
+                ] /*"origin roi" : [691,393,114,34]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Login_Login"
+    },
+    "Login_Login": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/4_login.png",
+                "roi": [
+                    509,
+                    438,
+                    260,
+                    142
+                ] /*"origin roi" : [559,488,160,42]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Login_Check_Previous_Account"
+    },
+    "Login_Check_Previous_Account": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/5_previous_account.png",
+                "roi": [
+                    780,
+                    100,
+                    228,
+                    518
+                ] /*"origin roi" : [830,150,128,418]*/
+            }
+        },
+        "next": "Login_Remove_Previous_Account_1",
+        "on_error": "Login_Create_Guest_Account_1"
+    },
+    "Login_Remove_Previous_Account_1": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    871,
+                    317,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Remove_Previous_Account_2"
+    },
+    "Login_Remove_Previous_Account_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    871,
+                    418,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Remove_Previous_Account_3"
+    },
+    "Login_Remove_Previous_Account_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/6_remove_previous_account_3.png",
+                "roi": [
+                    628,
+                    365,
+                    227,
+                    137
+                ] /*"origin roi" : [678,415,127,37]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    960,
+                    587,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Create_Guest_Account_1"
+    },
+    "Login_Create_Guest_Account_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/7_create_guest_account.png",
+                "roi": [
+                    302,
+                    422,
+                    672,
+                    218
+                ] /*"origin roi" : [352,472,572,118]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    897,
+                    549,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Create_Guest_Account_2"
+    },
+    "Login_Create_Guest_Account_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    581,
+                    208,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "Login_Check_Email_Consent",
+            "Login_Term_Consent_1"
+        ]
+    },
+    "Login_Check_Email_Consent": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/8_email_consent.png",
+                "roi": [
+                    306,
+                    31,
+                    687,
+                    287
+                ] /*"origin roi" : [356,81,587,187]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    919,
+                    101,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "Login_Check_Google_Consent",
+            "Login_Term_Consent_1"
+        ]
+    },
+    "Login_Check_Google_Consent": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/9_google_consent.png",
+                "roi": [
+                    335,
+                    82,
+                    611,
+                    561
+                ] /*"origin roi" : [385,132,511,461]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    633,
+                    558,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Term_Consent_1"
+    },
+    "Login_Term_Consent_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "login/10_term_consent.png",
+                "roi": [
+                    189,
+                    80,
+                    903,
+                    613
+                ] /*"origin roi" : [239,130,803,513]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    284,
+                    238,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Term_Consent_2"
+    },
+    "Login_Term_Consent_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    283,
+                    294,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Term_Consent_3"
+    },
+    "Login_Term_Consent_3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    284,
+                    348,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Login_Term_Consent_4"
+    },
+    "Login_Term_Consent_4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    743,
+                    608,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Start_Prologue1"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "Main": {
+        "next": [] /* Set from interface.json */
+    },
+    "Entry_Login": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "entry_check/login.png",
+                "roi": [
+                    1156,
+                    62,
+                    124,
+                    307
+                ] /*"origin roi" : [1206,112,56,207]*/
+            }
+        },
+        "next": "Start_Login",
+        "on_error": "Entry_Login_Failed"
+    },
+    "Entry_Login_Failed": {
+        "focus": "!! 로그인 화면에 있지 않습니다. 작업을 종료합니다."
+    },
+    "Entry_Home": {
+        "on_error": "Entry_Home_Failed"
+    },
+    "Entry_Home_Failed": {
+        "focus": "!! 홈 화면에 있지 않습니다. 작업을 종료합니다."
+    }
+}

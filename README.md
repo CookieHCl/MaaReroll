@@ -23,3 +23,8 @@ Copy-Item -Recurse -Force .\deps\MFAAvalonia\* .\install\
 ```
 
 또는 위 내용이 적혀있는 `./build.ps1`
+
+# 개발
+
+MaaFramework의 [PipelineProtocol](https://maafw.xyz/en/docs/3.1-PipelineProtocol.html)과 [ProjectInterface](https://maafw.xyz/en/docs/3.2-ProjectInterface.html) 참고.  
+roi 좌표, 이미지 등은 [MFATools](https://github.com/SweetSmellFox/MFATools/releases)를 반드시 사용하자.
