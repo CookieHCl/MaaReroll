@@ -32,11 +32,7 @@
             "doc": "**[앱플레이어 디스플레이 설정]**\n해상도 - 1280x720, DPI - 180dpi, 프레임 - 60\n※ 확인 필수!\n\n",
             "option": [
                 "리세 방식",
-                "현재 화면" /*,
-                "픽업 배너",
-                "종료 조건",
-                "순오리지늄 사용",
-                "직접 뽑기"*/
+                "현재 화면"
             ]
         }
     ],
@@ -70,77 +66,6 @@
                     }
                 }
             ]
-        } /*,
-        "픽업 배너": {
-            "doc": "몇 번째 픽업 배너를 선택할지 골라주세요.",
-            "cases": [
-                {
-                    "name": "첫 번째",
-                    "pipeline_override": {
-                        "Roll1-2": {
-                            "template": [
-                                "../image/roll/배너1.png"
-                            ],
-                            "focus": [
-                                "▸ 배너1"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "종료 조건": {
-            "doc": "리세를 종료할 오퍼레이터를 골라주세요.",
-            "cases": [
-                {
-                    "name": "위슝좍",
-                    "pipeline_override": {
-                        "Check-char-1": {
-                            "template": [
-                                "../image/check/위슝좍.png"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "순오리지늄 사용": {
-            "doc": "해당 옵션을 활성화하면 순오리지늄도 사용하여 리세를 진행합니다.",
-            "cases": [
-                {
-                    "name": "No",
-                    "pipeline_override": {}
-                },
-                {
-                    "name": "Yes",
-                    "pipeline_override": {
-                        "Rolla": {
-                            "next": [
-                                "Golla"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "직접 뽑기": {
-            "doc": "해당 옵션을 활성화하면 **종료 조건을 무시하고** 가챠 직전에서 리세가 종료됩니다.",
-            "cases": [
-                {
-                    "name": "No",
-                    "pipeline_override": {}
-                },
-                {
-                    "name": "Yes",
-                    "pipeline_override": {
-                        "Roll1-1": {
-                            "next": [
-                                "TaskEnd"
-                            ]
-                        }
-                    }
-                }
-            ]
-        }*/
+        }
     }
 }
