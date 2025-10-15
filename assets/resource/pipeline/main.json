@@ -12,7 +12,8 @@
                     62,
                     124,
                     307
-                ] /*"origin roi" : [1206,112,56,207]*/
+                ] /*"origin roi" : [1206,112,56,207]*/,
+                "threshold": 0.95
             }
         },
         "next": "Start_Login"
@@ -30,7 +31,8 @@
                     0,
                     543,
                     149
-                ] /*"origin roi" : [721,15,443,49]*/
+                ] /*"origin roi" : [721,15,443,49]*/,
+                "threshold": 0.95
             }
         },
         "next": "Start_Reset"
@@ -48,7 +50,8 @@
                     0,
                     279,
                     343
-                ] /*"origin roi" : [0,17,179,243]*/
+                ] /*"origin roi" : [0,17,179,243]*/,
+                "threshold": 0.95
             }
         },
         "next": "Start_Reset"
