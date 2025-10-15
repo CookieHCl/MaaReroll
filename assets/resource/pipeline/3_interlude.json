@@ -1,9 +1,7 @@
 {
     /* 메인화면 돌아온 직후부터 0-1 진입까지 */
     "Start_Interlude": {
-        "next": [
-            "Interlude_Wait_Until_Headhunting"
-        ]
+        "next": "Interlude_Wait_Until_Headhunting"
     },
     "Interlude_Wait_Until_Headhunting": {
         "next": [

@@ -1,9 +1,10 @@
 {
     /* 인게임 들어가기 전의 공지사항 뜬 화면 or 로그인 화면부터 로그인까지 */
     "Start_Login": {
-        "next": [
+        "next": [ /* TODO: 혹시나 무한루프? */
             "Login_Check_Announcement",
-            "Login_Check_Already_Login"
+            "Login_Check_Already_Login",
+            "Login_Login"
         ]
     },
     "Login_Check_Announcement": {
@@ -25,7 +26,10 @@
                 "target": true
             }
         },
-        "next": "Login_Check_Already_Login"
+        "next": [ /* TODO: 혹시나 무한루프? */
+            "Login_Check_Already_Login",
+            "Login_Login"
+        ]
     },
     "Login_Check_Already_Login": {
         "recognition": {
@@ -51,8 +55,7 @@
                 ]
             }
         },
-        "next": "Login_Change_Account",
-        "on_error": "Login_Login"
+        "next": "Login_Change_Account"
     },
     "Login_Change_Account": {
         "recognition": {
@@ -73,7 +76,7 @@
                 "target": true
             }
         },
-        "next": "Login_Login"
+        "next": "Start_Login"
     },
     "Login_Login": {
         "recognition": {
@@ -94,7 +97,10 @@
                 "target": true
             }
         },
-        "next": "Login_Check_Previous_Account"
+        "next": [ /* TODO: 혹시나 무한루프? */
+            "Login_Check_Previous_Account",
+            "Login_Create_Guest_Account_1"
+        ]
     },
     "Login_Check_Previous_Account": {
         "recognition": {
@@ -109,8 +115,7 @@
                 ] /*"origin roi" : [830,150,128,418]*/
             }
         },
-        "next": "Login_Remove_Previous_Account_1",
-        "on_error": "Login_Create_Guest_Account_1"
+        "next": "Login_Remove_Previous_Account_1"
     },
     "Login_Remove_Previous_Account_1": {
         "action": {
@@ -156,12 +161,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    960,
-                    587,
-                    1,
-                    1
-                ]
+                "target": true
             }
         },
         "next": "Login_Create_Guest_Account_1"

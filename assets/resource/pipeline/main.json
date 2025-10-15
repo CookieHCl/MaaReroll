@@ -15,8 +15,7 @@
                 ] /*"origin roi" : [1206,112,56,207]*/
             }
         },
-        "next": "Start_Login",
-        "on_error": "Entry_Login_Failed"
+        "next": "Start_Login"
     },
     "Entry_Login_Failed": {
         "focus": "!! 로그인 화면에 있지 않습니다. 작업을 종료합니다."
@@ -34,8 +33,7 @@
                 ] /*"origin roi" : [721,15,443,49]*/
             }
         },
-        "next": "Start_Reset",
-        "on_error": "Entry_Operator_Failed"
+        "next": "Start_Reset"
     },
     "Entry_Operator_Failed": {
         "focus": "!! 오퍼레이터 화면에 있지 않습니다. 작업을 종료합니다."
@@ -53,8 +51,7 @@
                 ] /*"origin roi" : [0,17,179,243]*/
             }
         },
-        "next": "Start_Reset",
-        "on_error": "Entry_Home_Failed"
+        "next": "Start_Reset"
     },
     "Entry_Home_Failed": {
         "focus": "!! 홈 화면에 있지 않습니다. 작업을 종료합니다."

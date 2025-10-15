@@ -264,7 +264,7 @@
                 ]
             }
         },
-        "next": [
+        "next": [ /* TODO: 혹시나 무한루프? */
             "Gatcha_10roll_orundum",
             "Gatcha_10roll_originite_prime"
         ]
@@ -394,7 +394,7 @@
                 ]
             }
         },
-        "next": [
+        "next": [ /* TODO: 혹시나 무한루프? */
             "Gatcha_1roll_free",
             "Gatcha_1roll_orundum",
             "Gatcha_1roll_originite_prime"

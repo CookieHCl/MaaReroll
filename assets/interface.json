@@ -56,7 +56,10 @@
                     "name": "로그인 화면",
                     "pipeline_override": {
                         "Main": {
-                            "next": "Entry_Login"
+                            "next": [
+                                "Entry_Login",
+                                "Entry_Login_Failed"
+                            ]
                         }
                     }
                 },
@@ -64,7 +67,10 @@
                     "name": "오퍼레이터 화면",
                     "pipeline_override": {
                         "Main": {
-                            "next": "Entry_Operator"
+                            "next": [
+                                "Entry_Operator",
+                                "Entry_Operator_Failed"
+                            ]
                         }
                     }
                 },
@@ -72,7 +78,10 @@
                     "name": "홈 화면",
                     "pipeline_override": {
                         "Main": {
-                            "next": "Entry_Home"
+                            "next": [
+                                "Entry_Home",
+                                "Entry_Home_Failed"
+                            ]
                         }
                     }
                 }
