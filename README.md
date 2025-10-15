@@ -1,6 +1,5 @@
 # 준비
 
-1. [uv](https://docs.astral.sh/uv/) 깔기
 1. [MaaFramework](https://github.com/MaaXYZ/MaaFramework/releases) 받아서 deps 아래에 **폴더 풀어서** 복사  
   즉, deps/bin, deps/docs ... 등등의 폴더가 있어야 함
 1. [MFAAvalonia](https://github.com/maynut02/MFAAvalonia-ko/releases/) 받아서 deps 아래에 **폴더 그대로** 복사  
@@ -9,18 +8,16 @@
 다 됐으면 아래 코드 실행
 
 ```powershell
+pip install MaaFw
 git submodule update --init --recursive
-uv run ./configure.py
+python ./configure.py
 ```
-
-만약 uv가 싫다면 python + `pip install MaaFw`  
-그리고 interface.json을 바꿔줘야함
 
 # 빌드 & 실행
 
 ```powershell
 Remove-Item -Recurse -Force .\install\*
-uv run ./install.py
+python ./install.py
 Copy-Item -Recurse -Force .\deps\MFAAvalonia\* .\install\
 .\install\MFAAvalonia.exe
 ```

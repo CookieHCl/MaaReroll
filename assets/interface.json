@@ -18,11 +18,8 @@
         }
     ],
     "agent": {
-        "child_exec": "uv",
+        "child_exec": "python",
         "child_args": [
-            "run",
-            "--with",
-            "MaaFw",
             "{PROJECT_DIR}/agent/main.py"
         ]
     },
