@@ -1,0 +1,213 @@
+{
+    /* 가챠 실패시 계삭런 */
+    "Start_Reset": {
+        "next": [
+            "Reset_Close_Operator_1",
+            "Reset_Remove_Account_1"
+        ]
+    },
+    "Reset_Close_Operator_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "reset/1_operator.png",
+                "roi": [
+                    671,
+                    0,
+                    543,
+                    149
+                ] /*"origin roi" : [721,15,443,49]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    268,
+                    37,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Reset_Close_Operator_2"
+    },
+    "Reset_Close_Operator_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "reset/2_go_to_home.png",
+                "roi": [
+                    24,
+                    105,
+                    135,
+                    247
+                ] /*"origin roi" : [74,155,35,147]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Reset_Remove_Account_1"
+    },
+    "Reset_Remove_Account_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "reset/3_home.png",
+                "roi": [
+                    0,
+                    0,
+                    279,
+                    343
+                ] /*"origin roi" : [0,17,179,243]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    46,
+                    40,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Reset_Remove_Account_2"
+    },
+    "Reset_Remove_Account_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    139,
+                    594,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Reset_Remove_Account_3"
+    },
+    "Reset_Remove_Account_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "reset/4_remove_account.png",
+                "roi": [
+                    188,
+                    104,
+                    274,
+                    157
+                ] /*"origin roi" : [238,154,174,57]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    319,
+                    493,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Reset_Remove_Account_4"
+    },
+    "Reset_Remove_Account_4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    278,
+                    317,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Reset_Remove_Account_5"
+    },
+    "Reset_Remove_Account_5": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    576,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Reset_Remove_Account_6"
+    },
+    "Reset_Remove_Account_6": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    306,
+                    250,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Reset_Remove_Account_7"
+    },
+    "Reset_Remove_Account_7": {
+        "action": {
+            "type": "InputText",
+            "param": {
+                "input_text": "DELETE"
+            }
+        },
+        "next": "Reset_Remove_Account_8"
+    },
+    "Reset_Remove_Account_8": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    538,
+                    579,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Reset_Remove_Account_9"
+    },
+    "Reset_Remove_Account_9": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "reset/5_confirm_removal.png",
+                "roi": [
+                    319,
+                    260,
+                    639,
+                    353
+                ] /*"origin roi" : [369,310,539,253]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    640,
+                    522,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Start_Login"
+    }
+}

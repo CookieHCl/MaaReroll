@@ -22,12 +22,38 @@
         "focus": "!! 로그인 화면에 있지 않습니다. 작업을 종료합니다."
     },
     "Entry_Operator": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "entry_check/operator.png",
+                "roi": [
+                    671,
+                    0,
+                    543,
+                    149
+                ] /*"origin roi" : [721,15,443,49]*/
+            }
+        },
+        "next": "Start_Reset",
         "on_error": "Entry_Operator_Failed"
     },
     "Entry_Operator_Failed": {
         "focus": "!! 오퍼레이터 화면에 있지 않습니다. 작업을 종료합니다."
     },
     "Entry_Home": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "entry_check/home.png",
+                "roi": [
+                    0,
+                    0,
+                    279,
+                    343
+                ] /*"origin roi" : [0,17,179,243]*/
+            }
+        },
+        "next": "Start_Reset",
         "on_error": "Entry_Home_Failed"
     },
     "Entry_Home_Failed": {
