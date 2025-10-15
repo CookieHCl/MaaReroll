@@ -34,6 +34,7 @@
                 "리세 방식",
                 "현재 화면",
                 "픽업 배너",
+                "종료 조건",
                 "순오리지늄 사용",
                 "직접 뽑기"
             ]
@@ -119,6 +120,24 @@
                     "pipeline_override": {
                         "Gatcha_Select_Headhunting": {
                             "next": "Gatcha_1st_Headhunting"
+                        }
+                    }
+                }
+            ]
+        },
+        "종료 조건": {
+            "doc": "리세를 종료할 오퍼레이터를 골라주세요.",
+            "cases": [
+                {
+                    "name": "신시아 (엑시아 더 뉴 커버넌트)",
+                    "pipeline_override": {
+                        "Check_Operator": {
+                            "recognition": {
+                                "param": {
+                                    "template": "check/agent/exusiai_the_new_covenant.png"
+                                }
+                            },
+                            "focus": "▶ 신시아 확인"
                         }
                     }
                 }

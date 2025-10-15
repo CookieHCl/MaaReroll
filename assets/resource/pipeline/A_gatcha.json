@@ -1,7 +1,6 @@
 {
     /* 가챠하려고 홈화면 온 이후부터 가챠까지 */
     /* TODO: 퇴각런 아니면 신입 입무 같은거 받아야 함 */
-    /* TODO: 편성화면보고 위슝좍 있을때까지 돌리기 */
     "Start_Gatcha": {
         "next": "Gatcha_Daily_Plan_1"
     },
@@ -294,6 +293,7 @@
         "next": "Gatcha_1st_Headhunting"
     },
     "Gatcha_1st_Headhunting": {
+        "focus": "!!! 가챠 시작합니다 !!!",
         "next": "Gatcha_Try_10roll"
     },
     "Gatcha_Try_10roll": {
@@ -645,6 +645,7 @@
             "param": {
                 "target": true
             }
-        }
+        },
+        "next": "Start_Check"
     }
 }

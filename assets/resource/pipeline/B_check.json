@@ -1,0 +1,50 @@
+{
+    /* 오퍼레이터 화면에서 가챠 성공여부 확인 */
+    "Start_Check": {
+        "next": "Check_Wait_Until_Operator"
+    },
+    "Check_Wait_Until_Operator": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "check/1_operator.png",
+                "roi": [
+                    671,
+                    0,
+                    543,
+                    149
+                ] /*"origin roi" : [721,15,443,49]*/,
+                "threshold": 0.95
+            }
+        },
+        "focus": "▶ 가챠 확인중...",
+        "next": [
+            "Check_Operator",
+            "Check_Failed"
+        ]
+    },
+    "Check_Operator": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "check/agent/exusiai_the_new_covenant.png",
+                "roi": [
+                    9,
+                    76,
+                    1270,
+                    621
+                ],
+                "threshold": 0.95
+            }
+        },
+        "focus": "▶ 신시아 확인",
+        "next": "Check_Success"
+    },
+    "Check_Success": {
+        "focus": "!!! 리세 성공 !!!"
+    },
+    "Check_Failed": {
+        "focus": "XXX 리세 실패 XXX",
+        "next": "Start_Reset"
+    }
+}
