@@ -93,7 +93,7 @@
                 {
                     "name": "두번째 (메인 배너)",
                     "pipeline_override": {
-                        "Gatcha_Goto_Headhunting": {
+                        "Gatcha_Select_Headhunting": {
                             "next": "Gatcha_2nd_Headhunting"
                         }
                     }
@@ -101,7 +101,7 @@
                 {
                     "name": "세번째",
                     "pipeline_override": {
-                        "Gatcha_Goto_Headhunting": {
+                        "Gatcha_Select_Headhunting": {
                             "next": "Gatcha_3rd_Headhunting"
                         }
                     }
@@ -109,7 +109,7 @@
                 {
                     "name": "네번째",
                     "pipeline_override": {
-                        "Gatcha_Goto_Headhunting": {
+                        "Gatcha_Select_Headhunting": {
                             "next": "Gatcha_4th_Headhunting"
                         }
                     }
@@ -117,7 +117,7 @@
                 {
                     "name": "첫번째 (신규 유저 배너)",
                     "pipeline_override": {
-                        "Gatcha_Goto_Headhunting": {
+                        "Gatcha_Select_Headhunting": {
                             "next": "Gatcha_1st_Headhunting"
                         }
                     }

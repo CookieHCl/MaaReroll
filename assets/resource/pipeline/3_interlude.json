@@ -125,11 +125,11 @@
             "param": {
                 "template": "interlude/4_squad_2.png",
                 "roi": [
-                    297,
-                    75,
-                    345,
-                    365
-                ] /*"origin roi" : [347,125,245,265]*/,
+                    457,
+                    0,
+                    740,
+                    475
+                ] /*"origin roi" : [507,12,640,375]*/,
                 "threshold": 0.95
             }
         },
@@ -160,9 +160,7 @@
         },
         "next": "Interlude_Close_Squad_1"
     },
-    /* TODO: 이거 delay로 조절하지 말고 사진 다시 찍기 */
     "Interlude_Close_Squad_1": {
-        "pre_delay": 1000,
         "action": {
             "type": "Click",
             "param": {
@@ -177,7 +175,19 @@
         "next": "Interlude_Close_Squad_2"
     },
     "Interlude_Close_Squad_2": {
-        "pre_delay": 1000,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/5_close_squad.png",
+                "roi": [
+                    0,
+                    67,
+                    291,
+                    350
+                ] /*"origin roi" : [25,117,191,250]*/,
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
@@ -201,7 +211,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/5_story.png",
+                "template": "interlude/6_story.png",
                 "roi": [
                     436,
                     183,
@@ -242,7 +252,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/6_0-1_1.png",
+                "template": "interlude/7_0-1_1.png",
                 "roi": [
                     460,
                     224,
@@ -269,7 +279,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/7_0-1_2.png",
+                "template": "interlude/8_0-1_2.png",
                 "roi": [
                     949,
                     523,
@@ -296,7 +306,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/8_0-1_3.png",
+                "template": "interlude/9_0-1_3.png",
                 "roi": [
                     939,
                     269,

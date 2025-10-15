@@ -396,18 +396,23 @@
             "param": {
                 "template": "prologue/9_use_texas.png",
                 "roi": [
-                    771,
-                    320,
-                    216,
-                    231
-                ] /*"origin roi" : [821,370,116,131]*/,
+                    719,
+                    265,
+                    353,
+                    330
+                ] /*"origin roi" : [769,315,253,230]*/,
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": true
+                "target": [
+                    879,
+                    424,
+                    1,
+                    1
+                ]
             }
         },
         "next": "Prologue_Battle2_Wait_Until_Amiya"

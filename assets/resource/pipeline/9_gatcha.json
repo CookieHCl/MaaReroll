@@ -84,7 +84,9 @@
                 ]
             }
         },
-        "next": "Gatcha_Notice"
+        "timeout": 5000, /*공지 겁나 늦게 뜸*/
+        "next": "Gatcha_Notice",
+        "on_error": "Gatcha_Get_Mail_1"
     },
     "Gatcha_Notice": {
         "recognition": {
@@ -165,8 +167,8 @@
             "type": "Click",
             "param": {
                 "target": [
-                    1140,
-                    665,
+                    89,
+                    46,
                     1,
                     1
                 ]
@@ -197,6 +199,22 @@
                     1,
                     1
                 ]
+            }
+        },
+        "next": "Gatcha_Select_Headhunting"
+    },
+    "Gatcha_Select_Headhunting": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/7_headhunting_home.png",
+                "roi": [
+                    0,
+                    0,
+                    454,
+                    148
+                ] /*"origin roi" : [17,15,354,48]*/,
+                "threshold": 0.95
             }
         },
         "next": "Gatcha_2nd_Headhunting"
@@ -250,7 +268,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/11_headhunting_home.png",
+                "template": "gatcha/7_headhunting_home.png",
                 "roi": [
                     0,
                     0,
@@ -280,7 +298,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/7_gatcha_orundum_roll.png",
+                "template": "gatcha/8_gatcha_orundum_roll.png",
                 "roi": [
                     381,
                     134,
@@ -307,7 +325,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/8_gatcha_originite_prime.png",
+                "template": "gatcha/9_gatcha_originite_prime.png",
                 "roi": [
                     331,
                     144,
@@ -337,7 +355,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/10_gatcha_failed.png",
+                "template": "gatcha/11_gatcha_failed.png",
                 "roi": [
                     0,
                     212,
@@ -384,7 +402,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/11_headhunting_home.png",
+                "template": "gatcha/7_headhunting_home.png",
                 "roi": [
                     0,
                     0,
@@ -415,7 +433,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/9_gatcha_free.png",
+                "template": "gatcha/10_gatcha_free.png",
                 "roi": [
                     0,
                     405,
@@ -442,7 +460,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/7_gatcha_orundum_roll.png",
+                "template": "gatcha/8_gatcha_orundum_roll.png",
                 "roi": [
                     381,
                     134,
@@ -469,7 +487,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/8_gatcha_originite_prime.png",
+                "template": "gatcha/9_gatcha_originite_prime.png",
                 "roi": [
                     331,
                     144,
@@ -499,7 +517,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/10_gatcha_failed.png",
+                "template": "gatcha/11_gatcha_failed.png",
                 "roi": [
                     0,
                     212,
