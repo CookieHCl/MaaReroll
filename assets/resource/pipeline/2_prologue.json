@@ -1,0 +1,537 @@
+{
+    /* 닉네임 입력하는 부분부터 프롤로그 하까지 */
+    "Start_Prologue": {
+        "next": [
+            "Prologue_Input_Name_1"
+        ]
+    },
+    "Prologue_Input_Name_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/1_input_name.png",
+                "roi": [
+                    339,
+                    213,
+                    593,
+                    367
+                ] /*"origin roi" : [389,263,493,267]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    641,
+                    414,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Input_Name_2"
+    },
+    "Prologue_Input_Name_2": {
+        "action": {
+            "type": "InputText",
+            "param": {
+                "input_text": "Arknights"
+            }
+        },
+        "next": "Prologue_Input_Name_3"
+    },
+    "Prologue_Input_Name_3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1212,
+                    673,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Input_Name_4"
+    },
+    "Prologue_Input_Name_4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    637,
+                    504,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Story1_1"
+    },
+    "Prologue_Story1_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/2_story1.png",
+                "roi": [
+                    1097,
+                    0,
+                    176,
+                    121
+                ] /*"origin roi" : [1147,42,76,21]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Prologue_Story1_2"
+    },
+    "Prologue_Story1_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    796,
+                    460,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle1_Start"
+    },
+    "Prologue_Battle1_Start": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/3_battle1_start.png",
+                "roi": [
+                    1,
+                    0,
+                    258,
+                    269
+                ] /*"origin roi" : [51,36,158,169]*/
+            }
+        },
+        "next": "Prologue_Battle1_Wait_Until_OP1"
+    },
+    "Prologue_Battle1_Wait_Until_OP1": {
+        "next": [
+            "Prologue_Battle1_Place_OP1_1",
+            "Prologue_Battle1_Tap_Until_OP1"
+        ]
+    },
+    "Prologue_Battle1_Place_OP1_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/4_place_op1.png",
+                "roi": [
+                    877,
+                    488,
+                    332,
+                    232
+                ] /*"origin roi" : [927,538,232,181]*/
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1098,
+                    659,
+                    1,
+                    1
+                ],
+                "end": [
+                    580,
+                    425,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle1_Place_OP1_2"
+    },
+    "Prologue_Battle1_Tap_Until_OP1": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    244,
+                    418,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle1_Wait_Until_OP1"
+    },
+    "Prologue_Battle1_Place_OP1_2": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    581,
+                    407,
+                    1,
+                    1
+                ],
+                "end": [
+                    833,
+                    408,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle1_Wait_Until_OP2"
+    },
+    "Prologue_Battle1_Wait_Until_OP2": {
+        "next": [
+            "Prologue_Battle1_Place_OP2_1",
+            "Prologue_Battle1_Tap_Until_OP2"
+        ]
+    },
+    "Prologue_Battle1_Place_OP2_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/5_place_op2.png",
+                "roi": [
+                    1009,
+                    497,
+                    271,
+                    223
+                ] /*"origin roi" : [1059,547,220,172]*/
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1218,
+                    658,
+                    1,
+                    1
+                ],
+                "end": [
+                    696,
+                    296,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle1_Place_OP2_2"
+    },
+    "Prologue_Battle1_Tap_Until_OP2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    244,
+                    418,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle1_Wait_Until_OP2"
+    },
+    "Prologue_Battle1_Place_OP2_2": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    694,
+                    296,
+                    1,
+                    1
+                ],
+                "end": [
+                    917,
+                    294,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle1_Wait_Until_Finish"
+    },
+    "Prologue_Battle1_Wait_Until_Finish": {
+        "next": [
+            "Prologue_Story2_1",
+            "Prologue_Battle1_Tap_Until_Finish"
+        ]
+    },
+    "Prologue_Story2_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/6_story2.png",
+                "roi": [
+                    1098,
+                    0,
+                    174,
+                    120
+                ] /*"origin roi" : [1148,43,74,20]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Prologue_Story2_2"
+    },
+    "Prologue_Battle1_Tap_Until_Finish": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    244,
+                    418,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle1_Wait_Until_Finish"
+    },
+    "Prologue_Story2_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    795,
+                    359,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Start"
+    },
+    "Prologue_Battle2_Start": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/7_battle2_start.png",
+                "roi": [
+                    0,
+                    0,
+                    261,
+                    270
+                ] /*"origin roi" : [49,35,161,170]*/
+            }
+        },
+        "next": "Prologue_Battle2_Wait_Until_Texas_Ready"
+    },
+    "Prologue_Battle2_Wait_Until_Texas_Ready": {
+        "next": [
+            "Prologue_Battle2_Texas_Ready",
+            "Prologue_Battle2_Tap_Until_Texas_Ready"
+        ]
+    },
+    "Prologue_Battle2_Texas_Ready": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/8_ready_texas.png",
+                "roi": [
+                    346,
+                    157,
+                    326,
+                    303
+                ] /*"origin roi" : [396,207,226,203]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    487,
+                    296,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Wait_Until_Use_Texas"
+    },
+    "Prologue_Battle2_Tap_Until_Texas_Ready": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    54,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Wait_Until_Texas_Ready"
+    },
+    "Prologue_Battle2_Wait_Until_Use_Texas": {
+        "next": [
+            "Prologue_Battle2_Use_Texas",
+            "Prologue_Battle2_Tap_Until_Use_Texas"
+        ]
+    },
+    "Prologue_Battle2_Use_Texas": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/9_use_texas.png",
+                "roi": [
+                    771,
+                    320,
+                    216,
+                    231
+                ] /*"origin roi" : [821,370,116,131]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Prologue_Battle2_Wait_Until_Amiya"
+    },
+    "Prologue_Battle2_Tap_Until_Use_Texas": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    54,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Wait_Until_Use_Texas"
+    },
+    "Prologue_Battle2_Wait_Until_Amiya": {
+        "next": [
+            "Prologue_Battle2_Use_Amiya_1",
+            "Prologue_Battle2_Tap_Until_Amiya"
+        ]
+    },
+    "Prologue_Battle2_Use_Amiya_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/10_amiya.png",
+                "roi": [
+                    599,
+                    92,
+                    186,
+                    229
+                ] /*"origin roi" : [649,142,86,129]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    694,
+                    213,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Use_Amiya_2"
+    },
+    "Prologue_Battle2_Tap_Until_Amiya": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    54,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Wait_Until_Amiya"
+    },
+    "Prologue_Battle2_Use_Amiya_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    877,
+                    424,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Wait_Until_Finish"
+    },
+    "Prologue_Battle2_Wait_Until_Finish": {
+        "next": [
+            "Prologue_Story_3_1",
+            "Prologue_Battle2_Tap_Until_Finish"
+        ]
+    },
+    "Prologue_Story_3_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/11_story3.png",
+                "roi": [
+                    1098,
+                    0,
+                    173,
+                    120
+                ] /*"origin roi" : [1148,43,73,20]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Prologue_Story_3_2"
+    },
+    "Prologue_Battle2_Tap_Until_Finish": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    54,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Wait_Until_Finish"
+    },
+    "Prologue_Story_3_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    795,
+                    464,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Start_0-1"
+    }
+}

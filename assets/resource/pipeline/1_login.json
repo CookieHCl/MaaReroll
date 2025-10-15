@@ -1,5 +1,5 @@
 {
-    /* 가정: 인게임 들어가기 전의 공지사항 뜬 화면 or 로그인 화면 */
+    /* 인게임 들어가기 전의 공지사항 뜬 화면 or 로그인 화면부터 로그인까지 */
     "Start_Login": {
         "next": [
             "Login_Check_Announcement",
@@ -330,6 +330,6 @@
                 ]
             }
         },
-        "next": "Start_Prologue1"
+        "next": "Start_Prologue"
     }
 }
