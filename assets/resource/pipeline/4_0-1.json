@@ -1,5 +1,168 @@
 {
     /* 0-1 스토리 시작부터 0-1 퇴각런까지 */
     /* TODO: 0-1 진짜 깨고 TR1 런? */
-    "Start_0-1": {}
+    "Start_0-1": {
+        "next": "0-1_Story1_1"
+    },
+    "0-1_Story1_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-1/1_story1.png",
+                "roi": [
+                    1098,
+                    0,
+                    174,
+                    119
+                ] /*"origin roi" : [1148,43,74,19]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "0-1_Story1_2"
+    },
+    "0-1_Story1_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    795,
+                    461,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "0-1_Battle"
+    },
+    "0-1_Battle": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-1/2_battle.png",
+                "roi": [
+                    0,
+                    0,
+                    261,
+                    271
+                ] /*"origin roi" : [50,34,161,171]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "0-1_Retreat_1"
+    },
+    /* 퇴각런시 */
+    "0-1_Retreat_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-1/r1_retreat_1.png",
+                "roi": [
+                    0,
+                    0,
+                    171,
+                    175
+                ] /*"origin roi" : [47,16,71,75]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "0-1_Retreat_2"
+    },
+    "0-1_Retreat_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-1/r2_retreat_2.png",
+                "roi": [
+                    592,
+                    491,
+                    688,
+                    170
+                ] /*"origin roi" : [642,541,635,70]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "0-1_Retreat_Wait_Until_Home"
+    },
+    "0-1_Retreat_Wait_Until_Home": {
+        "next": [
+            "0-1_Retreat_Go_Home_1",
+            "0-1_Retreat_Tap_Until_Home"
+        ]
+    },
+    "0-1_Retreat_Go_Home_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-1/r3_home_1.png",
+                "roi": [
+                    117,
+                    0,
+                    305,
+                    148
+                ] /*"origin roi" : [167,13,205,48]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "0-1_Retreat_Go_Home_2"
+    },
+    "0-1_Retreat_Tap_Until_Home": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    518,
+                    183,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "0-1_Retreat_Wait_Until_Home"
+    },
+    "0-1_Retreat_Go_Home_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-1/r4_home_2.png",
+                "roi": [
+                    15,
+                    102,
+                    153,
+                    251
+                ] /*"origin roi" : [65,152,53,151]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Start_Gatcha"
+    }
 }
