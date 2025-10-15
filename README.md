@@ -2,7 +2,7 @@
 
 1. [MaaFramework](https://github.com/MaaXYZ/MaaFramework/releases) 받아서 deps 아래에 **폴더 풀어서** 복사  
   즉, deps/bin, deps/docs ... 등등의 폴더가 있어야 함
-1. [MFAAvalonia](https://github.com/maynut02/MFAAvalonia-ko/releases/) 받아서 deps 아래에 **폴더 그대로** 복사  
+1. [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/releases) 받아서 deps 아래에 **폴더 그대로** 복사  
   폴더명은 MFAAvalonia로, 즉 deps/MFAAvalonia 폴더가 있어야 함
 
 다 됐으면 아래 코드 실행
