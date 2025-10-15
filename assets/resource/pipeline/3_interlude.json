@@ -155,6 +155,19 @@
         "next": "Interlude_Close_Squad_1"
     },
     "Interlude_Close_Squad_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/5_close_squad_1.png",
+                "roi": [
+                    81,
+                    0,
+                    385,
+                    176
+                ] /*"origin roi" : [131,0,285,76]*/,
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
@@ -172,7 +185,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/5_close_squad.png",
+                "template": "interlude/6_close_squad_2.png",
                 "roi": [
                     0,
                     67,
@@ -216,7 +229,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/6_story.png",
+                "template": "interlude/7_story.png",
                 "roi": [
                     436,
                     183,
@@ -243,7 +256,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/7_0-1_1.png",
+                "template": "interlude/8_0-1_1.png",
                 "roi": [
                     460,
                     224,
@@ -270,7 +283,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/8_0-1_2.png",
+                "template": "interlude/9_0-1_2.png",
                 "roi": [
                     949,
                     523,
@@ -297,7 +310,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "interlude/9_0-1_3.png",
+                "template": "interlude/10_0-1_3.png",
                 "roi": [
                     939,
                     269,

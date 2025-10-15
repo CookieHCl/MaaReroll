@@ -112,11 +112,11 @@
             "param": {
                 "template": "login/5_previous_account.png",
                 "roi": [
-                    780,
-                    100,
-                    228,
-                    518
-                ] /*"origin roi" : [830,150,128,418]*/,
+                    803,
+                    89,
+                    214,
+                    631
+                ] /*"origin roi" : [853,139,114,580]*/,
                 "threshold": 0.95
             }
         },

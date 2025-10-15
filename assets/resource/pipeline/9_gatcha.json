@@ -84,7 +84,7 @@
                 ]
             }
         },
-        "timeout": 3000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 바로 메일로 가버리는 불상사 발생*/
+        "timeout": 2000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생*/
         "next": "Gatcha_Notice",
         "on_error": "Gatcha_Get_Mail_1"
     },
@@ -157,7 +157,10 @@
         "next": "Gatcha_Wait_Until_Home"
     },
     "Gatcha_Wait_Until_Home": {
-        "next": "Gatcha_Goto_Headhunting",
+        "next": [ /* 단 1프레임이라도 홈화면이 보일 수 있어서 이렇게 */
+            "Gatcha_Wait_Until_Notice",
+            "Gatcha_Notice2"
+        ],
         "interrupt": "Gatcha_Tap_Until_Home"
     },
     "Gatcha_Tap_Until_Home": {
@@ -173,7 +176,7 @@
             }
         }
     },
-    "Gatcha_Goto_Headhunting": {
+    "Gatcha_Wait_Until_Notice": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -187,6 +190,38 @@
                 "threshold": 0.95
             }
         },
+        "timeout": 2000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생*/
+        "next": "Gatcha_Notice2",
+        "on_error": "Gatcha_Goto_Headhunting"
+    },
+    "Gatcha_Notice2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/4_notice.png",
+                "roi": [
+                    296,
+                    42,
+                    756,
+                    160
+                ] /*"origin roi" : [346,92,656,60]*/,
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1204,
+                    68,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Gatcha_Goto_Headhunting"
+    },
+    "Gatcha_Goto_Headhunting": {
         "action": {
             "type": "Click",
             "param": {
@@ -376,6 +411,19 @@
         "next": "Gatcha_Try_1roll"
     },
     "Gatcha_Wait_Until_10roll": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/12_gatcha_start.png",
+                "roi": [
+                    1126,
+                    0,
+                    154,
+                    166
+                ] /*"origin roi" : [1176,10,93,66]*/,
+                "threshold": 0.95
+            }
+        },
         "next": "Gatcha_Try_10roll",
         "interrupt": "Gatcha_Tap_Until_10roll"
     },
@@ -430,10 +478,10 @@
                 "template": "gatcha/10_gatcha_free.png",
                 "roi": [
                     0,
-                    405,
+                    114,
                     1280,
-                    176
-                ] /*"origin roi" : [5,455,1272,76]*/,
+                    467
+                ] /*"origin roi" : [5,164,1274,367]*/,
                 "threshold": 0.95
             }
         },
@@ -535,6 +583,19 @@
         "next": "Gatcha_Goto_Operator1"
     },
     "Gatcha_Wait_Until_1roll": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/12_gatcha_start.png",
+                "roi": [
+                    1126,
+                    0,
+                    154,
+                    166
+                ] /*"origin roi" : [1176,10,93,66]*/,
+                "threshold": 0.95
+            }
+        },
         "next": "Gatcha_Try_1roll",
         "interrupt": "Gatcha_Tap_Until_1roll"
     },
@@ -569,7 +630,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/12_operator.png",
+                "template": "gatcha/13_operator.png",
                 "roi": [
                     235,
                     79,

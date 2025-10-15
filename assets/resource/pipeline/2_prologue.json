@@ -439,11 +439,11 @@
             "param": {
                 "template": "prologue/10_amiya.png",
                 "roi": [
-                    599,
-                    92,
-                    186,
-                    229
-                ] /*"origin roi" : [649,142,86,129]*/,
+                    618,
+                    60,
+                    162,
+                    171
+                ] /*"origin roi" : [668,110,62,71]*/,
                 "threshold": 0.95
             }
         },
@@ -472,6 +472,64 @@
                 ]
             }
         },
+        "next": "Prologue_Battle2_Wait_Until_Exusiai"
+    },
+    "Prologue_Battle2_Wait_Until_Exusiai": {
+        "next": "Prologue_Battle2_Use_Exusiai_1",
+        "interrupt": "Prologue_Battle2_Tap_Until_Exusiai"
+    },
+    "Prologue_Battle2_Tap_Until_Exusiai": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    54,
+                    1,
+                    1
+                ]
+            }
+        }
+    },
+    "Prologue_Battle2_Use_Exusiai_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/11_not_exusiai.png",
+                "roi": [
+                    1055,
+                    161,
+                    163,
+                    176
+                ] /*"origin roi" : [1105,211,63,76]*/,
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1076,
+                    500,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Prologue_Battle2_Use_Exusiai_2"
+    },
+    "Prologue_Battle2_Use_Exusiai_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    880,
+                    427,
+                    1,
+                    1
+                ]
+            }
+        },
         "next": "Prologue_Battle2_Wait_Until_Finish"
     },
     "Prologue_Battle2_Wait_Until_Finish": {
@@ -495,7 +553,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/11_story3.png",
+                "template": "prologue/12_story3.png",
                 "roi": [
                     1098,
                     0,
