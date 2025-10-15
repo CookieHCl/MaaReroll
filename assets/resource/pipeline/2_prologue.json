@@ -142,11 +142,11 @@
             "param": {
                 "template": "prologue/4_place_op1.png",
                 "roi": [
-                    877,
-                    488,
-                    332,
-                    232
-                ] /*"origin roi" : [927,538,232,181]*/,
+                    0,
+                    0,
+                    1012,
+                    272
+                ] /*"origin roi" : [50,35,912,172]*/,
                 "threshold": 0.95
             }
         },
@@ -213,15 +213,14 @@
             "param": {
                 "template": "prologue/5_place_op2.png",
                 "roi": [
-                    1009,
-                    497,
-                    271,
-                    223
-                ] /*"origin roi" : [1059,547,220,172]*/,
+                    1,
+                    0,
+                    1010,
+                    273
+                ] /*"origin roi" : [51,33,910,173]*/,
                 "threshold": 0.95
             }
         },
-        "pre_delay": 500,
         "action": {
             "type": "Swipe",
             "param": {

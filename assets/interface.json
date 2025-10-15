@@ -50,7 +50,7 @@
             ]
         },
         "현재 화면": {
-            "doc": "현재 표시되는 화면을 선택해 주세요.\n\n▸ 로그인 화면 : 게임 시작 전 로그인 화면인 경우.\n▸ 오퍼레이터 화면 : 현재 오퍼레이터 화면에 있는 경우.\n▸ 홈 화면 : 현재 홈 화면에 있는 경우.",
+            "doc": "현재 표시되는 화면을 선택해 주세요.\n\n로그인, 오퍼레이터, 홈 화면에서는 기존 계정을 삭제합니다.",
             "cases": [
                 {
                     "name": "로그인 화면",
@@ -60,6 +60,22 @@
                                 "Entry_Login",
                                 "Entry_Login_Failed"
                             ]
+                        }
+                    }
+                },
+                {
+                    "name": "프롤로그 전투1",
+                    "pipeline_override": {
+                        "Main": {
+                            "next": "Prologue_Story1_1"
+                        }
+                    }
+                },
+                {
+                    "name": "프롤로그 전투2",
+                    "pipeline_override": {
+                        "Main": {
+                            "next": "Prologue_Story2_1"
                         }
                     }
                 },
