@@ -1,7 +1,7 @@
 {
     /* 인게임 들어가기 전의 공지사항 뜬 화면 or 로그인 화면부터 로그인까지 */
     "Start_Login": {
-        "next": [ /* TODO: 혹시나 무한루프? */
+        "next": [
             "Login_Check_Announcement",
             "Login_Check_Already_Login",
             "Login_Login"
@@ -27,7 +27,7 @@
                 "target": true
             }
         },
-        "next": [ /* TODO: 혹시나 무한루프? */
+        "next": [
             "Login_Check_Already_Login",
             "Login_Login"
         ]
@@ -101,7 +101,7 @@
                 "target": true
             }
         },
-        "next": [ /* TODO: 혹시나 무한루프? */
+        "next": [
             "Login_Check_Previous_Account",
             "Login_Create_Guest_Account_1"
         ]

@@ -4,10 +4,21 @@
         "next": "Interlude_Wait_Until_Headhunting"
     },
     "Interlude_Wait_Until_Headhunting": {
-        "next": [
-            "Interlude_Headhunting_1",
-            "Interlude_Tap_Until_Headhunting"
-        ]
+        "next": "Interlude_Headhunting_1",
+        "interrupt": "Interlude_Tap_Until_Headhunting"
+    },
+    "Interlude_Tap_Until_Headhunting": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    597,
+                    538,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Interlude_Headhunting_1": {
         "recognition": {
@@ -36,20 +47,6 @@
         },
         "next": "Interlude_Headhunting_2"
     },
-    "Interlude_Tap_Until_Headhunting": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    597,
-                    538,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Interlude_Wait_Until_Headhunting"
-    },
     "Interlude_Headhunting_2": {
         "recognition": {
             "type": "TemplateMatch",
@@ -73,10 +70,21 @@
         "next": "Interlude_Wait_Until_Squad"
     },
     "Interlude_Wait_Until_Squad": {
-        "next": [
-            "Interlude_Squad_1",
-            "Interlude_Tap_Until_Squad"
-        ]
+        "next": "Interlude_Squad_1",
+        "interrupt": "Interlude_Tap_Until_Squad"
+    },
+    "Interlude_Tap_Until_Squad": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    565,
+                    497,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Interlude_Squad_1": {
         "recognition": {
@@ -104,20 +112,6 @@
             }
         },
         "next": "Interlude_Squad_2"
-    },
-    "Interlude_Tap_Until_Squad": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    565,
-                    497,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Interlude_Wait_Until_Squad"
     },
     "Interlude_Squad_2": {
         "recognition": {
@@ -202,10 +196,21 @@
         "next": "Interlude_Wait_Until_Story"
     },
     "Interlude_Wait_Until_Story": {
-        "next": [
-            "Interlude_Story",
-            "Interlude_Tap_Until_Story"
-        ]
+        "next": "Interlude_Story",
+        "interrupt": "Interlude_Tap_Until_Story"
+    },
+    "Interlude_Tap_Until_Story": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    318,
+                    668,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Interlude_Story": {
         "recognition": {
@@ -233,20 +238,6 @@
             }
         },
         "next": "Interlude_0-1_1"
-    },
-    "Interlude_Tap_Until_Story": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    318,
-                    668,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Interlude_Wait_Until_Story"
     },
     "Interlude_0-1_1": {
         "recognition": {

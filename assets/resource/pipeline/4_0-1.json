@@ -108,10 +108,21 @@
         "next": "0-1_Retreat_Wait_Until_Home"
     },
     "0-1_Retreat_Wait_Until_Home": {
-        "next": [
-            "0-1_Retreat_Go_Home_1",
-            "0-1_Retreat_Tap_Until_Home"
-        ]
+        "next": "0-1_Retreat_Go_Home_1",
+        "interrupt": "0-1_Retreat_Tap_Until_Home"
+    },
+    "0-1_Retreat_Tap_Until_Home": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    518,
+                    183,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "0-1_Retreat_Go_Home_1": {
         "recognition": {
@@ -134,20 +145,6 @@
             }
         },
         "next": "0-1_Retreat_Go_Home_2"
-    },
-    "0-1_Retreat_Tap_Until_Home": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    518,
-                    183,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "0-1_Retreat_Wait_Until_Home"
     },
     "0-1_Retreat_Go_Home_2": {
         "recognition": {

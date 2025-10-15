@@ -120,10 +120,21 @@
         "next": "Prologue_Battle1_Wait_Until_OP1"
     },
     "Prologue_Battle1_Wait_Until_OP1": {
-        "next": [
-            "Prologue_Battle1_Place_OP1_1",
-            "Prologue_Battle1_Tap_Until_OP1"
-        ]
+        "next": "Prologue_Battle1_Place_OP1_1",
+        "interrupt": "Prologue_Battle1_Tap_Until_OP1"
+    },
+    "Prologue_Battle1_Tap_Until_OP1": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    244,
+                    418,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Prologue_Battle1_Place_OP1_1": {
         "recognition": {
@@ -158,20 +169,6 @@
         },
         "next": "Prologue_Battle1_Place_OP1_2"
     },
-    "Prologue_Battle1_Tap_Until_OP1": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    244,
-                    418,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Prologue_Battle1_Wait_Until_OP1"
-    },
     "Prologue_Battle1_Place_OP1_2": {
         "action": {
             "type": "Swipe",
@@ -193,10 +190,21 @@
         "next": "Prologue_Battle1_Wait_Until_OP2"
     },
     "Prologue_Battle1_Wait_Until_OP2": {
-        "next": [
-            "Prologue_Battle1_Place_OP2_1",
-            "Prologue_Battle1_Tap_Until_OP2"
-        ]
+        "next": "Prologue_Battle1_Place_OP2_1",
+        "interrupt": "Prologue_Battle1_Tap_Until_OP2"
+    },
+    "Prologue_Battle1_Tap_Until_OP2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    244,
+                    418,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Prologue_Battle1_Place_OP2_1": {
         "recognition": {
@@ -231,20 +239,6 @@
         },
         "next": "Prologue_Battle1_Place_OP2_2"
     },
-    "Prologue_Battle1_Tap_Until_OP2": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    244,
-                    418,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Prologue_Battle1_Wait_Until_OP2"
-    },
     "Prologue_Battle1_Place_OP2_2": {
         "action": {
             "type": "Swipe",
@@ -266,10 +260,21 @@
         "next": "Prologue_Battle1_Wait_Until_Finish"
     },
     "Prologue_Battle1_Wait_Until_Finish": {
-        "next": [
-            "Prologue_Story2_1",
-            "Prologue_Battle1_Tap_Until_Finish"
-        ]
+        "next": "Prologue_Story2_1",
+        "interrupt": "Prologue_Battle1_Tap_Until_Finish"
+    },
+    "Prologue_Battle1_Tap_Until_Finish": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    244,
+                    418,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Prologue_Story2_1": {
         "recognition": {
@@ -292,20 +297,6 @@
             }
         },
         "next": "Prologue_Story2_2"
-    },
-    "Prologue_Battle1_Tap_Until_Finish": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    244,
-                    418,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Prologue_Battle1_Wait_Until_Finish"
     },
     "Prologue_Story2_2": {
         "action": {
@@ -338,10 +329,21 @@
         "next": "Prologue_Battle2_Wait_Until_Texas_Ready"
     },
     "Prologue_Battle2_Wait_Until_Texas_Ready": {
-        "next": [
-            "Prologue_Battle2_Texas_Ready",
-            "Prologue_Battle2_Tap_Until_Texas_Ready"
-        ]
+        "next": "Prologue_Battle2_Texas_Ready",
+        "interrupt": "Prologue_Battle2_Tap_Until_Texas_Ready"
+    },
+    "Prologue_Battle2_Tap_Until_Texas_Ready": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    54,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Prologue_Battle2_Texas_Ready": {
         "recognition": {
@@ -370,7 +372,11 @@
         },
         "next": "Prologue_Battle2_Wait_Until_Use_Texas"
     },
-    "Prologue_Battle2_Tap_Until_Texas_Ready": {
+    "Prologue_Battle2_Wait_Until_Use_Texas": {
+        "next": "Prologue_Battle2_Use_Texas",
+        "interrupt": "Prologue_Battle2_Tap_Until_Use_Texas"
+    },
+    "Prologue_Battle2_Tap_Until_Use_Texas": {
         "action": {
             "type": "Click",
             "param": {
@@ -381,14 +387,7 @@
                     1
                 ]
             }
-        },
-        "next": "Prologue_Battle2_Wait_Until_Texas_Ready"
-    },
-    "Prologue_Battle2_Wait_Until_Use_Texas": {
-        "next": [
-            "Prologue_Battle2_Use_Texas",
-            "Prologue_Battle2_Tap_Until_Use_Texas"
-        ]
+        }
     },
     "Prologue_Battle2_Use_Texas": {
         "recognition": {
@@ -417,7 +416,11 @@
         },
         "next": "Prologue_Battle2_Wait_Until_Amiya"
     },
-    "Prologue_Battle2_Tap_Until_Use_Texas": {
+    "Prologue_Battle2_Wait_Until_Amiya": {
+        "next": "Prologue_Battle2_Use_Amiya_1",
+        "interrupt": "Prologue_Battle2_Tap_Until_Amiya"
+    },
+    "Prologue_Battle2_Tap_Until_Amiya": {
         "action": {
             "type": "Click",
             "param": {
@@ -428,14 +431,7 @@
                     1
                 ]
             }
-        },
-        "next": "Prologue_Battle2_Wait_Until_Use_Texas"
-    },
-    "Prologue_Battle2_Wait_Until_Amiya": {
-        "next": [
-            "Prologue_Battle2_Use_Amiya_1",
-            "Prologue_Battle2_Tap_Until_Amiya"
-        ]
+        }
     },
     "Prologue_Battle2_Use_Amiya_1": {
         "recognition": {
@@ -464,20 +460,6 @@
         },
         "next": "Prologue_Battle2_Use_Amiya_2"
     },
-    "Prologue_Battle2_Tap_Until_Amiya": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1098,
-                    54,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Prologue_Battle2_Wait_Until_Amiya"
-    },
     "Prologue_Battle2_Use_Amiya_2": {
         "action": {
             "type": "Click",
@@ -493,10 +475,21 @@
         "next": "Prologue_Battle2_Wait_Until_Finish"
     },
     "Prologue_Battle2_Wait_Until_Finish": {
-        "next": [
-            "Prologue_Story_3_1",
-            "Prologue_Battle2_Tap_Until_Finish"
-        ]
+        "next": "Prologue_Story_3_1",
+        "interrupt": "Prologue_Battle2_Tap_Until_Finish"
+    },
+    "Prologue_Battle2_Tap_Until_Finish": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    54,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Prologue_Story_3_1": {
         "recognition": {
@@ -519,20 +512,6 @@
             }
         },
         "next": "Prologue_Story_3_2"
-    },
-    "Prologue_Battle2_Tap_Until_Finish": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1098,
-                    54,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Prologue_Battle2_Wait_Until_Finish"
     },
     "Prologue_Story_3_2": {
         "action": {

@@ -84,7 +84,7 @@
                 ]
             }
         },
-        "timeout": 5000, /*공지 겁나 늦게 뜸*/
+        "timeout": 3000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 바로 메일로 가버리는 불상사 발생*/
         "next": "Gatcha_Notice",
         "on_error": "Gatcha_Get_Mail_1"
     },
@@ -157,10 +157,8 @@
         "next": "Gatcha_Wait_Until_Home"
     },
     "Gatcha_Wait_Until_Home": {
-        "next": [
-            "Gatcha_Goto_Headhunting",
-            "Gatcha_Tap_Until_Home"
-        ]
+        "next": "Gatcha_Goto_Headhunting",
+        "interrupt": "Gatcha_Tap_Until_Home"
     },
     "Gatcha_Tap_Until_Home": {
         "action": {
@@ -173,8 +171,7 @@
                     1
                 ]
             }
-        },
-        "next": "Gatcha_Wait_Until_Home"
+        }
     },
     "Gatcha_Goto_Headhunting": {
         "recognition": {
@@ -289,7 +286,7 @@
                 ]
             }
         },
-        "next": [ /* TODO: 혹시나 무한루프? */
+        "next": [
             "Gatcha_10roll_orundum",
             "Gatcha_10roll_originite_prime"
         ]
@@ -379,10 +376,8 @@
         "next": "Gatcha_Try_1roll"
     },
     "Gatcha_Wait_Until_10roll": {
-        "next": [
-            "Gatcha_Try_10roll",
-            "Gatcha_Tap_Until_10roll"
-        ]
+        "next": "Gatcha_Try_10roll",
+        "interrupt": "Gatcha_Tap_Until_10roll"
     },
     "Gatcha_Tap_Until_10roll": {
         "action": {
@@ -395,8 +390,7 @@
                     1
                 ]
             }
-        },
-        "next": "Gatcha_Wait_Until_10roll"
+        }
     },
     "Gatcha_Try_1roll": {
         "recognition": {
@@ -423,7 +417,7 @@
                 ]
             }
         },
-        "next": [ /* TODO: 혹시나 무한루프? */
+        "next": [
             "Gatcha_1roll_free",
             "Gatcha_1roll_orundum",
             "Gatcha_1roll_originite_prime"
@@ -541,10 +535,8 @@
         "next": "Gatcha_Goto_Operator1"
     },
     "Gatcha_Wait_Until_1roll": {
-        "next": [
-            "Gatcha_Try_1roll",
-            "Gatcha_Tap_Until_1roll"
-        ]
+        "next": "Gatcha_Try_1roll",
+        "interrupt": "Gatcha_Tap_Until_1roll"
     },
     "Gatcha_Tap_Until_1roll": {
         "action": {
@@ -557,8 +549,7 @@
                     1
                 ]
             }
-        },
-        "next": "Gatcha_Wait_Until_1roll"
+        }
     },
     "Gatcha_Goto_Operator1": {
         "action": {
