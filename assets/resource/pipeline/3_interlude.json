@@ -1,0 +1,316 @@
+{
+    /* 메인화면 돌아온 직후부터 0-1 진입까지 */
+    "Start_Interlude": {
+        "next": [
+            "Interlude_Wait_Until_Headhunting"
+        ]
+    },
+    "Interlude_Wait_Until_Headhunting": {
+        "next": [
+            "Interlude_Headhunting_1",
+            "Interlude_Tap_Until_Headhunting"
+        ]
+    },
+    "Interlude_Headhunting_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/1_headhunting_1.png",
+                "roi": [
+                    708,
+                    502,
+                    410,
+                    218
+                ] /*"origin roi" : [758,552,310,167]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    895,
+                    649,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Headhunting_2"
+    },
+    "Interlude_Tap_Until_Headhunting": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    597,
+                    538,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Wait_Until_Headhunting"
+    },
+    "Interlude_Headhunting_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/2_headhunting_2.png",
+                "roi": [
+                    1126,
+                    0,
+                    154,
+                    167
+                ] /*"origin roi" : [1176,9,93,67]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Interlude_Wait_Until_Squad"
+    },
+    "Interlude_Wait_Until_Squad": {
+        "next": [
+            "Interlude_Squad_1",
+            "Interlude_Tap_Until_Squad"
+        ]
+    },
+    "Interlude_Squad_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/3_squad_1.png",
+                "roi": [
+                    396,
+                    70,
+                    370,
+                    367
+                ] /*"origin roi" : [446,120,270,267]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    564,
+                    209,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Squad_2"
+    },
+    "Interlude_Tap_Until_Squad": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    565,
+                    497,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Wait_Until_Squad"
+    },
+    "Interlude_Squad_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/4_squad_2.png",
+                "roi": [
+                    297,
+                    75,
+                    345,
+                    365
+                ] /*"origin roi" : [347,125,245,265]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    443,
+                    207,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Squad_3"
+    },
+    "Interlude_Squad_3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1121,
+                    677,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Close_Squad_1"
+    },
+    /* TODO: 이거 delay로 조절하지 말고 사진 다시 찍기 */
+    "Interlude_Close_Squad_1": {
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    266,
+                    38,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Close_Squad_2"
+    },
+    "Interlude_Close_Squad_2": {
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    91,
+                    280,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Wait_Until_Story"
+    },
+    "Interlude_Wait_Until_Story": {
+        "next": [
+            "Interlude_Story",
+            "Interlude_Tap_Until_Story"
+        ]
+    },
+    "Interlude_Story": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/5_story.png",
+                "roi": [
+                    436,
+                    183,
+                    503,
+                    489
+                ] /*"origin roi" : [486,233,403,389]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    687,
+                    419,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_0-1_1"
+    },
+    "Interlude_Tap_Until_Story": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    318,
+                    668,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_Wait_Until_Story"
+    },
+    "Interlude_0-1_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/6_0-1_1.png",
+                "roi": [
+                    460,
+                    224,
+                    390,
+                    267
+                ] /*"origin roi" : [510,274,290,167]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    643,
+                    343,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_0-1_2"
+    },
+    "Interlude_0-1_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/7_0-1_2.png",
+                "roi": [
+                    949,
+                    523,
+                    331,
+                    197
+                ] /*"origin roi" : [999,573,280,146]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1123,
+                    654,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Interlude_0-1_3"
+    },
+    "Interlude_0-1_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "interlude/8_0-1_3.png",
+                "roi": [
+                    939,
+                    269,
+                    341,
+                    451
+                ] /*"origin roi" : [989,319,267,371]*/
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1106,
+                    507,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Start_0-1"
+    }
+}
