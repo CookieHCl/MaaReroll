@@ -147,10 +147,29 @@
                 ]
             }
         },
-        "next": "Gatcha_Tap_Until_Home"
+        "next": "Gatcha_Wait_Until_Home"
+    },
+    "Gatcha_Wait_Until_Home": {
+        "next": [
+            "Gatcha_Goto_Headhunting",
+            "Gatcha_Tap_Until_Home"
+        ]
     },
     "Gatcha_Tap_Until_Home": {
-        "inverse": true,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1140,
+                    665,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Gatcha_Wait_Until_Home"
+    },
+    "Gatcha_Goto_Headhunting": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -163,21 +182,6 @@
                 ] /*"origin roi" : [0,17,179,243]*/
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1140,
-                    665,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Gatcha_Tap_Until_Home",
-        "on_error": "Gatcha_Goto_Headhunting"
-    },
-    "Gatcha_Goto_Headhunting": {
         "action": {
             "type": "Click",
             "param": {
@@ -237,6 +241,18 @@
         "next": "Gatcha_Try_10roll"
     },
     "Gatcha_Try_10roll": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/11_headhunting_home.png",
+                "roi": [
+                    0,
+                    0,
+                    454,
+                    148
+                ] /*"origin roi" : [17,15,354,48]*/
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
@@ -277,7 +293,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Tap_Until_10roll"
+        "next": "Gatcha_Wait_Until_10roll"
     },
     "Gatcha_10roll_originite_prime": {
         "recognition": {
@@ -305,7 +321,7 @@
         },
         "next": [
             "Gatcha_10roll_failed",
-            "Gatcha_Tap_Until_10roll"
+            "Gatcha_Wait_Until_10roll"
         ]
     },
     "Gatcha_10roll_failed": {
@@ -334,8 +350,27 @@
         },
         "next": "Gatcha_Try_1roll"
     },
+    "Gatcha_Wait_Until_10roll": {
+        "next": [
+            "Gatcha_Try_10roll",
+            "Gatcha_Tap_Until_10roll"
+        ]
+    },
     "Gatcha_Tap_Until_10roll": {
-        "inverse": true,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1261,
+                    16,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "Gatcha_Wait_Until_10roll"
+    },
+    "Gatcha_Try_1roll": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -348,21 +383,6 @@
                 ] /*"origin roi" : [17,15,354,48]*/
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1261,
-                    16,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": "Gatcha_Tap_Until_10roll",
-        "on_error": "Gatcha_Try_10roll"
-    },
-    "Gatcha_Try_1roll": {
         "action": {
             "type": "Click",
             "param": {
@@ -404,7 +424,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Tap_Until_1roll"
+        "next": "Gatcha_Wait_Until_1roll"
     },
     "Gatcha_1roll_orundum": {
         "recognition": {
@@ -430,7 +450,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Tap_Until_1roll"
+        "next": "Gatcha_Wait_Until_1roll"
     },
     "Gatcha_1roll_originite_prime": {
         "recognition": {
@@ -458,7 +478,7 @@
         },
         "next": [
             "Gatcha_1roll_failed",
-            "Gatcha_Tap_Until_1roll"
+            "Gatcha_Wait_Until_1roll"
         ]
     },
     "Gatcha_1roll_failed": {
@@ -487,20 +507,13 @@
         },
         "next": "Gatcha_Goto_Operator1"
     },
+    "Gatcha_Wait_Until_1roll": {
+        "next": [
+            "Gatcha_Try_1roll",
+            "Gatcha_Tap_Until_1roll"
+        ]
+    },
     "Gatcha_Tap_Until_1roll": {
-        "inverse": true,
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/11_headhunting_home.png",
-                "roi": [
-                    0,
-                    0,
-                    454,
-                    148
-                ] /*"origin roi" : [17,15,354,48]*/
-            }
-        },
         "action": {
             "type": "Click",
             "param": {
@@ -512,8 +525,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Tap_Until_1roll",
-        "on_error": "Gatcha_Try_1roll"
+        "next": "Gatcha_Wait_Until_1roll"
     },
     "Gatcha_Goto_Operator1": {
         "action": {

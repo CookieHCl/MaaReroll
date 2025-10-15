@@ -167,19 +167,11 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "Gatcha_Tap_Until_10roll": {
-                            "inverse": false,
-                            "recognition": "DirectHit",
-                            "action": "DoNothing",
-                            "next": [],
-                            "on_error": []
+                        "Gatcha_Wait_Until_10roll": {
+                            "next": []
                         },
-                        "Gatcha_Tap_Until_1roll": {
-                            "inverse": false,
-                            "recognition": "DirectHit",
-                            "action": "DoNothing",
-                            "next": [],
-                            "on_error": []
+                        "Gatcha_Wait_Until_1roll": {
+                            "next": []
                         }
                     }
                 }
