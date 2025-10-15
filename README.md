@@ -13,6 +13,9 @@ git submodule update --init --recursive
 uv run ./configure.py
 ```
 
+만약 uv가 싫다면 python + `pip install MaaFw`  
+그리고 interface.json을 바꿔줘야함
+
 # 빌드 & 실행
 
 ```powershell
