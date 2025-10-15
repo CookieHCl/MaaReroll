@@ -29,10 +29,13 @@
             "name": "리세마라",
             "entry": "Main",
             "check": true,
-            "doc": "**[앱플레이어 디스플레이 설정]**\n해상도 - 1280x720, DPI - 180dpi, 프레임 - 60\n※ 확인 필수!\n\n",
+            "doc": "[color:red]리세 진행시 기존 계정은 삭제합니다.[/color]\n**[앱플레이어 디스플레이 설정]**\n해상도 - 1280x720, DPI - 180dpi, 프레임 - 60\n※ 확인 필수!\n\n",
             "option": [
                 "리세 방식",
-                "현재 화면"
+                "현재 화면",
+                "픽업 배너",
+                "순오리지늄 사용",
+                "직접 뽑기"
             ]
         }
     ],
@@ -47,7 +50,7 @@
             ]
         },
         "현재 화면": {
-            "doc": "현재 표시되는 화면을 선택해 주세요.\n\n▸ 로그인 화면 : 게임 시작 전 로그인 화면인 경우.\n▸ 홈 화면 : 현재 홈 화면에 있는 경우 (즉시 계정 삭제하고 다시 리세돌림).",
+            "doc": "현재 표시되는 화면을 선택해 주세요.\n\n▸ 로그인 화면 : 게임 시작 전 로그인 화면인 경우.\n▸ 오퍼레이터 화면 : 현재 오퍼레이터 화면에 있는 경우.\n▸ 홈 화면 : 현재 홈 화면에 있는 경우.",
             "cases": [
                 {
                     "name": "로그인 화면",
@@ -58,10 +61,125 @@
                     }
                 },
                 {
+                    "name": "오퍼레이터 화면",
+                    "pipeline_override": {
+                        "Main": {
+                            "next": "Entry_Operator"
+                        }
+                    }
+                },
+                {
                     "name": "홈 화면",
                     "pipeline_override": {
                         "Main": {
                             "next": "Entry_Home"
+                        }
+                    }
+                }
+            ]
+        },
+        "픽업 배너": {
+            "doc": "몇 번째 픽업 배너를 선택할지 골라주세요.",
+            "cases": [
+                {
+                    "name": "두번째 (메인 배너)",
+                    "pipeline_override": {
+                        "Gatcha_Goto_Headhunting": {
+                            "next": "Gatcha_2nd_Headhunting"
+                        }
+                    }
+                },
+                {
+                    "name": "세번째",
+                    "pipeline_override": {
+                        "Gatcha_Goto_Headhunting": {
+                            "next": "Gatcha_3rd_Headhunting"
+                        }
+                    }
+                },
+                {
+                    "name": "네번째",
+                    "pipeline_override": {
+                        "Gatcha_Goto_Headhunting": {
+                            "next": "Gatcha_4th_Headhunting"
+                        }
+                    }
+                },
+                {
+                    "name": "첫번째 (신규 유저 배너)",
+                    "pipeline_override": {
+                        "Gatcha_Goto_Headhunting": {
+                            "next": "Gatcha_1st_Headhunting"
+                        }
+                    }
+                }
+            ]
+        },
+        "순오리지늄 사용": {
+            "doc": "해당 옵션을 활성화하면 순오리지늄도 사용하여 리세를 진행합니다.",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Gatcha_10roll_originite_prime": {
+                            "action": {
+                                "type": "Click",
+                                "param": {
+                                    "target": [
+                                        305,
+                                        505,
+                                        1,
+                                        1
+                                    ]
+                                }
+                            },
+                            "next": "Gatcha_Try_1roll"
+                        },
+                        "Gatcha_1roll_originite_prime": {
+                            "action": {
+                                "type": "Click",
+                                "param": {
+                                    "target": [
+                                        305,
+                                        505,
+                                        1,
+                                        1
+                                    ]
+                                }
+                            },
+                            "next": "Gatcha_Goto_Operator1"
+                        }
+                    }
+                }
+            ]
+        },
+        "직접 뽑기": {
+            "doc": "해당 옵션을 활성화하면 **종료 조건을 무시하고** 가챠 직전에서 리세가 종료됩니다.",
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "Gatcha_Tap_Until_10roll": {
+                            "inverse": false,
+                            "recognition": "DirectHit",
+                            "action": "DoNothing",
+                            "next": [],
+                            "on_error": []
+                        },
+                        "Gatcha_Tap_Until_1roll": {
+                            "inverse": false,
+                            "recognition": "DirectHit",
+                            "action": "DoNothing",
+                            "next": [],
+                            "on_error": []
                         }
                     }
                 }

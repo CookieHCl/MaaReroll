@@ -21,6 +21,12 @@
     "Entry_Login_Failed": {
         "focus": "!! 로그인 화면에 있지 않습니다. 작업을 종료합니다."
     },
+    "Entry_Operator": {
+        "on_error": "Entry_Operator_Failed"
+    },
+    "Entry_Operator_Failed": {
+        "focus": "!! 오퍼레이터 화면에 있지 않습니다. 작업을 종료합니다."
+    },
     "Entry_Home": {
         "on_error": "Entry_Home_Failed"
     },
