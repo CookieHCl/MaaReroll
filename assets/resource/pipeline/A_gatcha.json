@@ -153,16 +153,39 @@
                 ]
             }
         },
-        "next": "Gatcha_Wait_Until_Home"
+        "next": "Gatcha_Wait_Until_Mail_Received"
     },
-    "Gatcha_Wait_Until_Home": {
-        "next": [ /* 단 1프레임이라도 홈화면이 보일 수 있어서 이렇게 */
-            "Gatcha_Wait_Until_Notice",
-            "Gatcha_Notice2"
-        ],
-        "interrupt": "Gatcha_Tap_Until_Home"
+    "Gatcha_Wait_Until_Mail_Received": {
+        "next": "Gatcha_Mail_Received",
+        "interrupt": "Gatcha_Tap_Until_Mail_Received"
     },
-    "Gatcha_Tap_Until_Home": {
+    "Gatcha_Tap_Until_Mail_Received": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1192,
+                    44,
+                    1,
+                    1
+                ]
+            }
+        }
+    },
+    "Gatcha_Mail_Received": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/6_received_mail.png",
+                "roi": [
+                    1041,
+                    36,
+                    239,
+                    684
+                ] /*"origin roi" : [1091,86,144,609]*/,
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
@@ -172,21 +195,6 @@
                     1,
                     1
                 ]
-            }
-        }
-    },
-    "Gatcha_Wait_Until_Notice": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/6_home.png",
-                "roi": [
-                    0,
-                    0,
-                    279,
-                    343
-                ] /*"origin roi" : [0,17,179,243]*/,
-                "threshold": 0.95
             }
         },
         "timeout": 2000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생*/
