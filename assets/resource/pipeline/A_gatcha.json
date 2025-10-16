@@ -83,7 +83,7 @@
                 ]
             }
         },
-        "timeout": 2000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생*/
+        "timeout": 4000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생*/
         "next": "Gatcha_Notice",
         "on_error": "Gatcha_Get_Mail_1"
     },
@@ -197,7 +197,7 @@
                 ]
             }
         },
-        "timeout": 2000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생*/
+        "timeout": 4000, /*공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생*/
         "next": "Gatcha_Notice2",
         "on_error": "Gatcha_Goto_Headhunting"
     },
