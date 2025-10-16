@@ -142,15 +142,15 @@
             "param": {
                 "template": "prologue/4_place_op1.png",
                 "roi": [
-                    0,
-                    0,
-                    1012,
-                    272
-                ] /*"origin roi" : [50,35,912,172]*/,
+                    892,
+                    536,
+                    388,
+                    184
+                ] /*"origin roi" : [942,586,337,133]*/,
                 "threshold": 0.95
             }
         },
-        "pre_delay": 500,
+        "pre_delay": 750,
         "action": {
             "type": "Swipe",
             "param": {
@@ -171,6 +171,7 @@
         "next": "Prologue_Battle1_Place_OP1_2"
     },
     "Prologue_Battle1_Place_OP1_2": {
+        "pre_delay": 300,
         "action": {
             "type": "Swipe",
             "param": {
@@ -213,14 +214,15 @@
             "param": {
                 "template": "prologue/5_place_op2.png",
                 "roi": [
-                    1,
-                    0,
-                    1010,
-                    273
-                ] /*"origin roi" : [51,33,910,173]*/,
+                    1046,
+                    521,
+                    234,
+                    199
+                ] /*"origin roi" : [1096,571,183,148]*/,
                 "threshold": 0.95
             }
         },
+        "pre_delay": 750,
         "action": {
             "type": "Swipe",
             "param": {
@@ -241,6 +243,7 @@
         "next": "Prologue_Battle1_Place_OP2_2"
     },
     "Prologue_Battle1_Place_OP2_2": {
+        "pre_delay": 300,
         "action": {
             "type": "Swipe",
             "param": {
