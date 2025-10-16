@@ -77,6 +77,14 @@
                     }
                 },
                 {
+                    "name": "가챠",
+                    "pipeline_override": {
+                        "Main": {
+                            "next": "Gatcha_Goto_Headhunting"
+                        }
+                    }
+                },
+                {
                     "name": "오퍼레이터",
                     "pipeline_override": {
                         "Main": {

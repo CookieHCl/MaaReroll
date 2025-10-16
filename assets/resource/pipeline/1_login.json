@@ -212,10 +212,7 @@
                 ]
             }
         },
-        "next": [
-            "Login_Check_Email_Consent",
-            "Login_Term_Consent_1"
-        ]
+        "next": "Login_Check_Email_Consent"
     },
     "Login_Check_Email_Consent": {
         "recognition": {
@@ -242,10 +239,12 @@
                 ]
             }
         },
+        "timeout": 4000,
         "next": [
             "Login_Check_Google_Consent",
             "Login_Term_Consent_1"
-        ]
+        ],
+        "on_error": "Start_Prologue"
     },
     "Login_Check_Google_Consent": {
         "recognition": {
@@ -272,7 +271,9 @@
                 ]
             }
         },
-        "next": "Login_Term_Consent_1"
+        "timeout": 4000,
+        "next": "Login_Term_Consent_1",
+        "on_error": "Start_Prologue"
     },
     "Login_Term_Consent_1": {
         "recognition": {
