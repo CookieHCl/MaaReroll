@@ -64,22 +64,6 @@
                     }
                 },
                 {
-                    "name": "프롤로그 전투1",
-                    "pipeline_override": {
-                        "Main": {
-                            "next": "Prologue_Story1_1"
-                        }
-                    }
-                },
-                {
-                    "name": "프롤로그 전투2",
-                    "pipeline_override": {
-                        "Main": {
-                            "next": "Prologue_Story2_1"
-                        }
-                    }
-                },
-                {
                     "name": "오퍼레이터 화면",
                     "pipeline_override": {
                         "Main": {
