@@ -1,6 +1,7 @@
 {
     /* 가챠 실패시 계삭런 */
     "Start_Reset": {
+        "focus": "▶ 계정삭제 시작",
         "next": [
             "Reset_Close_Operator_1",
             "Reset_Remove_Account_1"

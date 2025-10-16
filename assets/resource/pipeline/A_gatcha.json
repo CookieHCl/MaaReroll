@@ -2,6 +2,7 @@
     /* 가챠하려고 홈화면 온 이후부터 가챠까지 */
     /* TODO: 퇴각런 아니면 신입 입무 같은거 받아야 함 */
     "Start_Gatcha": {
+        "focus": "▶ 가챠 시작",
         "next": "Gatcha_Daily_Plan_1"
     },
     "Gatcha_Daily_Plan_1": {

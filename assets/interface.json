@@ -53,35 +53,42 @@
             "doc": "현재 표시되는 화면을 선택해 주세요.\n\n로그인, 오퍼레이터, 홈 화면에서는 기존 계정을 삭제합니다.",
             "cases": [
                 {
-                    "name": "로그인 화면",
+                    "name": "로그인",
                     "pipeline_override": {
                         "Main": {
-                            "next": [
-                                "Entry_Login",
-                                "Entry_Login_Failed"
-                            ]
+                            "next": "Start_Login"
                         }
                     }
                 },
                 {
-                    "name": "오퍼레이터 화면",
+                    "name": "프롤로그",
                     "pipeline_override": {
                         "Main": {
-                            "next": [
-                                "Entry_Operator",
-                                "Entry_Operator_Failed"
-                            ]
+                            "next": "Start_Prologue"
                         }
                     }
                 },
                 {
-                    "name": "홈 화면",
+                    "name": "0-1",
                     "pipeline_override": {
                         "Main": {
-                            "next": [
-                                "Entry_Home",
-                                "Entry_Home_Failed"
-                            ]
+                            "next": "Start_0-1"
+                        }
+                    }
+                },
+                {
+                    "name": "오퍼레이터",
+                    "pipeline_override": {
+                        "Main": {
+                            "next": "Start_Reset"
+                        }
+                    }
+                },
+                {
+                    "name": "홈",
+                    "pipeline_override": {
+                        "Main": {
+                            "next": "Start_Reset"
                         }
                     }
                 }
@@ -136,7 +143,7 @@
                                     "template": "check/agent/exusiai_the_new_covenant.png"
                                 }
                             },
-                            "focus": "▶ 신시아 확인"
+                            "focus": "- 신시아 확인"
                         }
                     }
                 }
