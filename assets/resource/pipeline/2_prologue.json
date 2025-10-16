@@ -1,7 +1,10 @@
 {
     /* 닉네임 입력하는 부분부터 프롤로그 하까지 */
     "Start_Prologue": {
-        "next": "Prologue_Input_Name_1"
+        "next": [
+            "Prologue_Input_Name_1",
+            "Prologue_Story1_1"
+        ]
     },
     "Prologue_Input_Name_1": {
         "recognition": {
@@ -171,7 +174,7 @@
         "next": "Prologue_Battle1_Place_OP1_2"
     },
     "Prologue_Battle1_Place_OP1_2": {
-        "pre_delay": 300,
+        "pre_delay": 500,
         "action": {
             "type": "Swipe",
             "param": {
@@ -243,7 +246,7 @@
         "next": "Prologue_Battle1_Place_OP2_2"
     },
     "Prologue_Battle1_Place_OP2_2": {
-        "pre_delay": 300,
+        "pre_delay": 500,
         "action": {
             "type": "Swipe",
             "param": {
