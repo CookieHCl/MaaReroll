@@ -169,13 +169,13 @@
                     425,
                     1,
                     1
-                ]
+                ],
+                "duration": 500
             }
         },
         "next": "Prologue_Battle1_Place_OP1_2"
     },
     "Prologue_Battle1_Place_OP1_2": {
-        "pre_delay": 500,
         "action": {
             "type": "Swipe",
             "param": {
@@ -190,7 +190,8 @@
                     408,
                     1,
                     1
-                ]
+                ],
+                "duration": 500
             }
         },
         "next": "Prologue_Battle1_Wait_Until_OP2"
@@ -226,7 +227,7 @@
                 "threshold": 0.95
             }
         },
-        "pre_delay": 1500,
+        "pre_delay": 1000,
         "action": {
             "type": "Swipe",
             "param": {
@@ -241,13 +242,13 @@
                     296,
                     1,
                     1
-                ]
+                ],
+                "duration": 500
             }
         },
         "next": "Prologue_Battle1_Place_OP2_2"
     },
     "Prologue_Battle1_Place_OP2_2": {
-        "pre_delay": 500,
         "action": {
             "type": "Swipe",
             "param": {
@@ -262,7 +263,8 @@
                     294,
                     1,
                     1
-                ]
+                ],
+                "duration": 500
             }
         },
         "next": "Prologue_Battle1_Wait_Until_Finish"
