@@ -150,7 +150,7 @@
                 "threshold": 0.95
             }
         },
-        "pre_delay": 750,
+        "pre_delay": 1000,
         "action": {
             "type": "Swipe",
             "param": {
@@ -222,7 +222,7 @@
                 "threshold": 0.95
             }
         },
-        "pre_delay": 750,
+        "pre_delay": 1500,
         "action": {
             "type": "Swipe",
             "param": {
