@@ -1,5 +1,5 @@
 {
     "Main": {
-        "next": [] /* Set from interface.json */
+        "next": [] // Set from interface.json
     }
 }

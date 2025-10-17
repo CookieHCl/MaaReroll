@@ -24,7 +24,8 @@
         }
     ],
     "files.associations": {
-        "**/assets/**/*.json": "jsonc"
+        "**/assets/**/*.json": "jsonc",
+        "**/assets/interface.json": "json"
     },
     "[json][jsonc]": {
         "editor.formatOnSave": true,
