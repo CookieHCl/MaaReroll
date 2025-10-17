@@ -27,14 +27,15 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "check/count/",
+                "template": "check/2_6star.png",
                 "roi": [
                     9,
                     77,
                     1270,
                     620
                 ], // 화면 전체
-                "threshold": 0.95
+                "threshold": 0.9,
+                "green_mask": true
             }
         },
         "focus": "- 6성 1개 확인",
