@@ -18,22 +18,42 @@
                 "threshold": 0.95
             }
         },
-        "next": [
-            "Check_Operator",
-            "Check_Failed"
-        ]
+        "next": "Check_Operator_Count"
     },
-    "Check_Operator": {
+    "Check_Operator_Count": {
+        "next": "Check_Operator_Name"
+    },
+    "Check_Operator_Count_Success": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "check/agent/exusiai_the_new_covenant.png",
+                "template": "check/count/",
                 "roi": [
                     9,
-                    76,
+                    77,
                     1270,
-                    621
-                ],
+                    620
+                ], /* 화면 전체 */
+                "threshold": 0.95
+            }
+        },
+        "focus": "- 6성 1개 확인",
+        "next": "Check_Operator_Name"
+    },
+    "Check_Operator_Name": {
+        "next": "Check_Success"
+    },
+    "Check_Operator_Name_Success": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "check/operator/exusiai_the_new_covenant.png",
+                "roi": [
+                    9,
+                    77,
+                    1270,
+                    620
+                ], /* 화면 전체 */
                 "threshold": 0.95
             }
         },
