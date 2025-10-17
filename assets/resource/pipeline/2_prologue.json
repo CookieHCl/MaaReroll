@@ -2,6 +2,7 @@
     /* 닉네임 입력하는 부분부터 프롤로그 하까지 */
     "Start_Prologue": {
         "focus": "▶ 프롤로그 시작",
+        "timeout": 60000,
         "next": [
             "Prologue_Input_Name_1",
             "Prologue_Story1_1"
