@@ -85,9 +85,7 @@
                 ]
             }
         },
-        "timeout": 4000, // 공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생
-        "next": "Gatcha_Notice",
-        "on_error": "Gatcha_Get_Mail_1"
+        "next": "Gatcha_Get_Mail_1"
     },
     "Gatcha_Notice": {
         "recognition": {
@@ -128,7 +126,10 @@
                 ]
             }
         },
-        "next": "Gatcha_Get_Mail_2"
+        "next": [
+            "Gatcha_Get_Mail_2",
+            "Gatcha_Notice" // 공지 때문에 씹혔으면 공지 닫고 다시 진행
+        ]
     },
     "Gatcha_Get_Mail_2": {
         "recognition": {
@@ -194,35 +195,6 @@
                 "target": [
                     89,
                     46,
-                    1,
-                    1
-                ]
-            }
-        },
-        "timeout": 4000, // 공지 겁나 늦게 뜸 timeout을 없애고 싶지만 next 배열로 쓰면 공지가 너무 늦게 뜰 때 다음 노드로 가는 불상사 발생
-        "next": "Gatcha_Notice2",
-        "on_error": "Gatcha_Goto_Headhunting"
-    },
-    "Gatcha_Notice2": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/4_notice.png",
-                "roi": [
-                    296,
-                    42,
-                    756,
-                    160
-                ], // "origin roi" : [346,92,656,60]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1204,
-                    68,
                     1,
                     1
                 ]
