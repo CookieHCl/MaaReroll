@@ -45,7 +45,7 @@
             "doc": "리세 방식을 선택해 주세요.",
             "cases": [
                 {
-                    "name": "0-1 퇴각런",
+                    "name": "0-1 퇴각런 (7~8분)",
                     "pipeline_override": {}
                 }
             ]
@@ -70,6 +70,22 @@
                     }
                 },
                 {
+                    "name": "프롤로그 (2번째 전투)",
+                    "pipeline_override": {
+                        "Main": {
+                            "next": "Prologue_Battle2_Start"
+                        }
+                    }
+                },
+                {
+                    "name": "막간 (메인화면 설명)",
+                    "pipeline_override": {
+                        "Main": {
+                            "next": "Start_Interlude"
+                        }
+                    }
+                },
+                {
                     "name": "0-1",
                     "pipeline_override": {
                         "Main": {
@@ -78,7 +94,7 @@
                     }
                 },
                 {
-                    "name": "가챠 (홈 화면에 있다고 가정)",
+                    "name": "가챠 (홈 화면)",
                     "pipeline_override": {
                         "Main": {
                             "next": "Gatcha_Goto_Headhunting"
