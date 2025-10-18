@@ -32,9 +32,10 @@
             "option": [
                 "리세 방식",
                 "현재 화면",
-                "픽업 배너",
+                "종료 조건",
                 "종료 조건 (6성 개수)",
                 "종료 조건 (6성 오퍼레이터)",
+                "픽업 배너",
                 "순오리지늄 사용",
                 "직접 뽑기"
             ]
@@ -111,6 +112,110 @@
                 }
             ]
         },
+        "종료 조건": {
+            "doc": "AND - 모든 조건이 만족해야 합니다. OR - 하나의 조건만 만족해도 됩니다.",
+            "cases": [
+                {
+                    "name": "AND",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "OR",
+                    "pipeline_override": {
+                        "Check_Operator_Count_Success": {
+                            "next": "Check_Success"
+                        },
+                        "Check_Operator_Count_Failed": {
+                            "next": "Check_Operator_Name"
+                        }
+                    }
+                }
+            ]
+        },
+        "종료 조건 (6성 개수)": {
+            "doc": "리세를 종료할 6성 개수를 골라주세요.",
+            "cases": [
+                {
+                    "name": "0개 이상 (고려 안 함)",
+                    "pipeline_override": {
+                        "Check_Operator_Count": {
+                            "next": "Check_Operator_Name"
+                        }
+                    }
+                },
+                {
+                    "name": "1개 이상",
+                    "pipeline_override": {
+                        "Check_Operator_Count_Success": {
+                            "recognition": {
+                                "param": {
+                                    "roi": [
+                                        9,
+                                        77,
+                                        1270,
+                                        620
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "2개 이상",
+                    "pipeline_override": {
+                        "Check_Operator_Count_Success": {
+                            "recognition": {
+                                "param": {
+                                    "roi": [
+                                        9,
+                                        387,
+                                        1270,
+                                        310
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "종료 조건 (6성 오퍼레이터)": {
+            "doc": "리세를 종료할 오퍼레이터를 골라주세요.",
+            "cases": [
+                {
+                    "name": "신시아 (엑시아 더 뉴 커버넌트)",
+                    "pipeline_override": {
+                        "Check_Operator_Name_Success": {
+                            "recognition": {
+                                "param": {
+                                    "template": "check/operator/exusiai_the_new_covenant.png"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "위셔델",
+                    "pipeline_override": {
+                        "Check_Operator_Name_Success": {
+                            "recognition": {
+                                "param": {
+                                    "template": "check/operator/wisadel.png"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "없음 (고려 안 함)",
+                    "pipeline_override": {
+                        "Check_Operator_Name": {
+                            "next": "Check_Success"
+                        }
+                    }
+                }
+            ]
+        },
         "픽업 배너": {
             "doc": "몇 번째 픽업 배너를 선택할지 골라주세요.",
             "cases": [
@@ -145,106 +250,6 @@
                             "next": "Gatcha_1st_Headhunting"
                         }
                     }
-                }
-            ]
-        },
-        "종료 조건 (6성 개수)": {
-            "doc": "리세를 종료할 6성 개수를 골라주세요.",
-            "cases": [
-                {
-                    "name": "0개 이상 (고려 안 함)",
-                    "pipeline_override": {}
-                },
-                {
-                    "name": "1개 이상",
-                    "pipeline_override": {
-                        "Check_Operator_Count": {
-                            "next": [
-                                "Check_Operator_Count_Success",
-                                "Check_Failed"
-                            ]
-                        },
-                        "Check_Operator_Count_Success": {
-                            "recognition": {
-                                "param": {
-                                    "roi": [
-                                        9,
-                                        77,
-                                        1270,
-                                        620
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "name": "2개 이상",
-                    "pipeline_override": {
-                        "Check_Operator_Count": {
-                            "next": [
-                                "Check_Operator_Count_Success",
-                                "Check_Failed"
-                            ]
-                        },
-                        "Check_Operator_Count_Success": {
-                            "recognition": {
-                                "param": {
-                                    "roi": [
-                                        9,
-                                        387,
-                                        1270,
-                                        310
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        "종료 조건 (6성 오퍼레이터)": {
-            "doc": "리세를 종료할 오퍼레이터를 골라주세요.",
-            "cases": [
-                {
-                    "name": "신시아 (엑시아 더 뉴 커버넌트)",
-                    "pipeline_override": {
-                        "Check_Operator_Name": {
-                            "next": [
-                                "Check_Operator_Name_Success",
-                                "Check_Failed"
-                            ]
-                        },
-                        "Check_Operator_Name_Success": {
-                            "recognition": {
-                                "param": {
-                                    "template": "check/operator/exusiai_the_new_covenant.png"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "name": "위셔델",
-                    "pipeline_override": {
-                        "Check_Operator_Name": {
-                            "next": [
-                                "Check_Operator_Name_Success",
-                                "Check_Failed"
-                            ]
-                        },
-                        "Check_Operator_Name_Success": {
-                            "recognition": {
-                                "param": {
-                                    "template": "check/operator/wisadel.png"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "name": "없음 (고려 안 함)",
-                    "pipeline_override": {}
                 }
             ]
         },

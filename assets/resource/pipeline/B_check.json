@@ -21,7 +21,10 @@
         "next": "Check_Operator_Count"
     },
     "Check_Operator_Count": {
-        "next": "Check_Operator_Name"
+        "next": [
+            "Check_Operator_Count_Success",
+            "Check_Operator_Count_Failed"
+        ]
     },
     "Check_Operator_Count_Success": {
         "recognition": {
@@ -41,8 +44,14 @@
         "focus": "- 6성 개수 확인",
         "next": "Check_Operator_Name"
     },
+    "Check_Operator_Count_Failed": {
+        "next": "Check_Failed"
+    },
     "Check_Operator_Name": {
-        "next": "Check_Success"
+        "next": [
+            "Check_Operator_Name_Success",
+            "Check_Failed"
+        ]
     },
     "Check_Operator_Name_Success": {
         "recognition": {
@@ -60,6 +69,9 @@
         },
         "focus": "- 6성 요원 확인",
         "next": "Check_Success"
+    },
+    "Check_Operator_Name_Failed": {
+        "next": "Check_Failed"
     },
     "Check_Success": {
         "focus": "!!! 리세 성공 !!!"
