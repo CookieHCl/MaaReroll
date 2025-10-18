@@ -2,9 +2,9 @@
     /* 오퍼레이터 화면에서 가챠 성공여부 확인 */
     "Start_Check": {
         "focus": "▶ 가챠 확인중...",
-        "next": "Check_Wait_Until_Operator"
+        "next": "Check_Operator_Screen"
     },
-    "Check_Wait_Until_Operator": {
+    "Check_Operator_Screen": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {

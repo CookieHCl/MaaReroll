@@ -114,7 +114,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/3_battle1_start.png",
+                "template": "prologue/3_amiya_talking.png",
                 "roi": [
                     1,
                     0,
@@ -126,11 +126,20 @@
         },
         "next": "Prologue_Battle1_Wait_Until_OP1"
     },
-    "Prologue_Battle1_Wait_Until_OP1": {
-        "next": "Prologue_Battle1_Place_OP1_1",
-        "interrupt": "Prologue_Battle1_Tap_Until_OP1"
-    },
-    "Prologue_Battle1_Tap_Until_OP1": {
+    "Prologue_Battle1_Tap_Until_Amiya": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/3_amiya_talking.png",
+                "roi": [
+                    1,
+                    0,
+                    258,
+                    269
+                ], // "origin roi" : [51,36,158,169]
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
@@ -143,11 +152,15 @@
             }
         }
     },
+    "Prologue_Battle1_Wait_Until_OP1": {
+        "next": "Prologue_Battle1_Place_OP1_1",
+        "interrupt": "Prologue_Battle1_Tap_Until_Amiya"
+    },
     "Prologue_Battle1_Place_OP1_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/4_place_op1.png",
+                "template": "prologue/4_battle1_op1.png",
                 "roi": [
                     892,
                     536,
@@ -179,6 +192,7 @@
         "next": "Prologue_Battle1_Place_OP1_2"
     },
     "Prologue_Battle1_Place_OP1_2": {
+        "pre_delay": 500,
         "action": {
             "type": "Swipe",
             "param": {
@@ -201,26 +215,13 @@
     },
     "Prologue_Battle1_Wait_Until_OP2": {
         "next": "Prologue_Battle1_Place_OP2_1",
-        "interrupt": "Prologue_Battle1_Tap_Until_OP2"
-    },
-    "Prologue_Battle1_Tap_Until_OP2": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    244,
-                    418,
-                    1,
-                    1
-                ]
-            }
-        }
+        "interrupt": "Prologue_Battle1_Tap_Until_Amiya"
     },
     "Prologue_Battle1_Place_OP2_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/5_place_op2.png",
+                "template": "prologue/5_battle1_op2.png",
                 "roi": [
                     1046,
                     521,
@@ -252,6 +253,7 @@
         "next": "Prologue_Battle1_Place_OP2_2"
     },
     "Prologue_Battle1_Place_OP2_2": {
+        "pre_delay": 500,
         "action": {
             "type": "Swipe",
             "param": {
@@ -274,7 +276,7 @@
     },
     "Prologue_Battle1_Wait_Until_Finish": {
         "next": "Prologue_Story2_1",
-        "interrupt": "Prologue_Battle1_Tap_Until_Finish"
+        "interrupt": "Prologue_Battle1_Tap_Until_Finish" // 아미야 내려갈 때도 있어서 따로
     },
     "Prologue_Battle1_Tap_Until_Finish": {
         "action": {
@@ -330,40 +332,77 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/7_battle2_start.png",
+                "template": "prologue/3_amiya_talking.png",
                 "roi": [
+                    1,
                     0,
-                    0,
-                    261,
-                    270
-                ], // "origin roi" : [49,35,161,170]
+                    258,
+                    269
+                ], // "origin roi" : [51,36,158,169]
                 "threshold": 0.95
             }
         },
         "next": "Prologue_Battle2_Wait_Until_Texas_Ready"
     },
-    "Prologue_Battle2_Wait_Until_Texas_Ready": {
-        "next": "Prologue_Battle2_Texas_Ready",
-        "interrupt": "Prologue_Battle2_Tap_Until_Texas_Ready"
-    },
-    "Prologue_Battle2_Tap_Until_Texas_Ready": {
+    "Prologue_Battle2_Tap_Until_Amiya": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/3_amiya_talking.png",
+                "roi": [
+                    1,
+                    0,
+                    258,
+                    269
+                ], // "origin roi" : [51,36,158,169]
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
                 "target": [
-                    1098,
-                    54,
+                    45,
+                    689,
                     1,
                     1
                 ]
             }
         }
     },
+    "Prologue_Battle2_Tap_Until_2xSpeed": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/7_battle2_1xspeed.png",
+                "roi": [
+                    1011,
+                    0,
+                    173,
+                    179
+                ], // "origin roi" : [1061,14,73,79]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        }
+    },
+    "Prologue_Battle2_Wait_Until_Texas_Ready": {
+        "next": "Prologue_Battle2_Texas_Ready",
+        "interrupt": [
+            "Prologue_Battle2_Tap_Until_Amiya",
+            "Prologue_Battle2_Tap_Until_2xSpeed"
+        ]
+    },
     "Prologue_Battle2_Texas_Ready": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/8_ready_texas.png",
+                "template": "prologue/8_battle2_ready_texas.png",
                 "roi": [
                     346,
                     157,
@@ -388,26 +427,13 @@
     },
     "Prologue_Battle2_Wait_Until_Use_Texas": {
         "next": "Prologue_Battle2_Use_Texas",
-        "interrupt": "Prologue_Battle2_Tap_Until_Use_Texas"
-    },
-    "Prologue_Battle2_Tap_Until_Use_Texas": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1098,
-                    54,
-                    1,
-                    1
-                ]
-            }
-        }
+        "interrupt": "Prologue_Battle2_Tap_Until_Amiya"
     },
     "Prologue_Battle2_Use_Texas": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/9_use_texas.png",
+                "template": "prologue/9_battle2_use_texas.png",
                 "roi": [
                     719,
                     265,
@@ -432,33 +458,23 @@
     },
     "Prologue_Battle2_Wait_Until_Amiya": {
         "next": "Prologue_Battle2_Use_Amiya_1",
-        "interrupt": "Prologue_Battle2_Tap_Until_Amiya"
-    },
-    "Prologue_Battle2_Tap_Until_Amiya": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1098,
-                    54,
-                    1,
-                    1
-                ]
-            }
-        }
+        "interrupt": [
+            "Prologue_Battle2_Tap_Until_Amiya",
+            "Prologue_Battle2_Tap_Until_2xSpeed"
+        ]
     },
     "Prologue_Battle2_Use_Amiya_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/10_amiya.png",
+                "template": "prologue/10_battle2_amiya.png",
                 "roi": [
-                    618,
-                    60,
-                    162,
-                    171
-                ], // "origin roi" : [668,110,62,71]
-                "threshold": 0.95
+                    625,
+                    58,
+                    134,
+                    134
+                ], // "origin roi" : [675,108,34,34]
+                "threshold": 0.9
             }
         },
         "action": {
@@ -475,6 +491,7 @@
         "next": "Prologue_Battle2_Use_Amiya_2"
     },
     "Prologue_Battle2_Use_Amiya_2": {
+        "pre_delay": 500,
         "action": {
             "type": "Click",
             "param": {
@@ -489,37 +506,24 @@
         "next": "Prologue_Battle2_Wait_Until_Exusiai"
     },
     "Prologue_Battle2_Wait_Until_Exusiai": {
-        "next": [
-            "Prologue_Battle2_Use_Exusiai_1",
-            "Prologue_Story_3_1" // TODO: 애초에 엑시아 스킬을 항상 쓸 수 있도록 이미지 잘 찾기
-        ],
-        "interrupt": "Prologue_Battle2_Tap_Until_Exusiai"
-    },
-    "Prologue_Battle2_Tap_Until_Exusiai": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1098,
-                    54,
-                    1,
-                    1
-                ]
-            }
-        }
+        "next": "Prologue_Battle2_Use_Exusiai_1",
+        "interrupt": [
+            "Prologue_Battle2_Tap_Until_Amiya",
+            "Prologue_Battle2_Tap_Until_2xSpeed"
+        ]
     },
     "Prologue_Battle2_Use_Exusiai_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/11_not_exusiai.png",
+                "template": "prologue/11_battle2_not_exusiai.png",
                 "roi": [
-                    1055,
-                    161,
-                    163,
-                    176
-                ], // "origin roi" : [1105,211,63,76]
-                "threshold": 0.95
+                    1059,
+                    158,
+                    136,
+                    132
+                ], // "origin roi" : [1109,208,36,32]
+                "threshold": 0.9
             }
         },
         "action": {
@@ -536,6 +540,7 @@
         "next": "Prologue_Battle2_Use_Exusiai_2"
     },
     "Prologue_Battle2_Use_Exusiai_2": {
+        "pre_delay": 500,
         "action": {
             "type": "Click",
             "param": {
@@ -551,20 +556,10 @@
     },
     "Prologue_Battle2_Wait_Until_Finish": {
         "next": "Prologue_Story_3_1",
-        "interrupt": "Prologue_Battle2_Tap_Until_Finish"
-    },
-    "Prologue_Battle2_Tap_Until_Finish": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1098,
-                    54,
-                    1,
-                    1
-                ]
-            }
-        }
+        "interrupt": [
+            "Prologue_Battle2_Tap_Until_Amiya",
+            "Prologue_Battle2_Tap_Until_2xSpeed"
+        ]
     },
     "Prologue_Story_3_1": {
         "recognition": {
