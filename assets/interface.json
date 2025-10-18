@@ -74,7 +74,7 @@
                     "name": "프롤로그 (2번째 전투)",
                     "pipeline_override": {
                         "Main": {
-                            "next": "Prologue_Battle2_Start"
+                            "next": "Prologue_Story2_1"
                         }
                     }
                 },
