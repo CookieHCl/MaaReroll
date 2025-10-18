@@ -84,15 +84,23 @@
         "next": "Reset_Remove_Account_2"
     },
     "Reset_Remove_Account_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "reset/4_remove_account_1.png",
+                "roi": [
+                    0,
+                    506,
+                    299,
+                    181
+                ], // "origin roi" : [30,556,199,81]
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    139,
-                    594,
-                    1,
-                    1
-                ]
+                "target": true
             }
         },
         "next": "Reset_Remove_Account_3"
@@ -101,7 +109,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "reset/4_remove_account.png",
+                "template": "reset/5_remove_account_2.png",
                 "roi": [
                     188,
                     104,
@@ -193,7 +201,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "reset/5_confirm_removal.png",
+                "template": "reset/6_confirm_removal.png",
                 "roi": [
                     319,
                     260,
