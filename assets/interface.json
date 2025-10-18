@@ -28,7 +28,7 @@
             "name": "리세마라",
             "entry": "Main",
             "check": true,
-            "doc": "[color:red]리세 진행시 기존 계정은 삭제합니다.[/color]\n로그인 화면에서 계정은 [color:red]1개 이하[/color]로 남겨주세요.\n\n**[앱플레이어 디스플레이 설정]**\n해상도 - 1280x720, DPI - 180dpi, 프레임 - 60\n※ 확인 필수!\n\n",
+            "doc": "[color:red]리세 진행시 기존 계정은 삭제합니다.[/color]\n로그인 화면에서 계정은 [color:red]1개 이하[/color]로 남겨주세요.\n\n**[앱플레이어 디스플레이 설정]**\n해상도 - 1280x720, DPI - 180dpi, 프레임 - 60\n※ 확인 필수!",
             "option": [
                 "리세 방식",
                 "현재 화면",
@@ -51,7 +51,7 @@
             ]
         },
         "현재 화면": {
-            "doc": "현재 표시되는 화면을 선택해 주세요.\n\n로그인, 오퍼레이터, 홈 화면에서는 기존 계정을 삭제합니다.",
+            "doc": "현재 표시되는 화면을 선택해 주세요.\n\n로그인 화면에서는 기존 계정을 삭제합니다.",
             "cases": [
                 {
                     "name": "로그인",
@@ -62,7 +62,7 @@
                     }
                 },
                 {
-                    "name": "프롤로그",
+                    "name": "프롤로그 (1번째 전투)",
                     "pipeline_override": {
                         "Main": {
                             "next": "Start_Prologue"
@@ -94,7 +94,7 @@
                     }
                 },
                 {
-                    "name": "가챠 (홈 화면)",
+                    "name": "홈 (가챠 진행)",
                     "pipeline_override": {
                         "Main": {
                             "next": "Gatcha_Goto_Headhunting"
@@ -102,15 +102,7 @@
                     }
                 },
                 {
-                    "name": "오퍼레이터",
-                    "pipeline_override": {
-                        "Main": {
-                            "next": "Start_Reset"
-                        }
-                    }
-                },
-                {
-                    "name": "홈",
+                    "name": "오퍼레이터 (계정삭제 진행)",
                     "pipeline_override": {
                         "Main": {
                             "next": "Start_Reset"
