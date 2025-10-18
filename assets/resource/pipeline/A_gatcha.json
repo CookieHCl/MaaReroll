@@ -3,13 +3,14 @@
     /* TODO: 퇴각런 아니면 신입 입무 같은거 받아야 함 */
     "Start_Gatcha": {
         "focus": "▶ 가챠 시작",
+        "timeout": 60000,
         "next": "Gatcha_Daily_Plan_1"
     },
     "Gatcha_Daily_Plan_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "gatcha/1_daily_plan_1.png",
+                "template": "gatcha/1_daily_plan_1.png", // 진짜 안 될 것처럼 보이지만 개잘되니까 웬만하면 건드리지 말기
                 "roi": [
                     513,
                     0,

@@ -486,7 +486,10 @@
         "next": "Prologue_Battle2_Wait_Until_Exusiai"
     },
     "Prologue_Battle2_Wait_Until_Exusiai": {
-        "next": "Prologue_Battle2_Use_Exusiai_1",
+        "next": [
+            "Prologue_Battle2_Use_Exusiai_1",
+            "Prologue_Story_3_1" // TODO: 애초에 엑시아 스킬을 항상 쓸 수 있도록 이미지 잘 찾기
+        ],
         "interrupt": "Prologue_Battle2_Tap_Until_Exusiai"
     },
     "Prologue_Battle2_Tap_Until_Exusiai": {
