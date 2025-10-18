@@ -182,8 +182,7 @@
                                         620
                                     ]
                                 }
-                            },
-                            "focus": "- 6성 1개 확인"
+                            }
                         }
                     }
                 },
@@ -206,8 +205,7 @@
                                         310
                                     ]
                                 }
-                            },
-                            "focus": "- 6성 2개 확인"
+                            }
                         }
                     }
                 }
@@ -230,8 +228,7 @@
                                 "param": {
                                     "template": "check/operator/exusiai_the_new_covenant.png"
                                 }
-                            },
-                            "focus": "- 신시아 확인"
+                            }
                         }
                     }
                 },

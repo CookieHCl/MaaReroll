@@ -38,7 +38,7 @@
                 "green_mask": true
             }
         },
-        "focus": "- 6성 1개 확인",
+        "focus": "- 6성 개수 확인",
         "next": "Check_Operator_Name"
     },
     "Check_Operator_Name": {
@@ -58,7 +58,7 @@
                 "threshold": 0.95
             }
         },
-        "focus": "- 신시아 확인",
+        "focus": "- 6성 요원 확인",
         "next": "Check_Success"
     },
     "Check_Success": {
