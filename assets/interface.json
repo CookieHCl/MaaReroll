@@ -233,6 +233,24 @@
                     }
                 },
                 {
+                    "name": "위셔델",
+                    "pipeline_override": {
+                        "Check_Operator_Name": {
+                            "next": [
+                                "Check_Operator_Name_Success",
+                                "Check_Failed"
+                            ]
+                        },
+                        "Check_Operator_Name_Success": {
+                            "recognition": {
+                                "param": {
+                                    "template": "check/operator/wisadel.png"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
                     "name": "없음 (고려 안 함)",
                     "pipeline_override": {}
                 }
