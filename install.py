@@ -3,6 +3,7 @@ from pathlib import Path
 import shutil
 import sys
 import json
+import re
 
 from configure import configure_ocr_model
 
@@ -56,7 +57,7 @@ def install_resource():
     interface["version"] = version
 
     with open(install_path / "interface.json", "w", encoding="utf-8") as f:
-        json.dump(interface, f, ensure_ascii=False, indent=4)
+        json.dump(interface, f, ensure_ascii=False, separators=(',', ':'))
 
 
 def install_chores():
@@ -76,10 +77,28 @@ def install_agent():
         dirs_exist_ok=True,
     )
 
+def load_jsonc(filepath):
+    with open(filepath, "r", encoding="utf-8") as f:
+        raw = f.read()
+    raw = re.sub(r"\/\/.*", "", raw)
+    raw = re.sub(r"\/\*[\s\S]*?\*\/", "", raw)
+    return json.loads(raw)
+def minify_pipelines():
+    pipeline_dir = install_path / "resource" / "pipeline"
+
+    for pipeline_file in pipeline_dir.glob("*.json"):
+        with open(pipeline_file, "r", encoding="utf-8") as f:
+            pipeline_data = load_jsonc(pipeline_file)
+
+        with open(pipeline_file, "w", encoding="utf-8") as f:
+            json.dump(pipeline_data, f, ensure_ascii=False, separators=(',', ':'))
+
 if __name__ == "__main__":
     install_deps()
     install_resource()
     install_chores()
     install_agent()
+
+    minify_pipelines()
 
     print(f"Install to {install_path} successfully.")
