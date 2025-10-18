@@ -5,7 +5,8 @@
         "timeout": 60000,
         "next": [
             "Prologue_Input_Name_1",
-            "Prologue_Story1_1"
+            "Prologue_Story1_1",
+            "Prologue_Battle1_Start"
         ]
     },
     "Prologue_Input_Name_1": {
@@ -106,6 +107,7 @@
                 ]
             }
         },
+        "timeout": 60000,
         "next": "Prologue_Battle1_Start"
     },
     "Prologue_Battle1_Start": {
@@ -321,6 +323,7 @@
                 ]
             }
         },
+        "timeout": 60000,
         "next": "Prologue_Battle2_Start"
     },
     "Prologue_Battle2_Start": {

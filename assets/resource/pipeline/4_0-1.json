@@ -3,6 +3,7 @@
     /* TODO: 0-1 진짜 깨고 TR1 런? */
     "Start_0-1": {
         "focus": "▶ 0-1 시작",
+        "timeout": 60000,
         "next": "0-1_Story1_1"
     },
     "0-1_Story1_1": {
