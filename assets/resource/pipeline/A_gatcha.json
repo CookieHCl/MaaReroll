@@ -115,6 +115,7 @@
         "next": "Gatcha_Get_Mail_1"
     },
     "Gatcha_Get_Mail_1": {
+        "pre_delay": 500,
         "action": {
             "type": "Click",
             "param": {
