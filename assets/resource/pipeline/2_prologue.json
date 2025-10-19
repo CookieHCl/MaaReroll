@@ -160,7 +160,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/4_battle1_op1.png",
+                "template": "prologue/4_battle1_op1_1.png",
                 "roi": [
                     892,
                     536,
@@ -170,7 +170,6 @@
                 "threshold": 0.95
             }
         },
-        "pre_delay": 1000,
         "action": {
             "type": "Swipe",
             "param": {
@@ -189,10 +188,25 @@
                 "duration": 500
             }
         },
-        "next": "Prologue_Battle1_Place_OP1_2"
+        "next": [
+            "Prologue_Battle1_Place_OP1_2",
+            "Prologue_Battle1_Place_OP1_1" // 드래그 씹혔으니 다시
+        ]
     },
     "Prologue_Battle1_Place_OP1_2": {
-        "pre_delay": 500,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/5_battle1_op1_2.png",
+                "roi": [
+                    384,
+                    236,
+                    389,
+                    358
+                ], // "origin roi" : [434,286,289,258]
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Swipe",
             "param": {
@@ -221,7 +235,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/5_battle1_op2.png",
+                "template": "prologue/6_battle1_op2_1.png",
                 "roi": [
                     1046,
                     521,
@@ -231,7 +245,6 @@
                 "threshold": 0.95
             }
         },
-        "pre_delay": 1000,
         "action": {
             "type": "Swipe",
             "param": {
@@ -250,10 +263,25 @@
                 "duration": 500
             }
         },
-        "next": "Prologue_Battle1_Place_OP2_2"
+        "next": [
+            "Prologue_Battle1_Place_OP2_2",
+            "Prologue_Battle1_Place_OP2_1" // 드래그 씹혔으니 다시
+        ]
     },
     "Prologue_Battle1_Place_OP2_2": {
-        "pre_delay": 500,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "prologue/7_battle1_op2_2.png",
+                "roi": [
+                    508,
+                    147,
+                    375,
+                    328
+                ], // "origin roi" : [558,197,275,228]
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Swipe",
             "param": {
@@ -295,7 +323,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/6_story2.png",
+                "template": "prologue/8_story2.png",
                 "roi": [
                     1098,
                     0,
@@ -374,7 +402,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/7_battle2_1xspeed.png",
+                "template": "prologue/9_battle2_1xspeed.png",
                 "roi": [
                     1011,
                     0,
@@ -402,7 +430,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/8_battle2_ready_texas.png",
+                "template": "prologue/10_battle2_ready_texas.png",
                 "roi": [
                     346,
                     157,
@@ -433,7 +461,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/9_battle2_use_texas.png",
+                "template": "prologue/11_battle2_use_texas.png",
                 "roi": [
                     719,
                     265,
@@ -467,7 +495,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/10_battle2_amiya.png",
+                "template": "prologue/12_battle2_amiya.png",
                 "roi": [
                     625,
                     58,
@@ -516,7 +544,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/11_battle2_not_exusiai.png",
+                "template": "prologue/13_battle2_not_exusiai.png",
                 "roi": [
                     1059,
                     158,
@@ -565,7 +593,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "prologue/12_story3.png",
+                "template": "prologue/14_story3.png",
                 "roi": [
                     1098,
                     0,
