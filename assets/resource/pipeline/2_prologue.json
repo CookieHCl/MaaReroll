@@ -274,11 +274,11 @@
             "param": {
                 "template": "prologue/7_battle1_op2_2.png",
                 "roi": [
-                    508,
-                    147,
-                    375,
-                    328
-                ], // "origin roi" : [558,197,275,228]
+                    589,
+                    182,
+                    261,
+                    243
+                ], // "origin roi" : [639,232,161,143]
                 "threshold": 0.95
             }
         },
