@@ -22,9 +22,9 @@
 ## 개발환경
 
 - [VSCode](https://code.visualstudio.com/) + 아래 extension들을 사용합니다.
-  - [Python Black formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) ([ruff](https://docs.astral.sh/ruff/)로 바꿀 생각 있음; 아직 프로젝트 내 Python 코드가 없어서 고려중)
-  - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
   - [Maa Pipeline Support](https://marketplace.visualstudio.com/items?itemName=nekosu.maa-support)
+  - [Python ruff formatter](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
+  - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 특히 Maa Pipeline Support은 반드시 깔아둡시다. VSCode에서 곧바로 task를 실행시킬 수 있습니다.  
 만약 특정 지점부터 매크로를 돌리고 싶은 경우, 그냥 interface.json의 `현재 화면` 부분을 임시로 수정한 다음에 돌리면 됩니다. 까먹고 커밋하는 일만 없으면 됩니다.
@@ -37,7 +37,9 @@ PrintScreen 같은 방식의 캡쳐는 **절대로 하면 안 됩니다!!!**
 
 ## Pipeline 개발
 
-MaaFramework의 [PipelineProtocol](https://maafw.xyz/en/docs/3.1-PipelineProtocol.html)을 참고해 [파이프라인](assets/resource/pipeline/)들을, [ProjectInterface](https://maafw.xyz/en/docs/3.2-ProjectInterface.html)를 참고해 [interface.json](assets/interface.json)을 작성하면 됩니다.
+MaaFramework의 [PipelineProtocol](https://maafw.xyz/en/docs/3.1-PipelineProtocol.html)을 참고해 [pipeline](assets/resource/pipeline/)들을, [ProjectInterface](https://maafw.xyz/en/docs/3.2-ProjectInterface.html)를 참고해 [interface.json](assets/interface.json)을 작성하면 됩니다.
+
+Pipeline들은 [assets/resource/pipeline](assets/resource/pipeline/) 폴더에, pipeline에서 사용하는 이미지들은 [assets/resource/image](assets/resource/image/) 폴더에 있습니다.
 
 ### Pipeline 팁들
 
@@ -148,7 +150,7 @@ json으로 처리하기 복잡한 로직이나 MaaFramework에서 지원하지 �
 ### 프로젝트 관련
 
 - 사진/pipeline을 1,2,3,4 순서로 만드는게 정말 구리다.. 특히 중간에 작업 삽입/삭제 일어나면 난리남  
-  - pipeline까지는 숫자를 붙이고 사진은 숫자를 떼기? 파이프라인 순서는 거의 바뀔 일 없음
+  - pipeline까지는 숫자를 붙이고 사진은 숫자를 떼기? pipeline 순서는 거의 바뀔 일 없음
 - MFAAvalonia는 자동 업데이트를 지원하는데 그 기능 관심 없어서 손도 안 댔음 -> 손 대기
 - MFAAvalonia에서 매크로가 실패했다면 실패했다고 알려주기
   - 특히 어디서 실패했는지 로그에서 알려주면 걍 알아서 MFAAvalonia 캡쳐만 하라고 해도 로그쌀먹 가능함

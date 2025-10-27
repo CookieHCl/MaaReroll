@@ -5,13 +5,11 @@ from maa.context import Context
 
 @AgentServer.custom_recognition("my_reco_222")
 class MyRecongition(CustomRecognition):
-
     def analyze(
         self,
         context: Context,
         argv: CustomRecognition.AnalyzeArg,
     ) -> CustomRecognition.AnalyzeResult:
-
         reco_detail = context.run_recognition(
             "MyCustomOCR",
             argv.image,

@@ -38,7 +38,6 @@ def install_deps():
 
 
 def install_resource():
-
     configure_ocr_model()
 
     shutil.copytree(
