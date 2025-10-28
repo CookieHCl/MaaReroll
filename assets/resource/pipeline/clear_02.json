@@ -1,0 +1,579 @@
+{
+    "Clear_Start_02": {
+        "focus": "▶ 0-2 클리어 시작",
+        "next": "Start_02"
+    },
+    "02_Skip_Amiya_Dia": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    40,
+                    125,
+                    1,
+                    1
+                ]
+            }
+        }
+    },
+    "Start_02": {
+        "next": "02_Move_Right"
+    },
+    "02_Move_Right": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    845,
+                    372,
+                    1,
+                    1
+                ],
+                "end": [
+                    206,
+                    379,
+                    1,
+                    1
+                ],
+                "duration": 300
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "02_Press_02",
+            "02_Move_Right"
+        ]
+    },
+    "02_Press_02": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_op_btn.png",
+                "roi": [
+                    577,
+                    409,
+                    121,
+                    35
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 3000,
+        "next": "02_Start_02"
+    },
+    "02_Start_02": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1150,
+                    650,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "02_Find_Ami"
+    },
+    "02_Find_Ami": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_ami_dia.png",
+                "roi": [
+                    53,
+                    58,
+                    145,
+                    143
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "02_Wait_hib"
+    },
+    "02_Wait_hib": {
+        "next": "02_Add_Hib",
+        "interrupt": "02_Skip_Amiya_Dia"
+    },
+    "02_Add_Hib": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_add_hib.png",
+                "roi": [
+                    857,
+                    30,
+                    107,
+                    59
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 1000,
+        "next": "02_Click_Hib"
+    },
+    "02_Click_Hib": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1155,
+                    570,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "02_Select_Hib",
+            "02_Click_Hib"
+        ]
+    },
+    "02_Select_Hib": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_hib_select.png",
+                "roi": [
+                    659,
+                    76,
+                    324,
+                    556
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "02_Check_Hib",
+            "02_Select_Hib"
+        ]
+    },
+    "02_Check_Hib": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_hib_selected.png",
+                "roi": [
+                    659,
+                    76,
+                    324,
+                    556
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1100,
+                    680,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "02_Op_Start",
+            "02_Check_Hib"
+        ]
+    },
+    "02_Op_Start": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_op_start.png",
+                "roi": [
+                    1041,
+                    375,
+                    119,
+                    232
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "02_Skp_01"
+    },
+    "02_Skp_01": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_skip_01.png",
+                "roi": [
+                    1148,
+                    39,
+                    75,
+                    26
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "02_Skpok_01"
+    },
+    "02_Skpok_01": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_skipok_01.png",
+                "roi": [
+                    777,
+                    446,
+                    40,
+                    33
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "02_Skp_02"
+    },
+    "02_Skp_02": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_dobe.png",
+                "roi": [
+                    58,
+                    60,
+                    140,
+                    134
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1183,
+                    53,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": "02_Skpok_02"
+    },
+    "02_Skpok_02": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_skipok_02.png",
+                "roi": [
+                    780,
+                    345,
+                    37,
+                    33
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 500,
+        "next": "02_2x_01"
+    },
+    "02_2x_01": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1100,
+                    50,
+                    1,
+                    1
+                ]
+            }
+        },
+        "timeout": 60000,
+        "next": "02_Deploy_Nko"
+    },
+    "02_Deploy_Nko": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_deploy_nko.png",
+                "roi": [
+                    931,
+                    604,
+                    107,
+                    107
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    996,
+                    662,
+                    1,
+                    1
+                ],
+                "end": [
+                    810,
+                    386,
+                    1,
+                    1
+                ],
+                "duration": 500
+            }
+        },
+        "next": [
+            "02_DeployR_Nko",
+            "02_Deploy_Nko"
+        ]
+    },
+    "02_DeployR_Nko": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_deployr_nko.png",
+                "roi": [
+                    552,
+                    187,
+                    101,
+                    77
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    730,
+                    318,
+                    1,
+                    1
+                ],
+                "end": [
+                    1160,
+                    315,
+                    1,
+                    1
+                ],
+                "duration": 500
+            }
+        },
+        "timeout": 60000,
+        "next": "02_Deploy_Ami"
+    },
+    "02_Deploy_Ami": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_deploy_ami.png",
+                "roi": [
+                    1168,
+                    605,
+                    107,
+                    103
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1220,
+                    661,
+                    1,
+                    1
+                ],
+                "end": [
+                    932,
+                    470,
+                    1,
+                    1
+                ],
+                "duration": 500
+            }
+        },
+        "next": [
+            "02_DeployR_Ami",
+            "02_Deploy_Ami"
+        ]
+    },
+    "02_DeployR_Ami": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_deployr_ami.png",
+                "roi": [
+                    644,
+                    241,
+                    83,
+                    91
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    872,
+                    420,
+                    1,
+                    1
+                ],
+                "end": [
+                    864,
+                    68,
+                    1,
+                    1
+                ],
+                "duration": 500
+            }
+        },
+        "timeout": 60000,
+        "next": "02_Skip_EStory"
+    },
+    "02_Skip_EStory": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_skip_03.png",
+                "roi": [
+                    1146,
+                    39,
+                    75,
+                    26
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": [
+            "02_Skip_Chk",
+            "02_Skip_EStory"
+        ]
+    },
+    "02_Skip_Chk": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_02/02_skipok_03.png",
+                "roi": [
+                    779,
+                    444,
+                    39,
+                    39
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 3000,
+        "next": "02_Op_End"
+    },
+    "02_Op_End": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_01/01_end.png",
+                "roi": [
+                    72,
+                    294,
+                    58,
+                    59
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "02_Wait_End"
+    },
+    "02_Wait_End": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    300,
+                    250,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "02_Wait_Ami",
+            "02_Wait_End"
+        ]
+    },
+    "02_Wait_Ami": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_01/01_amiya_dia.png",
+                "roi": [
+                    58,
+                    55,
+                    139,
+                    147
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "02_End_Tutorial"
+    }
+}

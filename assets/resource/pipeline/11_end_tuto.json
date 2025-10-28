@@ -1,0 +1,788 @@
+{
+    "11_End_Tutorial": {
+        "focus": "▶ 추가 튜토리얼 시작",
+        "next": "11_Cl_Tutorial"
+    },
+    "11_Cl_Tutorial": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_prts_dia.png",
+                "roi": [
+                    56,
+                    57,
+                    143,
+                    140
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1000,
+                    620,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": "11_Cl_00"
+    },
+    "11_Cl_00": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1000,
+                    620,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_01",
+            "11_Cl_00"
+        ]
+    },
+    "11_Cl_01": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_dia.png",
+                "roi": [
+                    55,
+                    59,
+                    144,
+                    144
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 500,
+        "next": "11_Cl_02"
+    },
+    "11_Cl_02": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    170,
+                    200,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Build",
+            "11_Cl_02"
+        ]
+    },
+    "11_Cl_Build": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_ele.png",
+                "roi": [
+                    291,
+                    143,
+                    59,
+                    54
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": [
+            "11_Cl_Build_Ac",
+            "11_Cl_Build"
+        ]
+    },
+    "11_Cl_Build_Ac": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_build_ac.png",
+                "roi": [
+                    883,
+                    524,
+                    50,
+                    48
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": [
+            "11_Cl_Build_2",
+            "11_Cl_Build_Ac"
+        ]
+    },
+    "11_Cl_Build_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_ele_2.png",
+                "roi": [
+                    290,
+                    250,
+                    57,
+                    49
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": [
+            "11_Cl_Build_Ac_2",
+            "11_Cl_Build_2"
+        ]
+    },
+    "11_Cl_Build_Ac_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_build_ac.png",
+                "roi": [
+                    883,
+                    524,
+                    50,
+                    48
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "11_Cl_Build_3"
+    },
+    "11_Cl_Build_3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    340,
+                    300,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Build_Ac_3",
+            "11_Cl_Build_3"
+        ]
+    },
+    "11_Cl_Build_Ac_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_build_ac.png",
+                "roi": [
+                    883,
+                    524,
+                    50,
+                    48
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "11_Cl_Build_4"
+    },
+    "11_Cl_Build_4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    320,
+                    300,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Build_Ac_4",
+            "11_Cl_Build_4"
+        ]
+    },
+    "11_Cl_Build_Ac_4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_build_ac.png",
+                "roi": [
+                    883,
+                    524,
+                    50,
+                    48
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "11_Cl_Build_5"
+    },
+    "11_Cl_Build_5": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    300,
+                    300,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Build_Ac_5",
+            "11_Cl_Build_5"
+        ]
+    },
+    "11_Cl_Build_Ac_5": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_build_ac.png",
+                "roi": [
+                    883,
+                    524,
+                    50,
+                    48
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "11_Cl_Build_6"
+    },
+    "11_Cl_Build_6": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    320,
+                    300,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Build_Ac_6",
+            "11_Cl_Build_6"
+        ]
+    },
+    "11_Cl_Build_Ac_6": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_build_ac2.png",
+                "roi": [
+                    882,
+                    561,
+                    51,
+                    48
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "11_Cl_Build_7"
+    },
+    "11_Cl_Build_7": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    320,
+                    300,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "11_Cl_Build_Ac_7",
+            "11_Cl_Build_7"
+        ]
+    },
+    "11_Cl_Build_Ac_7": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_build_ac2.png",
+                "roi": [
+                    882,
+                    561,
+                    51,
+                    48
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "11_Cl_Build_8"
+    },
+    "11_Cl_Build_8": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    300,
+                    300,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "11_Cl_Build_Ac_8",
+            "11_Cl_Build_8"
+        ]
+    },
+    "11_Cl_Build_Ac_8": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_build_ac2.png",
+                "roi": [
+                    882,
+                    561,
+                    51,
+                    48
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 300,
+        "next": "11_Cl_Build_Off"
+    },
+    "11_Cl_Build_Off": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    176,
+                    206,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": "11_Cl_Ma_2"
+    },
+    "11_Cl_Ma_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    340,
+                    300,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Ma_3",
+            "11_Cl_Build_Off"
+        ]
+    },
+    "11_Cl_Ma_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_en.png",
+                "roi": [
+                    388,
+                    619,
+                    109,
+                    29
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "11_Cl_Ma_4"
+    },
+    "11_Cl_Ma_4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    330,
+                    650,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "11_Cl_Ma_5",
+            "11_Cl_Ma_4"
+        ]
+    },
+    "11_Cl_Ma_5": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_inf.png",
+                "roi": [
+                    1079,
+                    25,
+                    81,
+                    28
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    485,
+                    200,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": "11_Cl_Ma_6"
+    },
+    "11_Cl_Ma_6": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1185,
+                    675,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "11_Cl_Ma_7"
+    },
+    "11_Cl_Ma_7": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_prts_dia.png",
+                "roi": [
+                    56,
+                    57,
+                    143,
+                    140
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "11_Cl_Ma_8"
+    },
+    "11_Cl_Ma_8": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1126,
+                    330,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Ma_9",
+            "11_Cl_Ma_8"
+        ]
+    },
+    "11_Cl_Ma_9": {
+        "pre_delay": 500,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_ex.png",
+                "roi": [
+                    281,
+                    116,
+                    97,
+                    79
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 500,
+        "next": "11_Cl_Ma_10"
+    },
+    "11_Cl_Ma_10": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    950,
+                    600,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Ma_11",
+            "11_Cl_Ma_10"
+        ]
+    },
+    "11_Cl_Ma_11": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_go.png",
+                "roi": [
+                    283,
+                    283,
+                    80,
+                    71
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "11_Cl_Ma_12"
+    },
+    "11_Cl_Ma_12": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    300,
+                    650,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Ma_13",
+            "11_Cl_Ma_12"
+        ]
+    },
+    "11_Cl_Ma_13": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_inf.png",
+                "roi": [
+                    1079,
+                    25,
+                    81,
+                    28
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    485,
+                    200,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": "11_Cl_Ma_14"
+    },
+    "11_Cl_Ma_14": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1185,
+                    675,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "11_Cl_Ma_15"
+    },
+    "11_Cl_Ma_15": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    425,
+                    320,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "11_Cl_Ma_16",
+            "11_Cl_Ma_15"
+        ]
+    },
+    "11_Cl_Ma_16": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_go_2.png",
+                "roi": [
+                    720,
+                    284,
+                    174,
+                    72
+                ],
+                "threshold": 0.95
+            }
+        },
+        "post_delay": 2000,
+        "next": "11_Cl_Exit"
+    },
+    "11_Cl_Exit": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    270,
+                    40,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "11_Cl_Home",
+            "11_Cl_Exit"
+        ]
+    },
+    "11_Cl_Home": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_cl_home.png",
+                "roi": [
+                    73,
+                    154,
+                    42,
+                    150
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 2000,
+        "next": "11_Cl_Home_2"
+    },
+    "11_Cl_Home_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    850,
+                    500,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "11_Cl_Main"
+    },
+    "11_Cl_Main": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_main.png",
+                "roi": [
+                    392,
+                    179,
+                    91,
+                    67
+                ],
+                "threshold": 0.95
+            }
+        },
+        "post_delay": 3000,
+        "next": "11_Get_Daily"
+    } 
+}
