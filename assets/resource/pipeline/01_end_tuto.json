@@ -97,15 +97,31 @@
         ]
     },
     "01_TStage_Tuto_Start": {
+        "type": "Click",
+        "param": {
+            "target": [
+                300,
+                635,
+                1,
+                1
+            ]
+        },
+        "post_delay": 500,
+        "next": [
+            "01_Back_Battle_01",
+            "01_TStage_Tuto_Start"
+        ]
+    },
+    "01_Back_Battle_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "01_end_tuto/01E_back_op.png",
+                "template": "01_end_tuto/01_prts_dia.png",
                 "roi": [
-                    899,
-                    124,
-                    152,
-                    149
+                    50,
+                    51,
+                    153,
+                    148
                 ],
                 "threshold": 0.95
             }
@@ -113,12 +129,31 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": true
+                "target": [
+                    470,
+                    400,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "01_Back_Battle_02"
+    },
+    "01_Back_Battle_02": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    470,
+                    400,
+                    1,
+                    1
+                ]
             }
         },
         "next": [
             "01_Starting_TR1",
-            "01_TStage_Tuto_Start"
+            "01_Back_Battle_02"
         ]
     },
     "01_Starting_TR1": {
@@ -128,10 +163,10 @@
             "param": {
                 "template": "01_end_tuto/01_TR1.png",
                 "roi": [
-                    509,
-                    411,
-                    101,
-                    44
+                    397,
+                    362,
+                    376,
+                    156
                 ],
                 "threshold": 0.95
             }
