@@ -68,6 +68,7 @@
         },
         "next": [
             "10_Re_01",
+            "10_Re_01_2",
             "10_Re_00"
         ]
     },
@@ -81,6 +82,34 @@
                     645,
                     47,
                     51
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    530,
+                    670,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": "10_Re_02"
+    },
+    "10_Re_01_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "10_end_tuto/10_re_map_2.png",
+                "roi": [
+                    508,
+                    649,
+                    42,
+                    36
                 ],
                 "threshold": 0.95
             }
