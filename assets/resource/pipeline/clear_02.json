@@ -121,7 +121,7 @@
                 "target": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": "02_Click_Hib"
     },
     "02_Click_Hib": {
@@ -136,9 +136,23 @@
                 ]
             }
         },
+        "next": "02_Click_Hib_1"
+    },
+    "02_Click_Hib_1": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1155,
+                    570,
+                    1,
+                    1
+                ]
+            }
+        },
         "next": [
             "02_Select_Hib",
-            "02_Click_Hib"
+            "02_Click_Hib_1"
         ]
     },
     "02_Select_Hib": {
@@ -161,7 +175,7 @@
                 "target": true
             }
         },
-        "post_delay": 500,
+        "post_delay": 1000,
         "next": [
             "02_Check_Hib",
             "02_Select_Hib"

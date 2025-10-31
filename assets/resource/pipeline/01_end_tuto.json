@@ -62,31 +62,9 @@
             }
         },
         "next": [
-            "01_Check_Exp",
+            "01_Check_Reward",
             "01_Wait_Reward"
         ]
-    },
-    "01_Check_Exp": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "01_end_tuto/01_reward_exp.png",
-                "roi": [
-                    620,
-                    626,
-                    41,
-                    29
-                ],
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": true
-            }
-        },
-        "next": "01_Check_Reward"
     },
     "01_Check_Reward": {
         "recognition": {
@@ -179,6 +157,7 @@
                 ]
             }
         },
+        "post_delay": 1000,
         "next": [
             "01_TR1_Op_Ami",
             "01_TR1_Op"
