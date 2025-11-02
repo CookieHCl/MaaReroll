@@ -98,7 +98,10 @@
             }
         },
         "post_delay": 500,
-        "next": "10_Re_02"
+        "next": [
+            "10_Re_02",
+            "10_Re_01"
+        ]
     },
     "10_Re_01_2": {
         "recognition": {
@@ -126,7 +129,10 @@
             }
         },
         "post_delay": 500,
-        "next": "10_Re_02"
+        "next": [
+            "10_Re_02",
+            "10_Re_01_2"
+        ]
     },
     "10_Re_02": {
         "recognition": {
