@@ -80,21 +80,7 @@
                 "threshold": 0.95
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    90,
-                    40,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": [
-            "01_TStage_Tuto_Start",
-            "01_Check_Reward"
-        ]
+        "next": "01_TStage_Tuto_Start"
     },
     "01_TStage_Tuto_Start": {
         "type": "Click",

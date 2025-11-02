@@ -129,6 +129,19 @@
         "next": "10_Re_02"
     },
     "10_Re_02": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "10_end_tuto/10_re_main.png",
+                "roi": [
+                    791,
+                    38,
+                    74,
+                    13
+                ],
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {

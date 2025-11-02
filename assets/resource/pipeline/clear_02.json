@@ -192,7 +192,7 @@
                     324,
                     556
                 ],
-                "threshold": 0.95
+                "threshold": 0.98
             }
         },
         "action": {
