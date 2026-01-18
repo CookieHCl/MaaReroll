@@ -28,7 +28,7 @@
                 "target": true
             }
         },
-        "next": "0-1_Story1_2"
+        "next": ["0-1_Story1_2"]
     },
     "0-1_Story1_2": {
         "action": {
@@ -43,7 +43,7 @@
             }
         },
         "timeout": 60000,
-        "next": "0-1_Battle"
+        "next": ["0-1_Battle"]
     },
     "0-1_Battle": {
         "recognition": {
@@ -65,7 +65,7 @@
                 "target": true
             }
         },
-        "next": "0-1_Retreat_1"
+        "next": ["0-1_Retreat_1"]
     },
     /* 퇴각런시 */
     "0-1_Retreat_1": {
@@ -88,7 +88,7 @@
                 "target": true
             }
         },
-        "next": "0-1_Retreat_2"
+        "next": ["0-1_Retreat_2"]
     },
     "0-1_Retreat_2": {
         "recognition": {
@@ -110,11 +110,13 @@
                 "target": true
             }
         },
-        "next": "0-1_Retreat_Wait_Until_Home"
+        "next": ["0-1_Retreat_Wait_Until_Home"]
     },
     "0-1_Retreat_Wait_Until_Home": {
-        "next": "0-1_Retreat_Go_Home_1",
-        "interrupt": "0-1_Retreat_Tap_Until_Home"
+        "next": [
+            "0-1_Retreat_Go_Home_1",
+            "[JumpBack]0-1_Retreat_Tap_Until_Home"
+        ]
     },
     "0-1_Retreat_Tap_Until_Home": {
         "action": {
@@ -149,7 +151,7 @@
                 "target": true
             }
         },
-        "next": "0-1_Retreat_Go_Home_2"
+        "next": ["0-1_Retreat_Go_Home_2"]
     },
     "0-1_Retreat_Go_Home_2": {
         "recognition": {
@@ -171,6 +173,6 @@
                 "target": true
             }
         },
-        "next": "Start_Gatcha"
+        "next": ["Start_Gatcha"]
     }
 }

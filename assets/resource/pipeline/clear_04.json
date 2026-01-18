@@ -1,7 +1,7 @@
 {
     "Clear_Start_04": {
         "focus": "▶ 0-4 클리어 시작",
-        "next": "Start_04"
+        "next": ["Start_04"]
     },
     "04_Skip_Amiya_Dia": {
         "action": {
@@ -17,7 +17,7 @@
         }
     },
     "Start_04": {
-        "next": "04_Move_Right"
+        "next": ["04_Move_Right"]
     },
     "04_Move_Right": {
         "action": {
@@ -65,7 +65,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "04_Start_04"
+        "next": ["04_Start_04"]
     },
     "04_Start_04": {
         "action": {
@@ -79,7 +79,7 @@
                 ]
             }
         },
-        "next": "04_Find_Ami"
+        "next": ["04_Find_Ami"]
     },
     "04_Find_Ami": {
         "recognition": {
@@ -95,11 +95,13 @@
                 "threshold": 0.95
             }
         },
-        "next": "04_Wait_Jes"
+        "next": ["04_Wait_Jes"]
     },
     "04_Wait_Jes": {
-        "next": "04_Add_Jes",
-        "interrupt": "04_Skip_Amiya_Dia"
+        "next": [
+            "04_Add_Jes",
+            "[JumpBack]04_Skip_Amiya_Dia"
+        ]
     },
     "04_Add_Jes": {
         "recognition": {
@@ -122,7 +124,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "04_Click_Jes"
+        "next": ["04_Click_Jes"]
     },
     "04_Click_Jes": {
         "action": {
@@ -180,7 +182,7 @@
                 "threshold": 0.95
             }
         },
-        "next": "04_Click_Ad1"
+        "next": ["04_Click_Ad1"]
     },
     "04_Click_Ad1": {
         "recognition": {
@@ -221,7 +223,7 @@
                 "threshold": 0.95
             }
         },
-        "next": "04_Click_Ok"
+        "next": ["04_Click_Ok"]
     },
     "04_Click_Ok": {
         "action": {
@@ -235,7 +237,7 @@
                 ]
             }
         },
-        "next": "04_Op_Start"
+        "next": ["04_Op_Start"]
     },
     "04_Op_Start": {
         "recognition": {
@@ -257,7 +259,7 @@
                 "target": true
             }
         },
-        "next": "04_Skp_01"
+        "next": ["04_Skp_01"]
     },
     "04_Skp_01": {
         "recognition": {
@@ -279,7 +281,7 @@
                 "target": true
             }
         },
-        "next": "04_Skpok_01"
+        "next": ["04_Skpok_01"]
     },
     "04_Skpok_01": {
         "recognition": {
@@ -301,7 +303,7 @@
                 "target": true
             }
         },
-        "next": "04_Skp_02"
+        "next": ["04_Skp_02"]
     },
     "04_Skp_02": {
         "recognition": {
@@ -329,7 +331,7 @@
             }
         },
         "post_delay": 300,
-        "next": "04_Skpok_02"
+        "next": ["04_Skpok_02"]
     },
     "04_Skpok_02": {
         "recognition": {
@@ -352,7 +354,7 @@
             }
         },
         "post_delay": 500,
-        "next": "04_2x_01"
+        "next": ["04_2x_01"]
     },
     "04_2x_01": {
         "recognition": {
@@ -375,7 +377,7 @@
             }
         },
         "timeout": 60000,
-        "next": "04_Deploy_Jes"
+        "next": ["04_Deploy_Jes"]
     },
     "04_Deploy_Jes": {
         "recognition": {
@@ -447,7 +449,7 @@
             }
         },
         "timeout": 60000,
-        "next": "04_Deploy_Nko"
+        "next": ["04_Deploy_Nko"]
     },
     "04_Deploy_Nko": {
         "recognition": {
@@ -519,7 +521,7 @@
             }
         },
         "timeout": 60000,
-        "next": "04_Deploy_Ami"
+        "next": ["04_Deploy_Ami"]
     },
     "04_Deploy_Ami": {
         "recognition": {
@@ -591,7 +593,7 @@
             }
         },
         "timeout": 60000,
-        "next": "04_Deploy_Ad"
+        "next": ["04_Deploy_Ad"]
     },
     "04_Deploy_Ad": {
         "recognition": {
@@ -663,7 +665,7 @@
             }
         },
         "timeout": 60000,
-        "next": "04_Op_End"
+        "next": ["04_Op_End"]
     },
     "04_Op_End": {
         "recognition": {
@@ -685,7 +687,7 @@
                 "target": true
             }
         },
-        "next": "04_Wait_End"
+        "next": ["04_Wait_End"]
     },
     "04_Wait_End": {
         "action": {
@@ -718,6 +720,6 @@
                 "threshold": 0.95
             }
         },
-        "next": "04_End_Tutorial"
+        "next": ["04_End_Tutorial"]
     }
 }

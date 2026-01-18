@@ -1,11 +1,13 @@
 {
     /* 메인화면 돌아온 직후부터 0-1 진입까지 */
     "Start_Interlude": {
-        "next": "Interlude_Wait_Until_Headhunting"
+        "next": ["Interlude_Wait_Until_Headhunting"]
     },
     "Interlude_Wait_Until_Headhunting": {
-        "next": "Interlude_Headhunting_1",
-        "interrupt": "Interlude_Tap_Until_Headhunting"
+        "next": [
+            "Interlude_Headhunting_1",
+            "[JumpBack]Interlude_Tap_Until_Headhunting"
+        ]
     },
     "Interlude_Tap_Until_Headhunting": {
         "action": {
@@ -45,7 +47,7 @@
                 ]
             }
         },
-        "next": "Interlude_Headhunting_2"
+        "next": ["Interlude_Headhunting_2"]
     },
     "Interlude_Headhunting_2": {
         "recognition": {
@@ -67,11 +69,13 @@
                 "target": true
             }
         },
-        "next": "Interlude_Wait_Until_Squad"
+        "next": ["Interlude_Wait_Until_Squad"]
     },
     "Interlude_Wait_Until_Squad": {
-        "next": "Interlude_Squad_1",
-        "interrupt": "Interlude_Tap_Until_Squad"
+        "next": [
+            "Interlude_Squad_1",
+            "[JumpBack]Interlude_Tap_Until_Squad"
+        ]
     },
     "Interlude_Tap_Until_Squad": {
         "action": {
@@ -111,7 +115,7 @@
                 ]
             }
         },
-        "next": "Interlude_Squad_2"
+        "next": ["Interlude_Squad_2"]
     },
     "Interlude_Squad_2": {
         "recognition": {
@@ -138,7 +142,7 @@
                 ]
             }
         },
-        "next": "Interlude_Squad_3"
+        "next": ["Interlude_Squad_3"]
     },
     "Interlude_Squad_3": {
         "action": {
@@ -152,7 +156,7 @@
                 ]
             }
         },
-        "next": "Interlude_Close_Squad_1"
+        "next": ["Interlude_Close_Squad_1"]
     },
     "Interlude_Close_Squad_1": {
         "recognition": {
@@ -179,7 +183,7 @@
                 ]
             }
         },
-        "next": "Interlude_Close_Squad_2"
+        "next": ["Interlude_Close_Squad_2"]
     },
     "Interlude_Close_Squad_2": {
         "recognition": {
@@ -206,11 +210,13 @@
                 ]
             }
         },
-        "next": "Interlude_Wait_Until_Story"
+        "next": ["Interlude_Wait_Until_Story"]
     },
     "Interlude_Wait_Until_Story": {
-        "next": "Interlude_Story",
-        "interrupt": "Interlude_Tap_Until_Story"
+        "next": [
+            "Interlude_Story",
+            "[JumpBack]Interlude_Tap_Until_Story"
+        ]
     },
     "Interlude_Tap_Until_Story": {
         "action": {
@@ -250,7 +256,7 @@
                 ]
             }
         },
-        "next": "Interlude_0-1_1"
+        "next": ["Interlude_0-1_1"]
     },
     "Interlude_0-1_1": {
         "recognition": {
@@ -277,7 +283,7 @@
                 ]
             }
         },
-        "next": "Interlude_0-1_2"
+        "next": ["Interlude_0-1_2"]
     },
     "Interlude_0-1_2": {
         "recognition": {
@@ -304,7 +310,7 @@
                 ]
             }
         },
-        "next": "Interlude_0-1_3"
+        "next": ["Interlude_0-1_3"]
     },
     "Interlude_0-1_3": {
         "recognition": {
@@ -331,6 +337,6 @@
                 ]
             }
         },
-        "next": "Start_0-1"
+        "next": ["Start_0-1"]
     }
 }

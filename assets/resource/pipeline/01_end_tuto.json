@@ -1,7 +1,7 @@
 {
     "01_End_Tutorial": {
         "focus": "▶ 추가 튜토리얼 시작",
-        "next": "01_Mission_Tutorial"
+        "next": ["01_Mission_Tutorial"]
     },
     "01_Skip_Amiya_Dia": {
         "action": {
@@ -47,7 +47,7 @@
                 "threshold": 0.95
             }
         },
-        "next": "01_Wait_Reward"
+        "next": ["01_Wait_Reward"]
     },
     "01_Wait_Reward": {
         "action": {
@@ -80,7 +80,7 @@
                 "threshold": 0.95
             }
         },
-        "next": "01_TStage_Tuto_Start"
+        "next": ["01_TStage_Tuto_Start"]
     },
     "01_TStage_Tuto_Start": {
         "type": "Click",
@@ -123,7 +123,7 @@
                 ]
             }
         },
-        "next": "01_Back_Battle_02"
+        "next": ["01_Back_Battle_02"]
     },
     "01_Back_Battle_02": {
         "action": {
@@ -164,7 +164,7 @@
             }
         },
         "post_delay": 2000,
-        "next": "01_TR1_Op"
+        "next": ["01_TR1_Op"]
     },
     "01_TR1_Op": {
         "action": {
@@ -204,11 +204,13 @@
                 "target": true
             }
         },
-        "next": "01_TR1_Op_Wait_Start"
+        "next": ["01_TR1_Op_Wait_Start"]
     },
     "01_TR1_Op_Wait_Start": {
-        "next": "01_TR1_Op_Start",
-        "interrupt": "01_Skip_Amiya_Dia"
+        "next": [
+            "01_TR1_Op_Start",
+            "[JumpBack]01_Skip_Amiya_Dia"
+        ]
     },
     "01_TR1_Op_Start": {
         "recognition": {
@@ -230,7 +232,7 @@
                 "target": true
             }
         },
-        "next": "TR1_Wait_Load"
+        "next": ["TR1_Wait_Load"]
     },
     "TR1_Wait_Load": {
         "action": {
@@ -269,7 +271,7 @@
                 "target": true
             }
         },
-        "next": "TR1_Skip_Chk"
+        "next": ["TR1_Skip_Chk"]
     },
     "TR1_Skip_Chk": {
         "recognition": {
@@ -292,7 +294,7 @@
             }
         },
         "post_delay": 1000,
-        "next": "TR1_2x_01"
+        "next": ["TR1_2x_01"]
     },
     "TR1_2x_01": {
         "action": {
@@ -307,7 +309,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR1_Deploy_Ran"
+        "next": ["TR1_Deploy_Ran"]
     },
     "TR1_Deploy_Ran": {
         "recognition": {
@@ -379,7 +381,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR1_Deploy_Yato"
+        "next": ["TR1_Deploy_Yato"]
     },
     "TR1_Deploy_Yato": {
         "recognition": {
@@ -451,7 +453,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR1_Skip2"
+        "next": ["TR1_Skip2"]
     },
     "TR1_Skip2": {
         "recognition": {
@@ -473,7 +475,7 @@
                 "target": true
             }
         },
-        "next": "TR1_Skip_Chk2"
+        "next": ["TR1_Skip_Chk2"]
     },
     "TR1_Skip_Chk2": {
         "recognition": {
@@ -496,7 +498,7 @@
             }
         },
         "post_delay": 1000,
-        "next": "TR1_2x_02"
+        "next": ["TR1_2x_02"]
     },
     "TR1_2x_02": {
         "action": {
@@ -511,7 +513,7 @@
             }
         },
         "timeout": 60000,
-        "next": "01_Deploy_Hib"
+        "next": ["01_Deploy_Hib"]
     },
     "01_Deploy_Hib": {
         "recognition": {
@@ -583,12 +585,14 @@
             }
         },
         "timeout": 60000,
-        "next": "TR1_Wait_Recruit"
+        "next": ["TR1_Wait_Recruit"]
     },
     "TR1_Wait_Recruit": {
         "timeout": 60000,
-        "next": "TR1_Op_End",
-        "interrupt": "01_Skip_Amiya_Dia"
+        "next": [
+            "TR1_Op_End",
+            "[JumpBack]01_Skip_Amiya_Dia"
+        ]
     },
     "TR1_Op_End": {
         "recognition": {
@@ -630,6 +634,6 @@
                 "threshold": 0.95
             }
         },
-        "next": "Clear_Start_02"
+        "next": ["Clear_Start_02"]
     }
 }

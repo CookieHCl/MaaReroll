@@ -4,7 +4,7 @@
     "Start_Gatcha": {
         "focus": "▶ 가챠 시작",
         "timeout": 60000,
-        "next": "Gatcha_Daily_Plan_1"
+        "next": ["Gatcha_Daily_Plan_1"]
     },
     "Gatcha_Daily_Plan_1": {
         "recognition": {
@@ -31,7 +31,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Daily_Plan_2"
+        "next": ["Gatcha_Daily_Plan_2"]
     },
     "Gatcha_Daily_Plan_2": {
         "recognition": {
@@ -58,7 +58,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Rookie_Mission"
+        "next": ["Gatcha_Rookie_Mission"]
     },
     "Gatcha_Rookie_Mission": {
         "recognition": {
@@ -85,7 +85,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Get_Mail_1"
+        "next": ["Gatcha_Get_Mail_1"]
     },
     "Gatcha_Notice": {
         "recognition": {
@@ -112,7 +112,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Get_Mail_1"
+        "next": ["Gatcha_Get_Mail_1"]
     },
     "Gatcha_Get_Mail_1": {
         "pre_delay": 5000,
@@ -157,11 +157,13 @@
                 ]
             }
         },
-        "next": "Gatcha_Wait_Until_Mail_Received"
+        "next": ["Gatcha_Wait_Until_Mail_Received"]
     },
     "Gatcha_Wait_Until_Mail_Received": {
-        "next": "Gatcha_Mail_Received",
-        "interrupt": "Gatcha_Tap_Until_Mail_Received"
+        "next": [
+            "Gatcha_Mail_Received",
+            "[JumpBack]Gatcha_Tap_Until_Mail_Received"
+        ]
     },
     "Gatcha_Tap_Until_Mail_Received": {
         "action": {
@@ -201,7 +203,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Goto_Headhunting"
+        "next": ["Gatcha_Goto_Headhunting"]
     },
     "Gatcha_Goto_Headhunting": {
         "action": {
@@ -215,7 +217,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Select_Headhunting"
+        "next": ["Gatcha_Select_Headhunting"]
     },
     "Gatcha_Select_Headhunting": {
         "recognition": {
@@ -231,7 +233,7 @@
                 "threshold": 0.95
             }
         },
-        "next": "Gatcha_2nd_Headhunting"
+        "next": ["Gatcha_2nd_Headhunting"]
     },
     "Gatcha_4th_Headhunting": {
         "action": {
@@ -245,7 +247,7 @@
                 ]
             }
         },
-        "next": "Gatcha_3rd_Headhunting"
+        "next": ["Gatcha_3rd_Headhunting"]
     },
     "Gatcha_3rd_Headhunting": {
         "action": {
@@ -259,7 +261,7 @@
                 ]
             }
         },
-        "next": "Gatcha_2nd_Headhunting"
+        "next": ["Gatcha_2nd_Headhunting"]
     },
     "Gatcha_2nd_Headhunting": {
         "action": {
@@ -273,11 +275,11 @@
                 ]
             }
         },
-        "next": "Gatcha_1st_Headhunting"
+        "next": ["Gatcha_1st_Headhunting"]
     },
     "Gatcha_1st_Headhunting": {
         "focus": "!!! 가챠 시작합니다 !!!",
-        "next": "Gatcha_Try_10roll"
+        "next": ["Gatcha_Try_10roll"]
     },
     "Gatcha_Try_10roll": {
         "recognition": {
@@ -334,7 +336,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Wait_Until_10roll"
+        "next": ["Gatcha_Wait_Until_10roll"]
     },
     "Gatcha_10roll_originite_prime": {
         "recognition": {
@@ -391,7 +393,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Try_1roll"
+        "next": ["Gatcha_Try_1roll"]
     },
     "Gatcha_Wait_Until_10roll": {
         "recognition": {
@@ -407,8 +409,10 @@
                 "threshold": 0.95
             }
         },
-        "next": "Gatcha_Try_10roll",
-        "interrupt": "Gatcha_Tap_Until_10roll"
+        "next": [
+            "Gatcha_Try_10roll",
+            "[JumpBack]Gatcha_Tap_Until_10roll"
+        ]
     },
     "Gatcha_Tap_Until_10roll": {
         "action": {
@@ -479,7 +483,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Wait_Until_1roll"
+        "next": ["Gatcha_Wait_Until_1roll"]
     },
     "Gatcha_1roll_orundum": {
         "recognition": {
@@ -506,7 +510,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Wait_Until_1roll"
+        "next": ["Gatcha_Wait_Until_1roll"]
     },
     "Gatcha_1roll_originite_prime": {
         "recognition": {
@@ -563,7 +567,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Goto_Operator1"
+        "next": ["Gatcha_Goto_Operator1"]
     },
     "Gatcha_Wait_Until_1roll": {
         "recognition": {
@@ -579,8 +583,10 @@
                 "threshold": 0.95
             }
         },
-        "next": "Gatcha_Try_1roll",
-        "interrupt": "Gatcha_Tap_Until_1roll"
+        "next": [
+            "Gatcha_Try_1roll",
+            "[JumpBack]Gatcha_Tap_Until_1roll"
+        ]
     },
     "Gatcha_Tap_Until_1roll": {
         "action": {
@@ -607,7 +613,7 @@
                 ]
             }
         },
-        "next": "Gatcha_Goto_Operator2"
+        "next": ["Gatcha_Goto_Operator2"]
     },
     "Gatcha_Goto_Operator2": {
         "recognition": {
@@ -629,6 +635,6 @@
                 "target": true
             }
         },
-        "next": "Start_Check"
+        "next": ["Start_Check"]
     }
 }

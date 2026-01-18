@@ -34,7 +34,7 @@
                 ]
             }
         },
-        "next": "Prologue_Input_Name_2"
+        "next": ["Prologue_Input_Name_2"]
     },
     "Prologue_Input_Name_2": {
         "action": {
@@ -43,7 +43,7 @@
                 "input_text": "Arknights"
             }
         },
-        "next": "Prologue_Input_Name_3"
+        "next": ["Prologue_Input_Name_3"]
     },
     "Prologue_Input_Name_3": {
         "action": {
@@ -57,7 +57,7 @@
                 ]
             }
         },
-        "next": "Prologue_Input_Name_4"
+        "next": ["Prologue_Input_Name_4"]
     },
     "Prologue_Input_Name_4": {
         "action": {
@@ -71,7 +71,7 @@
                 ]
             }
         },
-        "next": "Prologue_Story1_1"
+        "next": ["Prologue_Story1_1"]
     },
     "Prologue_Story1_1": {
         "recognition": {
@@ -93,7 +93,7 @@
                 "target": true
             }
         },
-        "next": "Prologue_Story1_2"
+        "next": ["Prologue_Story1_2"]
     },
     "Prologue_Story1_2": {
         "action": {
@@ -108,7 +108,7 @@
             }
         },
         "timeout": 60000,
-        "next": "Prologue_Battle1_Start"
+        "next": ["Prologue_Battle1_Start"]
     },
     "Prologue_Battle1_Start": {
         "recognition": {
@@ -124,7 +124,7 @@
                 "threshold": 0.95
             }
         },
-        "next": "Prologue_Battle1_Wait_Until_OP1"
+        "next": ["Prologue_Battle1_Wait_Until_OP1"]
     },
     "Prologue_Battle1_Tap_Until_Amiya": {
         "recognition": {
@@ -153,8 +153,10 @@
         }
     },
     "Prologue_Battle1_Wait_Until_OP1": {
-        "next": "Prologue_Battle1_Place_OP1_1",
-        "interrupt": "Prologue_Battle1_Tap_Until_Amiya"
+        "next": [
+            "Prologue_Battle1_Place_OP1_1",
+            "[JumpBack]Prologue_Battle1_Tap_Until_Amiya"
+        ]
     },
     "Prologue_Battle1_Place_OP1_1": {
         "recognition": {
@@ -225,11 +227,13 @@
                 "duration": 500
             }
         },
-        "next": "Prologue_Battle1_Wait_Until_OP2"
+        "next": ["Prologue_Battle1_Wait_Until_OP2"]
     },
     "Prologue_Battle1_Wait_Until_OP2": {
-        "next": "Prologue_Battle1_Place_OP2_1",
-        "interrupt": "Prologue_Battle1_Tap_Until_Amiya"
+        "next": [
+            "Prologue_Battle1_Place_OP2_1",
+            "[JumpBack]Prologue_Battle1_Tap_Until_Amiya"
+        ]
     },
     "Prologue_Battle1_Place_OP2_1": {
         "recognition": {
@@ -300,11 +304,13 @@
                 "duration": 500
             }
         },
-        "next": "Prologue_Battle1_Wait_Until_Finish"
+        "next": ["Prologue_Battle1_Wait_Until_Finish"]
     },
     "Prologue_Battle1_Wait_Until_Finish": {
-        "next": "Prologue_Story2_1",
-        "interrupt": "Prologue_Battle1_Tap_Until_Finish" // 아미야 내려갈 때도 있어서 따로
+        "next": [
+            "Prologue_Story2_1",
+            "[JumpBack]Prologue_Battle1_Tap_Until_Finish"
+        ]
     },
     "Prologue_Battle1_Tap_Until_Finish": {
         "action": {
@@ -339,7 +345,7 @@
                 "target": true
             }
         },
-        "next": "Prologue_Story2_2"
+        "next": ["Prologue_Story2_2"]
     },
     "Prologue_Story2_2": {
         "action": {
@@ -354,7 +360,7 @@
             }
         },
         "timeout": 60000,
-        "next": "Prologue_Battle2_Start"
+        "next": ["Prologue_Battle2_Start"]
     },
     "Prologue_Battle2_Start": {
         "recognition": {
@@ -370,7 +376,7 @@
                 "threshold": 0.95
             }
         },
-        "next": "Prologue_Battle2_Wait_Until_Texas_Ready"
+        "next": ["Prologue_Battle2_Wait_Until_Texas_Ready"]
     },
     "Prologue_Battle2_Tap_Until_Amiya": {
         "recognition": {
@@ -420,10 +426,10 @@
         }
     },
     "Prologue_Battle2_Wait_Until_Texas_Ready": {
-        "next": "Prologue_Battle2_Texas_Ready",
-        "interrupt": [
-            "Prologue_Battle2_Tap_Until_Amiya",
-            "Prologue_Battle2_Tap_Until_2xSpeed"
+        "next": [
+            "Prologue_Battle2_Texas_Ready",
+            "[JumpBack]Prologue_Battle2_Tap_Until_Amiya",
+            "[JumpBack]Prologue_Battle2_Tap_Until_2xSpeed"
         ]
     },
     "Prologue_Battle2_Texas_Ready": {
@@ -451,11 +457,13 @@
                 ]
             }
         },
-        "next": "Prologue_Battle2_Wait_Until_Use_Texas"
+        "next": ["Prologue_Battle2_Wait_Until_Use_Texas"]
     },
     "Prologue_Battle2_Wait_Until_Use_Texas": {
-        "next": "Prologue_Battle2_Use_Texas",
-        "interrupt": "Prologue_Battle2_Tap_Until_Amiya"
+        "next": [
+            "Prologue_Battle2_Use_Texas",
+            "[JumpBack]Prologue_Battle2_Tap_Until_Amiya"
+        ]
     },
     "Prologue_Battle2_Use_Texas": {
         "recognition": {
@@ -482,13 +490,13 @@
                 ]
             }
         },
-        "next": "Prologue_Battle2_Wait_Until_Amiya"
+        "next": ["Prologue_Battle2_Wait_Until_Amiya"]
     },
     "Prologue_Battle2_Wait_Until_Amiya": {
-        "next": "Prologue_Battle2_Use_Amiya_1",
-        "interrupt": [
-            "Prologue_Battle2_Tap_Until_Amiya",
-            "Prologue_Battle2_Tap_Until_2xSpeed"
+        "next": [
+            "Prologue_Battle2_Use_Amiya_1",
+            "[JumpBack]Prologue_Battle2_Tap_Until_Amiya",
+            "[JumpBack]Prologue_Battle2_Tap_Until_2xSpeed"
         ]
     },
     "Prologue_Battle2_Use_Amiya_1": {
@@ -516,7 +524,7 @@
                 ]
             }
         },
-        "next": "Prologue_Battle2_Use_Amiya_2"
+        "next": ["Prologue_Battle2_Use_Amiya_2"]
     },
     "Prologue_Battle2_Use_Amiya_2": {
         "pre_delay": 500,
@@ -531,13 +539,13 @@
                 ]
             }
         },
-        "next": "Prologue_Battle2_Wait_Until_Exusiai"
+        "next": ["Prologue_Battle2_Wait_Until_Exusiai"]
     },
     "Prologue_Battle2_Wait_Until_Exusiai": {
-        "next": "Prologue_Battle2_Use_Exusiai_1",
-        "interrupt": [
-            "Prologue_Battle2_Tap_Until_Amiya",
-            "Prologue_Battle2_Tap_Until_2xSpeed"
+        "next": [
+            "Prologue_Battle2_Use_Exusiai_1",
+            "[JumpBack]Prologue_Battle2_Tap_Until_Amiya",
+            "[JumpBack]Prologue_Battle2_Tap_Until_2xSpeed"
         ]
     },
     "Prologue_Battle2_Use_Exusiai_1": {
@@ -565,7 +573,7 @@
                 ]
             }
         },
-        "next": "Prologue_Battle2_Use_Exusiai_2"
+        "next": ["Prologue_Battle2_Use_Exusiai_2"]
     },
     "Prologue_Battle2_Use_Exusiai_2": {
         "pre_delay": 500,
@@ -580,13 +588,13 @@
                 ]
             }
         },
-        "next": "Prologue_Battle2_Wait_Until_Finish"
+        "next": ["Prologue_Battle2_Wait_Until_Finish"]
     },
     "Prologue_Battle2_Wait_Until_Finish": {
-        "next": "Prologue_Story_3_1",
-        "interrupt": [
-            "Prologue_Battle2_Tap_Until_Amiya",
-            "Prologue_Battle2_Tap_Until_2xSpeed"
+        "next": [
+            "Prologue_Story_3_1",
+            "[JumpBack]Prologue_Battle2_Tap_Until_Amiya",
+            "[JumpBack]Prologue_Battle2_Tap_Until_2xSpeed"
         ]
     },
     "Prologue_Story_3_1": {
@@ -609,7 +617,7 @@
                 "target": true
             }
         },
-        "next": "Prologue_Story_3_2"
+        "next": ["Prologue_Story_3_2"]
     },
     "Prologue_Story_3_2": {
         "action": {
@@ -623,6 +631,6 @@
                 ]
             }
         },
-        "next": "Start_Interlude"
+        "next": ["Start_Interlude"]
     }
 }

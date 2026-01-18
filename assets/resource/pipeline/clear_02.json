@@ -1,7 +1,7 @@
 {
     "Clear_Start_02": {
         "focus": "▶ 0-2 클리어 시작",
-        "next": "Start_02"
+        "next": ["Start_02"]
     },
     "02_Skip_Amiya_Dia": {
         "action": {
@@ -17,7 +17,7 @@
         }
     },
     "Start_02": {
-        "next": "02_Move_Right"
+        "next": ["02_Move_Right"]
     },
     "02_Move_Right": {
         "action": {
@@ -65,7 +65,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "02_Start_02"
+        "next": ["02_Start_02"]
     },
     "02_Start_02": {
         "action": {
@@ -79,7 +79,7 @@
                 ]
             }
         },
-        "next": "02_Find_Ami"
+        "next": ["02_Find_Ami"]
     },
     "02_Find_Ami": {
         "recognition": {
@@ -95,11 +95,13 @@
                 "threshold": 0.95
             }
         },
-        "next": "02_Wait_hib"
+        "next": ["02_Wait_hib"]
     },
     "02_Wait_hib": {
-        "next": "02_Add_Hib",
-        "interrupt": "02_Skip_Amiya_Dia"
+        "next": [
+            "02_Add_Hib",
+            "[JumpBack]02_Skip_Amiya_Dia"
+        ]
     },
     "02_Add_Hib": {
         "recognition": {
@@ -122,7 +124,7 @@
             }
         },
         "post_delay": 2000,
-        "next": "02_Click_Hib"
+        "next": ["02_Click_Hib"]
     },
     "02_Click_Hib": {
         "action": {
@@ -136,7 +138,7 @@
                 ]
             }
         },
-        "next": "02_Click_Hib_1"
+        "next": ["02_Click_Hib_1"]
     },
     "02_Click_Hib_1": {
         "action": {
@@ -231,7 +233,7 @@
                 "target": true
             }
         },
-        "next": "02_Skp_01"
+        "next": ["02_Skp_01"]
     },
     "02_Skp_01": {
         "recognition": {
@@ -253,7 +255,7 @@
                 "target": true
             }
         },
-        "next": "02_Skpok_01"
+        "next": ["02_Skpok_01"]
     },
     "02_Skpok_01": {
         "recognition": {
@@ -275,7 +277,7 @@
                 "target": true
             }
         },
-        "next": "02_Skp_02"
+        "next": ["02_Skp_02"]
     },
     "02_Skp_02": {
         "recognition": {
@@ -303,7 +305,7 @@
             }
         },
         "post_delay": 300,
-        "next": "02_Skpok_02"
+        "next": ["02_Skpok_02"]
     },
     "02_Skpok_02": {
         "recognition": {
@@ -326,7 +328,7 @@
             }
         },
         "post_delay": 500,
-        "next": "02_2x_01"
+        "next": ["02_2x_01"]
     },
     "02_2x_01": {
         "action": {
@@ -341,7 +343,7 @@
             }
         },
         "timeout": 60000,
-        "next": "02_Deploy_Nko"
+        "next": ["02_Deploy_Nko"]
     },
     "02_Deploy_Nko": {
         "recognition": {
@@ -413,7 +415,7 @@
             }
         },
         "timeout": 60000,
-        "next": "02_Deploy_Ami"
+        "next": ["02_Deploy_Ami"]
     },
     "02_Deploy_Ami": {
         "recognition": {
@@ -485,7 +487,7 @@
             }
         },
         "timeout": 60000,
-        "next": "02_Skip_EStory"
+        "next": ["02_Skip_EStory"]
     },
     "02_Skip_EStory": {
         "recognition": {
@@ -533,7 +535,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "02_Op_End"
+        "next": ["02_Op_End"]
     },
     "02_Op_End": {
         "recognition": {
@@ -555,7 +557,7 @@
                 "target": true
             }
         },
-        "next": "02_Wait_End"
+        "next": ["02_Wait_End"]
     },
     "02_Wait_End": {
         "action": {
@@ -588,6 +590,6 @@
                 "threshold": 0.95
             }
         },
-        "next": "02_End_Tutorial"
+        "next": ["02_End_Tutorial"]
     }
 }

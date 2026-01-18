@@ -1,7 +1,7 @@
 {
     "Clear_Start_05": {
         "focus": "▶ 0-5 클리어 시작",
-        "next": "Start_05"
+        "next": ["Start_05"]
     },
     "05_Skip_Amiya_Dia": {
         "action": {
@@ -17,7 +17,7 @@
         }
     },
     "Start_05": {
-        "next": "05_Move_Right"
+        "next": ["05_Move_Right"]
     },
     "05_Move_Right": {
         "action": {
@@ -65,7 +65,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "05_Start_05"
+        "next": ["05_Start_05"]
     },
     "05_Start_05": {
         "action": {
@@ -79,7 +79,7 @@
                 ]
             }
         },
-        "next": "05_Find_Ami"
+        "next": ["05_Find_Ami"]
     },
     "05_Find_Ami": {
         "recognition": {
@@ -95,11 +95,13 @@
                 "threshold": 0.95
             }
         },
-        "next": "05_Wait_Fe"
+        "next": ["05_Wait_Fe"]
     },
     "05_Wait_Fe": {
-        "next": "05_Add_Fe",
-        "interrupt": "05_Skip_Amiya_Dia"
+        "next": [
+            "05_Add_Fe",
+            "[JumpBack]05_Skip_Amiya_Dia"
+        ]
     },
     "05_Add_Fe": {
         "recognition": {
@@ -122,7 +124,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "05_Click_Fe"
+        "next": ["05_Click_Fe"]
     },
     "05_Click_Fe": {
         "action": {
@@ -180,7 +182,7 @@
                 "threshold": 0.95
             }
         },
-        "next": "05_Click_Ok"
+        "next": ["05_Click_Ok"]
     },
     "05_Click_Ok": {
         "action": {
@@ -194,7 +196,7 @@
                 ]
             }
         },
-        "next": "05_Op_Start"
+        "next": ["05_Op_Start"]
     },
     "05_Op_Start": {
         "recognition": {
@@ -216,7 +218,7 @@
                 "target": true
             }
         },
-        "next": "05_2x_01"
+        "next": ["05_2x_01"]
     },
     "05_2x_01": {
         "recognition": {
@@ -239,7 +241,7 @@
             }
         },
         "timeout": 60000,
-        "next": "05_Skp_01"
+        "next": ["05_Skp_01"]
     },
     "05_Skp_01": {
         "recognition": {
@@ -266,7 +268,7 @@
                 ]
             }
         },
-        "next": "05_Skpok_01"
+        "next": ["05_Skpok_01"]
     },
     "05_Skpok_01": {
         "recognition": {
@@ -288,7 +290,7 @@
                 "target": true
             }
         },
-        "next": "05_2x_02"
+        "next": ["05_2x_02"]
     },
     "05_2x_02": {
         "recognition": {
@@ -311,7 +313,7 @@
             }
         },
         "timeout": 60000,
-        "next": "05_Deploy_Fe"
+        "next": ["05_Deploy_Fe"]
     },
     "05_Deploy_Fe": {
         "recognition": {
@@ -383,7 +385,7 @@
             }
         },
         "timeout": 60000,
-        "next": "05_Deploy_Ami"
+        "next": ["05_Deploy_Ami"]
     },
     "05_Deploy_Ami": {
         "recognition": {
@@ -455,7 +457,7 @@
             }
         },
         "timeout": 60000,
-        "next": "05_Deploy_Hib"
+        "next": ["05_Deploy_Hib"]
     },
     "05_Deploy_Hib": {
         "recognition": {
@@ -527,7 +529,7 @@
             }
         },
         "timeout": 60000,
-        "next": "05_Deploy_Jes"
+        "next": ["05_Deploy_Jes"]
     },
     "05_Deploy_Jes": {
         "recognition": {
@@ -599,12 +601,14 @@
             }
         },
         "timeout": 60000,
-        "next": "05_Wait_Recruit"
+        "next": ["05_Wait_Recruit"]
     },
     "05_Wait_Recruit": {
         "timeout": 60000,
-        "next": "05_Op_End",
-        "interrupt": "05_Skip_Amiya_Dia"
+        "next": [
+            "05_Op_End",
+            "[JumpBack]05_Skip_Amiya_Dia"
+        ]
     },
     "05_Op_End": {
         "recognition": {
@@ -626,11 +630,13 @@
                 "target": true
             }
         },
-        "next": "05_Wait_End"
+        "next": ["05_Wait_End"]
     },
     "05_Wait_End": {
-        "next": "05_Check_End",
-        "interrupt": "05_Skip_Amiya_Dia"
+        "next": [
+            "05_Check_End",
+            "[JumpBack]05_Skip_Amiya_Dia"
+        ]
     },
     "05_Check_End": {
         "recognition": {
@@ -646,6 +652,6 @@
                 "threshold": 0.95
             }
         },
-        "next": "Clear_Start_06"
+        "next": ["Clear_Start_06"]
     }
 }

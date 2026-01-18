@@ -1,7 +1,7 @@
 {
     "Clear_Start_TR5": {
         "focus": "▶ TR-5 클리어 시작",
-        "next": "Start_TR5"
+        "next": ["Start_TR5"]
     },
     "TR5_Skip_Amiya_Dia": {
         "action": {
@@ -17,7 +17,7 @@
         }
     },
     "Start_TR5": {
-        "next": "TR5_Move_Right"
+        "next": ["TR5_Move_Right"]
     },
     "TR5_Move_Right": {
         "action": {
@@ -65,7 +65,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "TR5_Start_05"
+        "next": ["TR5_Start_05"]
     },
     "TR5_Start_05": {
         "action": {
@@ -79,7 +79,7 @@
                 ]
             }
         },
-        "next": "TR5_Op_Start"
+        "next": ["TR5_Op_Start"]
     },
     "TR5_Op_Start": {
         "recognition": {
@@ -101,7 +101,7 @@
                 "target": true
             }
         },
-        "next": "TR5_Skp_01"
+        "next": ["TR5_Skp_01"]
     },
     "TR5_Skp_01": {
         "recognition": {
@@ -129,7 +129,7 @@
             }
         },
         "post_delay": 300,
-        "next": "TR5_Skpok_01"
+        "next": ["TR5_Skpok_01"]
     },
     "TR5_Skpok_01": {
         "recognition": {
@@ -152,7 +152,7 @@
             }
         },
         "post_delay": 500,
-        "next": "TR5_2x_01"
+        "next": ["TR5_2x_01"]
     },
     "TR5_2x_01": {
         "recognition": {
@@ -175,7 +175,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR5_Deploy_Fe"
+        "next": ["TR5_Deploy_Fe"]
     },
     "TR5_Deploy_Fe": {
         "recognition": {
@@ -247,7 +247,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR5_Skp_02"
+        "next": ["TR5_Skp_02"]
     },
     "TR5_Skp_02": {
         "recognition": {
@@ -275,7 +275,7 @@
             }
         },
         "post_delay": 300,
-        "next": "TR5_Skpok_02"
+        "next": ["TR5_Skpok_02"]
     },
     "TR5_Skpok_02": {
         "recognition": {
@@ -298,7 +298,7 @@
             }
         },
         "post_delay": 500,
-        "next": "TR5_2x_02"
+        "next": ["TR5_2x_02"]
     },
     "TR5_2x_02": {
         "recognition": {
@@ -321,7 +321,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR5_Deploy_Du"
+        "next": ["TR5_Deploy_Du"]
     },
     "TR5_Deploy_Du": {
         "recognition": {
@@ -393,7 +393,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR5_Deploy_Hib"
+        "next": ["TR5_Deploy_Hib"]
     },
     "TR5_Deploy_Hib": {
         "recognition": {
@@ -465,12 +465,14 @@
             }
         },
         "timeout": 60000,
-        "next": "TR5_Wait_Recruit"
+        "next": ["TR5_Wait_Recruit"]
     },
     "TR5_Wait_Recruit": {
         "timeout": 60000,
-        "next": "TR5_Op_End",
-        "interrupt": "TR5_Skip_Amiya_Dia"
+        "next": [
+            "TR5_Op_End",
+            "[JumpBack]TR5_Skip_Amiya_Dia"
+        ]
     },
     "TR5_Op_End": {
         "recognition": {
@@ -492,11 +494,13 @@
                 "target": true
             }
         },
-        "next": "TR5_Wait_End"
+        "next": ["TR5_Wait_End"]
     },
     "TR5_Wait_End": {
-        "next": "TR5_Check_End",
-        "interrupt": "TR5_Skip_Amiya_Dia"
+        "next": [
+            "TR5_Check_End",
+            "[JumpBack]TR5_Skip_Amiya_Dia"
+        ]
     },
     "TR5_Check_End": {
         "recognition": {
@@ -512,6 +516,6 @@
                 "threshold": 0.95
             }
         },
-        "next": "Clear_Start_07"
+        "next": ["Clear_Start_07"]
     }
 }

@@ -1,7 +1,7 @@
 {
     "Clear_Start_07": {
         "focus": "▶ 0-7 클리어 시작",
-        "next": "Start_07"
+        "next": ["Start_07"]
     },
     "07_Skip_Amiya_Dia": {
         "action": {
@@ -17,7 +17,7 @@
         }
     },
     "Start_07": {
-        "next": "07_Move_Right"
+        "next": ["07_Move_Right"]
     },
     "07_Move_Right": {
         "action": {
@@ -65,7 +65,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "07_Start_07"
+        "next": ["07_Start_07"]
     },
     "07_Start_07": {
         "action": {
@@ -79,7 +79,7 @@
                 ]
             }
         },
-        "next": "07_Prts_Dia"
+        "next": ["07_Prts_Dia"]
     },
     "07_Prts_Dia": {
         "recognition": {
@@ -156,11 +156,13 @@
                 "threshold": 0.95
             }
         },
-        "next": "07_Wait_hib"
+        "next": ["07_Wait_hib"]
     },
     "07_Wait_hib": {
-        "next": "07_Dia_End",
-        "interrupt": "07_Skip_Amiya_Dia"
+        "next": [
+            "07_Dia_End",
+            "[JumpBack]07_Skip_Amiya_Dia"
+        ]
     },
     "07_Dia_End": {
         "recognition": {
@@ -177,7 +179,7 @@
             }
         },
         "post_delay": 300,
-        "next": "07_Op_Start"
+        "next": ["07_Op_Start"]
     },
     "07_Op_Start": {
         "recognition": {
@@ -224,7 +226,7 @@
                 "target": true
             }
         },
-        "next": "07_Skpok_01"
+        "next": ["07_Skpok_01"]
     },
     "07_Skpok_01": {
         "recognition": {
@@ -246,7 +248,7 @@
                 "target": true
             }
         },
-        "next": "07_2x_01"
+        "next": ["07_2x_01"]
     },
     "07_2x_01": {
         "recognition": {
@@ -269,7 +271,7 @@
             }
         },
         "timeout": 60000,
-        "next": "07_Skp_02"
+        "next": ["07_Skp_02"]
     },
     "07_Skp_02": {
         "recognition": {
@@ -296,7 +298,7 @@
                 ]
             }
         },
-        "next": "07_Skpok_02"
+        "next": ["07_Skpok_02"]
     },
     "07_Skpok_02": {
         "recognition": {
@@ -318,7 +320,7 @@
                 "target": true
             }
         },
-        "next": "07_2x_02"
+        "next": ["07_2x_02"]
     },
     "07_2x_02": {
         "recognition": {
@@ -341,7 +343,7 @@
             }
         },
         "timeout": 60000,
-        "next": "07_Deploy_Fe"
+        "next": ["07_Deploy_Fe"]
     },
     "07_Deploy_Fe": {
         "recognition": {
@@ -413,7 +415,7 @@
             }
         },
         "timeout": 60000,
-        "next": "07_Deploy_Ami"
+        "next": ["07_Deploy_Ami"]
     },
     "07_Deploy_Ami": {
         "recognition": {
@@ -485,7 +487,7 @@
             }
         },
         "timeout": 60000,
-        "next": "07_Deploy_Hib"
+        "next": ["07_Deploy_Hib"]
     },
     "07_Deploy_Hib": {
         "recognition": {
@@ -557,7 +559,7 @@
             }
         },
         "timeout": 60000,
-        "next": "07_Deploy_Jes"
+        "next": ["07_Deploy_Jes"]
     },
     "07_Deploy_Jes": {
         "recognition": {
@@ -629,7 +631,7 @@
             }
         },
         "timeout": 60000,
-        "next": "07_Amiya_Sk"
+        "next": ["07_Amiya_Sk"]
     },
     "07_Amiya_Sk": {
         "recognition": {
@@ -657,7 +659,7 @@
             }
         },
         "post_delay": 500,
-        "next": "07_Amiya_Sk_On"
+        "next": ["07_Amiya_Sk_On"]
     },
     "07_Amiya_Sk_On": {
         "action": {
@@ -673,7 +675,7 @@
         },
         "timeout": 120000,
         "post_delay": 500,
-        "next": "07_Skip_EStory"
+        "next": ["07_Skip_EStory"]
     },
     "07_Skip_EStory": {
         "recognition": {
@@ -721,7 +723,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "07_Wait_End"
+        "next": ["07_Wait_End"]
     },
     "07_Wait_End": {
         "action": {
@@ -754,6 +756,6 @@
                 "threshold": 0.95
             }
         },
-        "next": "Clear_Start_TR6"
+        "next": ["Clear_Start_TR6"]
     }
 }

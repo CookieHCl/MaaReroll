@@ -1,7 +1,7 @@
 {
     "Clear_Start_TR4": {
         "focus": "▶ TR-4 클리어 시작",
-        "next": "Start_TR4"
+        "next": ["Start_TR4"]
     },
     "TR4_Skip_Amiya_Dia": {
         "action": {
@@ -17,7 +17,7 @@
         }
     },
     "Start_TR4": {
-        "next": "TR4_Move_Right"
+        "next": ["TR4_Move_Right"]
     },
     "TR4_Move_Right": {
         "action": {
@@ -65,7 +65,7 @@
             }
         },
         "post_delay": 3000,
-        "next": "TR4_Start_04"
+        "next": ["TR4_Start_04"]
     },
     "TR4_Start_04": {
         "action": {
@@ -79,7 +79,7 @@
                 ]
             }
         },
-        "next": "TR4_Op_Start"
+        "next": ["TR4_Op_Start"]
     },
     "TR4_Op_Start": {
         "recognition": {
@@ -101,7 +101,7 @@
                 "target": true
             }
         },
-        "next": "TR4_Skp_01"
+        "next": ["TR4_Skp_01"]
     },
     "TR4_Skp_01": {
         "recognition": {
@@ -129,7 +129,7 @@
             }
         },
         "post_delay": 300,
-        "next": "TR4_Skpok_01"
+        "next": ["TR4_Skpok_01"]
     },
     "TR4_Skpok_01": {
         "recognition": {
@@ -152,7 +152,7 @@
             }
         },
         "post_delay": 500,
-        "next": "TR4_Deploy_Pl"
+        "next": ["TR4_Deploy_Pl"]
     },
     "TR4_Deploy_Pl": {
         "recognition": {
@@ -224,7 +224,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR4_Skp_02"
+        "next": ["TR4_Skp_02"]
     },
     "TR4_Skp_02": {
         "recognition": {
@@ -252,7 +252,7 @@
             }
         },
         "post_delay": 300,
-        "next": "TR4_Skpok_02"
+        "next": ["TR4_Skpok_02"]
     },
     "TR4_Skpok_02": {
         "recognition": {
@@ -275,7 +275,7 @@
             }
         },
         "post_delay": 500,
-        "next": "TR4_Deploy_Fe"
+        "next": ["TR4_Deploy_Fe"]
     },
     "TR4_Deploy_Fe": {
         "recognition": {
@@ -347,7 +347,7 @@
             }
         },
         "timeout": 60000,
-        "next": "TR4_2x_01"
+        "next": ["TR4_2x_01"]
     },
     "TR4_2x_01": {
         "recognition": {
@@ -370,12 +370,14 @@
             }
         },
         "timeout": 60000,
-        "next": "TR4_Wait_Recruit"
+        "next": ["TR4_Wait_Recruit"]
     },
     "TR4_Wait_Recruit": {
         "timeout": 60000,
-        "next": "TR4_Op_End",
-        "interrupt": "TR4_Skip_Amiya_Dia"
+        "next": [
+            "TR4_Op_End",
+            "[JumpBack]TR4_Skip_Amiya_Dia"
+        ]
     },
     "TR4_Op_End": {
         "recognition": {
@@ -397,11 +399,13 @@
                 "target": true
             }
         },
-        "next": "TR4_Wait_End"
+        "next": ["TR4_Wait_End"]
     },
     "TR4_Wait_End": {
-        "next": "TR4_Check_End",
-        "interrupt": "TR4_Skip_Amiya_Dia"
+        "next": [
+            "TR4_Check_End",
+            "[JumpBack]TR4_Skip_Amiya_Dia"
+        ]
     },
     "TR4_Check_End": {
         "recognition": {
@@ -417,6 +421,6 @@
                 "threshold": 0.95
             }
         },
-        "next": "Clear_Start_05"
+        "next": ["Clear_Start_05"]
     }
 }
