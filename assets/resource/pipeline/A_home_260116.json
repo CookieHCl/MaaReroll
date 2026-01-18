@@ -99,6 +99,7 @@
                 "threshold": 0.95
             }
         },
+        "post_delay": 1000,
         "next": [
             "Home_260116_Ticket_Received",
             "[JumpBack]Home_260116_Tap_Until_Ticket_Received"
