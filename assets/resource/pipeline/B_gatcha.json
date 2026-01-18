@@ -145,7 +145,7 @@
                     454,
                     148
                 ], // "origin roi" : [17,15,354,48]
-                "threshold": 0.95
+                "threshold": 0.99
             }
         },
         "action": {
@@ -161,7 +161,8 @@
         },
         "next": [
             "Gatcha_10roll_orundum",
-            "Gatcha_10roll_originite_prime"
+            "Gatcha_10roll_originite_prime",
+            "Gatcha_10roll_ticket"
         ]
     },
     "Gatcha_10roll_orundum": {
@@ -220,6 +221,35 @@
         },
         "next": [
             "Gatcha_10roll_failed",
+            "Gatcha_Wait_Until_10roll"
+        ]
+    },
+    "Gatcha_10roll_ticket": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/9.5_gatcha_ticket.png",
+                "roi": [
+                    577,
+                    236,
+                    123,
+                    149
+                ], // "origin roi" : [602, 261, 73, 99]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    909,
+                    516,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
             "Gatcha_Wait_Until_10roll"
         ]
     },
@@ -295,7 +325,7 @@
                     454,
                     148
                 ], // "origin roi" : [17,15,354,48]
-                "threshold": 0.95
+                "threshold": 0.99
             }
         },
         "action": {
