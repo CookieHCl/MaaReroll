@@ -1,0 +1,175 @@
+{
+    "02_End_Tutorial": {
+        "focus": "▶ 추가 튜토리얼 시작",
+        "next": "02_Rec_Tutorial"
+    },
+    "02_Rec_Tutorial": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1000,
+                    510,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "02_Rec_1",
+            "02_Rec_Tutorial"
+        ]
+    },
+    "02_Rec_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "02_end_tuto/02_rec_1.png",
+                "roi": [
+                    250,
+                    254,
+                    145,
+                    110
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": [
+            "02_Rec_2",
+            "02_Rec_1"
+        ]
+    },
+    "02_Rec_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "02_end_tuto/02_rec_ami.png",
+                "roi": [
+                    55,
+                    56,
+                    143,
+                    148
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "02_Escape_Rec"
+    },
+    "02_Escape_Rec": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    270,
+                    35,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "02_Back_Story",
+            "02_Escape_Rec"
+        ]
+    },
+    "02_Back_Story": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-11-run/4_rp_story.png",
+                "roi": [
+                    498,
+                    55,
+                    60,
+                    157
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 5000,
+        "next": "02_Prts_Dia"
+    },
+    "02_Prts_Dia": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "02_end_tuto/02_prts_dia.png",
+                "roi": [
+                    56,
+                    58,
+                    135,
+                    140
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1100,
+                    600,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "02_Prts_Dia",
+            "02_Mission"
+        ]
+    },
+    "02_Mission": {
+        "pre_delay": 500,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "02_end_tuto/02_mission.png",
+                "roi": [
+                    966,
+                    532,
+                    289,
+                    87
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "02_End_Back_Story"
+    },
+    "02_End_Back_Story": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "01_end_tuto/TR1_end_main.png",
+                "roi": [
+                    164,
+                    15,
+                    204,
+                    45
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "Clear_Start_TR2"
+    }
+}

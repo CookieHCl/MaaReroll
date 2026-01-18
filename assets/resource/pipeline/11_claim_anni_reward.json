@@ -1,0 +1,162 @@
+{
+    "11_Get_Daily": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    80,
+                    100,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "next": "11_Get_Daily_2"
+    },
+    "11_Get_Daily_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    550,
+                    420,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "next": "11_Get_Daily_3"
+    },
+    "11_Get_Daily_3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1230,
+                    100,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "11_Cl_Main_2",
+            "11_Get_Daily_3"
+        ]
+    },
+    "11_Cl_Main_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_main.png",
+                "roi": [
+                    392,
+                    179,
+                    91,
+                    67
+                ],
+                "threshold": 0.95
+            }
+        },
+        "post_delay": 3000,
+        "next": "11_Get_Lottery"
+    },
+    "11_Get_Lottery": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    80,
+                    200,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 3000,
+        "next": "11_Get_Lottery_2"
+    },
+    "11_Get_Lottery_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    300,
+                    280,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": "11_Get_Lottery_3"
+    },
+    "11_Get_Lottery_3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    300,
+                    410,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": "11_Get_Lottery_4"
+    },
+    "11_Get_Lottery_4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1120,
+                    540,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": "11_Get_Lottery_5"
+    },
+    "11_Get_Lottery_5": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1230,
+                    100,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "11_Cl_Main_3",
+            "11_Get_Lottery_5"
+        ]
+    },
+    "11_Cl_Main_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_main.png",
+                "roi": [
+                    392,
+                    179,
+                    91,
+                    67
+                ],
+                "threshold": 0.95
+            }
+        },
+        "post_delay": 3000,
+        "next": "Gatcha_Goto_Headhunting"
+    }
+}

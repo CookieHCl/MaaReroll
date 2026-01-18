@@ -62,11 +62,11 @@
             "param": {
                 "template": "reset/3_home.png",
                 "roi": [
-                    0,
-                    0,
-                    279,
-                    343
-                ], // "origin roi" : [0,17,179,243]
+                    20,
+                    15,
+                    50,
+                    47
+                ],
                 "threshold": 0.95
             }
         },

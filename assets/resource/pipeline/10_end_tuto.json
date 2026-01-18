@@ -1,0 +1,214 @@
+{
+    "10_End_Tutorial": {
+        "focus": "▶ 추가 튜토리얼 시작",
+        "next": "10_Re_Tutorial"
+    },
+    "10_Re_Tutorial": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "10_end_tuto/10_prts_dia.png",
+                "roi": [
+                    53,
+                    59,
+                    142,
+                    134
+                ],
+                "threshold": 0.95
+            }
+        },
+        "post_delay": 500,
+        "next": "10_Re"
+    },
+    "10_Re": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    950,
+                    200,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": [
+            "10_Find_Amiya",
+            "10_Re"
+        ]
+    },
+    "10_Find_Amiya": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "10_end_tuto/10_ami_dia.png",
+                "roi": [
+                    60,
+                    64,
+                    136,
+                    136
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "10_Re_00"
+    },
+    "10_Re_00": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    650,
+                    500,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "10_Re_01",
+            "10_Re_01_2",
+            "10_Re_00"
+        ]
+    },
+    "10_Re_01": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "10_end_tuto/10_re_map.png",
+                "roi": [
+                    509,
+                    645,
+                    47,
+                    51
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    530,
+                    670,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "10_Re_02",
+            "10_Re_01"
+        ]
+    },
+    "10_Re_01_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "10_end_tuto/10_re_map_2.png",
+                "roi": [
+                    508,
+                    649,
+                    42,
+                    36
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    530,
+                    670,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "10_Re_02",
+            "10_Re_01_2"
+        ]
+    },
+    "10_Re_02": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "10_end_tuto/10_re_main.png",
+                "roi": [
+                    791,
+                    38,
+                    74,
+                    13
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    270,
+                    40,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "10_Back_Story",
+            "10_Re_02"
+        ]
+    },
+    "10_Back_Story": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-11-run/4_rp_story.png",
+                "roi": [
+                    498,
+                    55,
+                    60,
+                    157
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 5000,
+        "next": "10_Mission"
+    },
+    "10_Mission": {
+        "pre_delay": 500,
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "10_end_tuto/10_mission.png",
+                "roi": [
+                    967,
+                    560,
+                    289,
+                    60
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "Clear_Start_11"
+    }
+}

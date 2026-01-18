@@ -1,0 +1,422 @@
+{
+    "Clear_Start_TR4": {
+        "focus": "▶ TR-4 클리어 시작",
+        "next": "Start_TR4"
+    },
+    "TR4_Skip_Amiya_Dia": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    40,
+                    125,
+                    1,
+                    1
+                ]
+            }
+        }
+    },
+    "Start_TR4": {
+        "next": "TR4_Move_Right"
+    },
+    "TR4_Move_Right": {
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    629,
+                    590,
+                    1,
+                    1
+                ],
+                "end": [
+                    165,
+                    589,
+                    1,
+                    1
+                ],
+                "duration": 300
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "TR4_Press_04",
+            "TR4_Move_Right"
+        ]
+    },
+    "TR4_Press_04": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_op_btn.png",
+                "roi": [
+                    601,
+                    328,
+                    77,
+                    26
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 3000,
+        "next": "TR4_Start_04"
+    },
+    "TR4_Start_04": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1150,
+                    650,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": "TR4_Op_Start"
+    },
+    "TR4_Op_Start": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr2/tr2_op_start.png",
+                "roi": [
+                    1040,
+                    372,
+                    124,
+                    247
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "TR4_Skp_01"
+    },
+    "TR4_Skp_01": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_dobe.png",
+                "roi": [
+                    58,
+                    61,
+                    138,
+                    141
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1183,
+                    53,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": "TR4_Skpok_01"
+    },
+    "TR4_Skpok_01": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_skpok_1.png",
+                "roi": [
+                    780,
+                    342,
+                    35,
+                    33
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 500,
+        "next": "TR4_Deploy_Pl"
+    },
+    "TR4_Deploy_Pl": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_deploy_pl.png",
+                "roi": [
+                    1166,
+                    599,
+                    106,
+                    115
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1219,
+                    646,
+                    1,
+                    1
+                ],
+                "end": [
+                    933,
+                    314,
+                    1,
+                    1
+                ],
+                "duration": 500
+            }
+        },
+        "next": [
+            "TR4_DeployR_Pl",
+            "TR4_Deploy_Pl"
+        ]
+    },
+    "TR4_DeployR_Pl": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_deployr_pl.png",
+                "roi": [
+                    692,
+                    135,
+                    86,
+                    71
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    928,
+                    312,
+                    1,
+                    1
+                ],
+                "end": [
+                    450,
+                    307,
+                    1,
+                    1
+                ],
+                "duration": 500
+            }
+        },
+        "timeout": 60000,
+        "next": "TR4_Skp_02"
+    },
+    "TR4_Skp_02": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_dobe.png",
+                "roi": [
+                    58,
+                    61,
+                    138,
+                    141
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1183,
+                    53,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": "TR4_Skpok_02"
+    },
+    "TR4_Skpok_02": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_skpok_1.png",
+                "roi": [
+                    780,
+                    342,
+                    35,
+                    33
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 500,
+        "next": "TR4_Deploy_Fe"
+    },
+    "TR4_Deploy_Fe": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_deploy_fe.png",
+                "roi": [
+                    1167,
+                    603,
+                    107,
+                    110
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1200,
+                    644,
+                    1,
+                    1
+                ],
+                "end": [
+                    735,
+                    329,
+                    1,
+                    1
+                ],
+                "duration": 500
+            }
+        },
+        "next": [
+            "TR4_DeployR_Fe",
+            "TR4_Deploy_Fe"
+        ]
+    },
+    "TR4_DeployR_Fe": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_deployr_fe.png",
+                "roi": [
+                    519,
+                    157,
+                    78,
+                    72
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    735,
+                    317,
+                    1,
+                    1
+                ],
+                "end": [
+                    195,
+                    315,
+                    1,
+                    1
+                ],
+                "duration": 500
+            }
+        },
+        "timeout": 60000,
+        "next": "TR4_2x_01"
+    },
+    "TR4_2x_01": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_tr4/tr4_1x.png",
+                "roi": [
+                    1074,
+                    25,
+                    51,
+                    52
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "timeout": 60000,
+        "next": "TR4_Wait_Recruit"
+    },
+    "TR4_Wait_Recruit": {
+        "timeout": 60000,
+        "next": "TR4_Op_End",
+        "interrupt": "TR4_Skip_Amiya_Dia"
+    },
+    "TR4_Op_End": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "clear_01/01_end.png",
+                "roi": [
+                    72,
+                    294,
+                    58,
+                    59
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": "TR4_Wait_End"
+    },
+    "TR4_Wait_End": {
+        "next": "TR4_Check_End",
+        "interrupt": "TR4_Skip_Amiya_Dia"
+    },
+    "TR4_Check_End": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "01_end_tuto/TR1_end_main.png",
+                "roi": [
+                    164,
+                    15,
+                    204,
+                    45
+                ],
+                "threshold": 0.95
+            }
+        },
+        "next": "Clear_Start_05"
+    }
+}
