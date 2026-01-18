@@ -3,9 +3,11 @@
     "Start_Home": {
         "focus": "▶ 홈화면 시작",
         "timeout": 60000,
-        "next": []
+        "next": [
+            "Home_Daily_Plan_1"
+        ]
     },
-    "Gatcha_Daily_Plan_1": {
+    "Home_Daily_Plan_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -31,20 +33,20 @@
             }
         },
         "next": [
-            "Gatcha_Daily_Plan_2"
+            "Home_Daily_Plan_2"
         ]
     },
-    "Gatcha_Daily_Plan_2": {
+    "Home_Daily_Plan_2": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "home/2_daily_plan_2.png",
                 "roi": [
-                    10,
-                    17,
-                    320,
-                    275
-                ], // "origin roi" : [60,67,220,175]
+                    48,
+                    116,
+                    151,
+                    151
+                ], // "origin roi" : [73, 141, 101, 101]
                 "threshold": 0.95
             }
         },
@@ -60,10 +62,10 @@
             }
         },
         "next": [
-            "Gatcha_Rookie_Mission"
+            "Home_Rookie_Mission_1"
         ]
     },
-    "Gatcha_Rookie_Mission": {
+    "Home_Rookie_Mission_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -81,6 +83,23 @@
             "type": "Click",
             "param": {
                 "target": [
+                    118,
+                    222,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "Home_Rookie_Mission_2"
+        ]
+    },
+    "Home_Rookie_Mission_2": {
+        // TODO: 0-1 퇴각런이 아닌 경우 여기서 합성옥을 받아야 함
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
                     1246,
                     74,
                     1,
@@ -89,10 +108,76 @@
             }
         },
         "next": [
-            "Gatcha_Get_Mail_1"
+            "Home_Handle_Events"
         ]
     },
-    "Gatcha_Notice": {
+    "Home_Handle_Events": {
+        "pre_wait_freezes": 2000,
+        "next": [
+            "[JumpBack]Home_260116_Wait_Until_Ticket_Received",
+            "[JumpBack]Home_Notice",
+            "Home_Get_Mail_1"
+        ]
+    },
+    "Home_260116_Wait_Until_Ticket_Received": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/260116/260116_ticket.png",
+                "roi": [
+                    663,
+                    194,
+                    352,
+                    347
+                ], // "origin roi" : [688, 219, 302, 297]
+                "threshold": 0.95
+            }
+        },
+        "next": [
+            "Home_260116_Ticket_Received",
+            "[JumpBack]Home_260116_Tap_Until_Ticket_Received"
+        ]
+    },
+    "Home_260116_Tap_Until_Ticket_Received": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    837,
+                    480,
+                    1,
+                    1
+                ]
+            }
+        }
+    },
+    "Home_260116_Ticket_Received": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/260116/260116_ticket_received.png",
+                "roi": [
+                    660,
+                    422,
+                    356,
+                    121
+                ], // "origin roi" : [685, 447, 306, 71]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1040,
+                    125,
+                    1,
+                    1
+                ]
+            }
+        }
+    },
+    "Home_Notice": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -116,13 +201,22 @@
                     1
                 ]
             }
-        },
-        "next": [
-            "Gatcha_Get_Mail_1"
-        ]
+        }
     },
-    "Gatcha_Get_Mail_1": {
-        "pre_delay": 5000,
+    "Home_Get_Mail_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/4.5_is_main.png",
+                "roi": [
+                    263,
+                    547,
+                    1017,
+                    173
+                ], // "origin roi" : [288, 572, 981, 148]
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
@@ -135,11 +229,10 @@
             }
         },
         "next": [
-            "Gatcha_Get_Mail_2",
-            "Gatcha_Notice" // 공지 때문에 씹혔으면 공지 닫고 다시 진행
+            "Home_Get_Mail_2"
         ]
     },
-    "Gatcha_Get_Mail_2": {
+    "Home_Get_Mail_2": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -165,16 +258,16 @@
             }
         },
         "next": [
-            "Gatcha_Wait_Until_Mail_Received"
+            "Home_Wait_Until_Mail_Received"
         ]
     },
-    "Gatcha_Wait_Until_Mail_Received": {
+    "Home_Wait_Until_Mail_Received": {
         "next": [
-            "Gatcha_Mail_Received",
-            "[JumpBack]Gatcha_Tap_Until_Mail_Received"
+            "Home_Mail_Received",
+            "[JumpBack]Home_Tap_Until_Mail_Received"
         ]
     },
-    "Gatcha_Tap_Until_Mail_Received": {
+    "Home_Tap_Until_Mail_Received": {
         "action": {
             "type": "Click",
             "param": {
@@ -187,7 +280,7 @@
             }
         }
     },
-    "Gatcha_Mail_Received": {
+    "Home_Mail_Received": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -213,10 +306,23 @@
             }
         },
         "next": [
-            "Gatcha_Goto_Headhunting"
+            "Home_Return_Home"
         ]
     },
-    "Home_TODO": {
+    "Home_Return_Home": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/4.5_is_main.png",
+                "roi": [
+                    263,
+                    547,
+                    1017,
+                    173
+                ], // "origin roi" : [288, 572, 981, 148]
+                "threshold": 0.95
+            }
+        },
         "next": [
             "Start_Gatcha"
         ]
