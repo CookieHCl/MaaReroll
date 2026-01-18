@@ -110,6 +110,13 @@ jobs:
             echo "Skipping copy MFA for Android."
           fi
 
+      - name: Set default language of MFAAvalonia to English
+        if: matrix.os != 'android'
+        shell: bash
+        run: |
+          mkdir -p install/config
+          echo '{"CurrentLanguage": "en-US"}' > install/config/config.json
+
       - uses: actions/upload-artifact@v4
         with:
           name: MaaXXX-${{ matrix.os }}-${{ matrix.arch }}
