@@ -4,220 +4,63 @@
     "Start_Gatcha": {
         "focus": "▶ 가챠 시작",
         "timeout": 60000,
-        "next": ["Gatcha_Daily_Plan_1"]
-    },
-    "Gatcha_Daily_Plan_1": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/1_daily_plan_1.png", // 진짜 안 될 것처럼 보이지만 개잘되니까 웬만하면 건드리지 말기
-                "roi": [
-                    513,
-                    0,
-                    258,
-                    720
-                ], // "origin roi" : [563,36,158,641]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    638,
-                    636,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": ["Gatcha_Daily_Plan_2"]
-    },
-    "Gatcha_Daily_Plan_2": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/2_daily_plan_2.png",
-                "roi": [
-                    10,
-                    17,
-                    320,
-                    275
-                ], // "origin roi" : [60,67,220,175]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1214,
-                    67,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": ["Gatcha_Rookie_Mission"]
-    },
-    "Gatcha_Rookie_Mission": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/3_rookie_mission.png",
-                "roi": [
-                    238,
-                    208,
-                    499,
-                    305
-                ], // "origin roi" : [288,258,399,205]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1246,
-                    74,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": ["Gatcha_Get_Mail_1"]
-    },
-    "Gatcha_Notice": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/4_notice.png",
-                "roi": [
-                    296,
-                    42,
-                    756,
-                    160
-                ], // "origin roi" : [346,92,656,60]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1204,
-                    68,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": ["Gatcha_Get_Mail_1"]
-    },
-    "Gatcha_Get_Mail_1": {
-        "pre_delay": 5000,
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    193,
-                    41,
-                    1,
-                    1
-                ]
-            }
-        },
         "next": [
-            "Gatcha_Get_Mail_2",
-            "Gatcha_Notice" // 공지 때문에 씹혔으면 공지 닫고 다시 진행
+            "Gatcha_Goto_Headhunting"
         ]
-    },
-    "Gatcha_Get_Mail_2": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/5_get_mail.png",
-                "roi": [
-                    1040,
-                    35,
-                    240,
-                    685
-                ], // "origin roi" : [1090,85,145,610]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1140,
-                    665,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": ["Gatcha_Wait_Until_Mail_Received"]
-    },
-    "Gatcha_Wait_Until_Mail_Received": {
-        "next": [
-            "Gatcha_Mail_Received",
-            "[JumpBack]Gatcha_Tap_Until_Mail_Received"
-        ]
-    },
-    "Gatcha_Tap_Until_Mail_Received": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1192,
-                    44,
-                    1,
-                    1
-                ]
-            }
-        }
-    },
-    "Gatcha_Mail_Received": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "gatcha/6_received_mail.png",
-                "roi": [
-                    1041,
-                    36,
-                    239,
-                    684
-                ], // "origin roi" : [1091,86,144,609]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    89,
-                    46,
-                    1,
-                    1
-                ]
-            }
-        },
-        "next": ["Gatcha_Goto_Headhunting"]
     },
     "Gatcha_Goto_Headhunting": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/5_headhunting.png",
+                "roi": [
+                    1068,
+                    480,
+                    212,
+                    94
+                ], // [1093, 505, 172, 44]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "next": [
+            "Gatcha_Select_Headhunting",
+            "Gatcha_Handle_No_Voice"
+        ]
+    },
+    "Gatcha_Handle_No_Voice": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/6_handle_no_voice.png",
+                "roi": [
+                    41,
+                    148,
+                    1150,
+                    403
+                ], // [66, 173, 1100, 353]
+                "threshold": 0.95
+            }
+        },
         "action": {
             "type": "Click",
             "param": {
                 "target": [
-                    1175,
-                    523,
+                    446,
+                    495,
                     1,
                     1
                 ]
             }
         },
-        "next": ["Gatcha_Select_Headhunting"]
+        "next": [
+            "Gatcha_Select_Headhunting"
+        ]
     },
     "Gatcha_Select_Headhunting": {
         "recognition": {
@@ -233,7 +76,9 @@
                 "threshold": 0.95
             }
         },
-        "next": ["Gatcha_2nd_Headhunting"]
+        "next": [
+            "Gatcha_2nd_Headhunting"
+        ]
     },
     "Gatcha_4th_Headhunting": {
         "action": {
@@ -247,7 +92,9 @@
                 ]
             }
         },
-        "next": ["Gatcha_3rd_Headhunting"]
+        "next": [
+            "Gatcha_3rd_Headhunting"
+        ]
     },
     "Gatcha_3rd_Headhunting": {
         "action": {
@@ -261,7 +108,9 @@
                 ]
             }
         },
-        "next": ["Gatcha_2nd_Headhunting"]
+        "next": [
+            "Gatcha_2nd_Headhunting"
+        ]
     },
     "Gatcha_2nd_Headhunting": {
         "action": {
@@ -275,11 +124,15 @@
                 ]
             }
         },
-        "next": ["Gatcha_1st_Headhunting"]
+        "next": [
+            "Gatcha_1st_Headhunting"
+        ]
     },
     "Gatcha_1st_Headhunting": {
         "focus": "!!! 가챠 시작합니다 !!!",
-        "next": ["Gatcha_Try_10roll"]
+        "next": [
+            "Gatcha_Try_10roll"
+        ]
     },
     "Gatcha_Try_10roll": {
         "recognition": {
@@ -336,7 +189,9 @@
                 ]
             }
         },
-        "next": ["Gatcha_Wait_Until_10roll"]
+        "next": [
+            "Gatcha_Wait_Until_10roll"
+        ]
     },
     "Gatcha_10roll_originite_prime": {
         "recognition": {
@@ -393,7 +248,9 @@
                 ]
             }
         },
-        "next": ["Gatcha_Try_1roll"]
+        "next": [
+            "Gatcha_Try_1roll"
+        ]
     },
     "Gatcha_Wait_Until_10roll": {
         "recognition": {
@@ -483,7 +340,9 @@
                 ]
             }
         },
-        "next": ["Gatcha_Wait_Until_1roll"]
+        "next": [
+            "Gatcha_Wait_Until_1roll"
+        ]
     },
     "Gatcha_1roll_orundum": {
         "recognition": {
@@ -510,7 +369,9 @@
                 ]
             }
         },
-        "next": ["Gatcha_Wait_Until_1roll"]
+        "next": [
+            "Gatcha_Wait_Until_1roll"
+        ]
     },
     "Gatcha_1roll_originite_prime": {
         "recognition": {
@@ -567,7 +428,9 @@
                 ]
             }
         },
-        "next": ["Gatcha_Goto_Operator1"]
+        "next": [
+            "Gatcha_Goto_Operator1"
+        ]
     },
     "Gatcha_Wait_Until_1roll": {
         "recognition": {
@@ -613,7 +476,9 @@
                 ]
             }
         },
-        "next": ["Gatcha_Goto_Operator2"]
+        "next": [
+            "Gatcha_Goto_Operator2"
+        ]
     },
     "Gatcha_Goto_Operator2": {
         "recognition": {
@@ -635,6 +500,8 @@
                 "target": true
             }
         },
-        "next": ["Start_Check"]
+        "next": [
+            "Start_Check"
+        ]
     }
 }
