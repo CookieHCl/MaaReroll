@@ -31,7 +31,7 @@ python ./configure.py
 Remove-Item -Recurse -Force .\install\* # install 폴더 없을시 안 해도 됨
 python ./install.py
 Copy-Item -Recurse -Force .\deps\MFAAvalonia\* .\install\
-New-Item -Path '.\install\config\config.json' -Value '{"CurrentLanguage": "en-US"}' -Force
+New-Item -Path '.\install\config\config.json' -Value '{"CurrentLanguage":"en-US,"CurrentTasks":["리세마라<|||>Main"]"}' -Force
 .\install\MFAAvalonia.exe
 ```
 
