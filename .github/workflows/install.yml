@@ -118,7 +118,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p install/config
-          echo '{"CurrentLanguage":"en-US,"CurrentTasks":["리세마라<|||>Main"]"}' > install/config/config.json
+          echo '{"CurrentLanguage":"en-US","CurrentTasks":["리세마라<|||>Main"]}' > install/config/config.json
 
       - uses: actions/upload-artifact@v4
         with:
