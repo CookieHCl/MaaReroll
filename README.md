@@ -28,9 +28,10 @@ python ./configure.py
 ### 빌드 & 실행
 
 ```powershell
-Remove-Item -Recurse -Force .\install\*
+Remove-Item -Recurse -Force .\install\* # install 폴더 없을시 안 해도 됨
 python ./install.py
 Copy-Item -Recurse -Force .\deps\MFAAvalonia\* .\install\
+New-Item -Path '.\install\config\config.json' -Value '{"CurrentLanguage": "en-US"}' -Force
 .\install\MFAAvalonia.exe
 ```
 
