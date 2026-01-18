@@ -145,7 +145,7 @@
                     454,
                     148
                 ], // "origin roi" : [17,15,354,48]
-                "threshold": 0.99
+                "threshold": 0.95
             }
         },
         "action": {
@@ -297,7 +297,7 @@
             }
         },
         "next": [
-            "Gatcha_Try_10roll",
+            "Gatcha_Tap_More_10roll_1",
             "[JumpBack]Gatcha_Tap_Until_10roll"
         ]
     },
@@ -314,6 +314,52 @@
             }
         }
     },
+    // 10연차 후에 결과창 넘기는게 잘 안 돼서 클릭 두 번 더 해줌
+    "Gatcha_Tap_More_10roll_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/7_headhunting_home.png",
+                "roi": [
+                    0,
+                    0,
+                    454,
+                    148
+                ], // "origin roi" : [17,15,354,48]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1261,
+                    16,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "Gatcha_Tap_More_10roll_2"
+        ]
+    },
+    "Gatcha_Tap_More_10roll_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1261,
+                    16,
+                    1,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "Gatcha_Try_10roll"
+        ]
+    },
     "Gatcha_Try_1roll": {
         "recognition": {
             "type": "TemplateMatch",
@@ -325,7 +371,7 @@
                     454,
                     148
                 ], // "origin roi" : [17,15,354,48]
-                "threshold": 0.99
+                "threshold": 0.95
             }
         },
         "action": {
