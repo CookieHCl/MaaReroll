@@ -1,27 +1,20 @@
 {
     "name": "Arknights Reroll with MAAFramework",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "url": "https://github.com/CookieHCl/MaaReroll",
     "custom_title": "위슝좍이 먹고싶어요",
     "controller": [
-        {
-            "name": "MuMuPlayer",
-            "type": "Adb"
-        }
+        {"name": "MuMuPlayer", "type": "Adb"}
     ],
     "resource": [
         {
             "name": "한섭",
-            "path": [
-                "{PROJECT_DIR}/resource"
-            ]
+            "path": ["{PROJECT_DIR}/resource"]
         }
     ],
     "agent": {
         "child_exec": "python",
-        "child_args": [
-            "{PROJECT_DIR}/agent/main.py"
-        ]
+        "child_args": ["{PROJECT_DIR}/agent/main.py"]
     },
     "task": [
         {
@@ -57,17 +50,13 @@
                 {
                     "name": "로그인",
                     "pipeline_override": {
-                        "Main": {
-                            "next": "Start_Login"
-                        }
+                        "Main": {"next": "Start_Login"}
                     }
                 },
                 {
                     "name": "프롤로그 (1번째 전투)",
                     "pipeline_override": {
-                        "Main": {
-                            "next": "Start_Prologue"
-                        }
+                        "Main": {"next": "Start_Prologue"}
                     }
                 },
                 {
@@ -84,33 +73,25 @@
                 {
                     "name": "막간 (메인화면 설명)",
                     "pipeline_override": {
-                        "Main": {
-                            "next": "Start_Interlude"
-                        }
+                        "Main": {"next": "Start_Interlude"}
                     }
                 },
                 {
                     "name": "0-1",
                     "pipeline_override": {
-                        "Main": {
-                            "next": "Start_0-1"
-                        }
+                        "Main": {"next": "Start_0-1"}
                     }
                 },
                 {
                     "name": "홈 (가챠 진행)",
                     "pipeline_override": {
-                        "Main": {
-                            "next": "Gatcha_Goto_Headhunting"
-                        }
+                        "Main": {"next": "Gatcha_Goto_Headhunting"}
                     }
                 },
                 {
                     "name": "오퍼레이터 (계정삭제 진행)",
                     "pipeline_override": {
-                        "Main": {
-                            "next": "Start_Reset"
-                        }
+                        "Main": {"next": "Start_Reset"}
                     }
                 }
             ]
@@ -125,12 +106,8 @@
                 {
                     "name": "OR",
                     "pipeline_override": {
-                        "Check_Operator_Count_Success": {
-                            "next": "Check_Success"
-                        },
-                        "Check_Operator_Count_Failed": {
-                            "next": "Check_Operator_Name"
-                        }
+                        "Check_Operator_Count_Success": {"next": "Check_Success"},
+                        "Check_Operator_Count_Failed": {"next": "Check_Operator_Name"}
                     }
                 }
             ]
@@ -141,9 +118,7 @@
                 {
                     "name": "0개 이상 (고려 안 함)",
                     "pipeline_override": {
-                        "Check_Operator_Count": {
-                            "next": "Check_Operator_Name"
-                        }
+                        "Check_Operator_Count": {"next": "Check_Operator_Name"}
                     }
                 },
                 {
@@ -152,12 +127,7 @@
                         "Check_Operator_Count_Success": {
                             "recognition": {
                                 "param": {
-                                    "roi": [
-                                        9,
-                                        77,
-                                        1270,
-                                        620
-                                    ]
+                                    "roi": [9, 77, 1270, 620]
                                 }
                             }
                         }
@@ -169,12 +139,7 @@
                         "Check_Operator_Count_Success": {
                             "recognition": {
                                 "param": {
-                                    "roi": [
-                                        9,
-                                        387,
-                                        1270,
-                                        310
-                                    ]
+                                    "roi": [9, 387, 1270, 310]
                                 }
                             }
                         }
@@ -214,9 +179,7 @@
                     "pipeline_override": {
                         "Check_Operator_Name_Success": {
                             "recognition": {
-                                "param": {
-                                    "template": "check/operator/wisadel.png"
-                                }
+                                "param": {"template": "check/operator/wisadel.png"}
                             }
                         }
                     }
@@ -224,9 +187,7 @@
                 {
                     "name": "없음 (고려 안 함)",
                     "pipeline_override": {
-                        "Check_Operator_Name": {
-                            "next": "Check_Success"
-                        }
+                        "Check_Operator_Name": {"next": "Check_Success"}
                     }
                 }
             ]
@@ -237,33 +198,25 @@
                 {
                     "name": "두번째 (메인 배너)",
                     "pipeline_override": {
-                        "Gatcha_Select_Headhunting": {
-                            "next": "Gatcha_2nd_Headhunting"
-                        }
+                        "Gatcha_Select_Headhunting": {"next": "Gatcha_2nd_Headhunting"}
                     }
                 },
                 {
                     "name": "세번째",
                     "pipeline_override": {
-                        "Gatcha_Select_Headhunting": {
-                            "next": "Gatcha_3rd_Headhunting"
-                        }
+                        "Gatcha_Select_Headhunting": {"next": "Gatcha_3rd_Headhunting"}
                     }
                 },
                 {
                     "name": "네번째",
                     "pipeline_override": {
-                        "Gatcha_Select_Headhunting": {
-                            "next": "Gatcha_4th_Headhunting"
-                        }
+                        "Gatcha_Select_Headhunting": {"next": "Gatcha_4th_Headhunting"}
                     }
                 },
                 {
                     "name": "첫번째 (신규 유저 배너)",
                     "pipeline_override": {
-                        "Gatcha_Select_Headhunting": {
-                            "next": "Gatcha_1st_Headhunting"
-                        }
+                        "Gatcha_Select_Headhunting": {"next": "Gatcha_1st_Headhunting"}
                     }
                 }
             ]
@@ -282,12 +235,7 @@
                             "action": {
                                 "type": "Click",
                                 "param": {
-                                    "target": [
-                                        305,
-                                        505,
-                                        1,
-                                        1
-                                    ]
+                                    "target": [305, 505, 1, 1]
                                 }
                             },
                             "next": "Gatcha_Try_1roll"
@@ -296,12 +244,7 @@
                             "action": {
                                 "type": "Click",
                                 "param": {
-                                    "target": [
-                                        305,
-                                        505,
-                                        1,
-                                        1
-                                    ]
+                                    "target": [305, 505, 1, 1]
                                 }
                             },
                             "next": "Gatcha_Goto_Operator1"
