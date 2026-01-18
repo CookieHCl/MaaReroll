@@ -15,7 +15,11 @@ on:
       - ".github/workflows/check.yml"
       - "assets/**"
       - "**.py"
-  workflow_dispatch:
+
+# PR 번호가 같은 경우 기존 작업을 취소하고 1개만 실행
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
   resource:
