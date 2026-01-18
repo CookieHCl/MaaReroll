@@ -12,8 +12,8 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "reset/1_operator.png",
-                "roi": [1085, 0, 195, 101],
-                // "origin roi" : [1110, 15, 168, 51]
+                "roi": [671, 0, 543, 149],
+                // "origin roi" : [721,15,443,49]
                 "threshold": 0.95
             }
         },
