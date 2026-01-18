@@ -10,17 +10,46 @@
             "param": {
                 "template": "check/1_operator.png",
                 "roi": [
-                    671,
+                    1085,
                     0,
-                    543,
-                    149
-                ], // "origin roi" : [721,15,443,49]
+                    195,
+                    101
+                ], // "origin roi" : [1110, 15, 168, 51]
                 "threshold": 0.95
             }
         },
-        "next": "Check_Operator_Count"
+        "next": [
+            "Check_Operator_Count",
+            "[JumpBack]Check_Sort_By_Rarity"
+        ]
+    },
+    "Check_Sort_By_Rarity": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    969,
+                    41,
+                    1,
+                    1
+                ]
+            }
+        }
     },
     "Check_Operator_Count": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "check/2_rarity.png",
+                "roi": [
+                    915,
+                    0,
+                    108,
+                    89
+                ], // "origin roi" : [940, 20, 58, 39]
+                "threshold": 0.95
+            }
+        },
         "next": [
             "Check_Operator_Count_Success",
             "Check_Operator_Count_Failed"
@@ -30,7 +59,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "check/2_6star.png",
+                "template": "check/3_6star.png",
                 "roi": [
                     9,
                     77,
