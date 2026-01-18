@@ -85,6 +85,7 @@
         "next": [
             "[JumpBack]Home_260116_Wait_Until_Ticket_Received",
             "[JumpBack]Home_Notice",
+            "[JumpBack]Home_Any_Event",
             "Home_Get_Mail_1"
         ]
     },
@@ -143,6 +144,22 @@
             "param": {
                 "target": [1204, 68, 1, 1]
             }
+        }
+    },
+    "Home_Any_Event": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/X.png",
+                "roi": [0, 0, 1280, 720],
+                // 화면 전체
+                "threshold": 0.9,
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
         }
     },
     "Home_Get_Mail_1": {
