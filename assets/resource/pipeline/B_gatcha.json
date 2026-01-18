@@ -13,20 +13,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/5_headhunting.png",
-                "roi": [
-                    1068,
-                    480,
-                    212,
-                    94
-                ], // [1093, 505, 172, 44]
+                "roi": [1068, 480, 212, 94],
+                // [1093, 505, 172, 44]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "Gatcha_Select_Headhunting",
@@ -38,24 +32,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/6_handle_no_voice.png",
-                "roi": [
-                    41,
-                    148,
-                    1150,
-                    403
-                ], // [66, 173, 1100, 353]
+                "roi": [41, 148, 1150, 403],
+                // [66, 173, 1100, 353]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    446,
-                    495,
-                    1,
-                    1
-                ]
+                "target": [446, 495, 1, 1]
             }
         },
         "next": [
@@ -67,12 +52,8 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/7_headhunting_home.png",
-                "roi": [
-                    0,
-                    0,
-                    454,
-                    148
-                ], // "origin roi" : [17,15,354,48]
+                "roi": [0, 0, 454, 148],
+                // "origin roi" : [17,15,354,48]
                 "threshold": 0.95
             }
         },
@@ -84,12 +65,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1253,
-                    392,
-                    1,
-                    1
-                ]
+                "target": [1253, 392, 1, 1]
             }
         },
         "next": [
@@ -100,12 +76,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1253,
-                    392,
-                    1,
-                    1
-                ]
+                "target": [1253, 392, 1, 1]
             }
         },
         "next": [
@@ -116,12 +87,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1253,
-                    392,
-                    1,
-                    1
-                ]
+                "target": [1253, 392, 1, 1]
             }
         },
         "next": [
@@ -139,24 +105,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/7_headhunting_home.png",
-                "roi": [
-                    0,
-                    0,
-                    454,
-                    148
-                ], // "origin roi" : [17,15,354,48]
+                "roi": [0, 0, 454, 148],
+                // "origin roi" : [17,15,354,48]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1103,
-                    647,
-                    1,
-                    1
-                ]
+                "target": [1103, 647, 1, 1]
             }
         },
         "next": [
@@ -170,24 +127,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/8_gatcha_orundum_roll.png",
-                "roi": [
-                    381,
-                    134,
-                    504,
-                    225
-                ], // "origin roi" : [431,184,404,125]
+                "roi": [381, 134, 504, 225],
+                // "origin roi" : [431,184,404,125]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    939,
-                    514,
-                    1,
-                    1
-                ]
+                "target": [939, 514, 1, 1]
             }
         },
         "next": [
@@ -199,24 +147,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/9_gatcha_originite_prime.png",
-                "roi": [
-                    331,
-                    144,
-                    602,
-                    226
-                ], // "origin roi" : [381,194,502,126]
+                "roi": [331, 144, 602, 226],
+                // "origin roi" : [381,194,502,126]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    937,
-                    506,
-                    1,
-                    1
-                ]
+                "target": [937, 506, 1, 1]
             }
         },
         "next": [
@@ -229,24 +168,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/9.5_gatcha_ticket.png",
-                "roi": [
-                    577,
-                    236,
-                    123,
-                    149
-                ], // "origin roi" : [602, 261, 73, 99]
+                "roi": [577, 236, 123, 149],
+                // "origin roi" : [602, 261, 73, 99]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    909,
-                    516,
-                    1,
-                    1
-                ]
+                "target": [909, 516, 1, 1]
             }
         },
         "next": [
@@ -258,24 +188,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/11_gatcha_failed.png",
-                "roi": [
-                    0,
-                    212,
-                    1280,
-                    355
-                ], // "origin roi" : [5,262,1273,255]
+                "roi": [0, 212, 1280, 355],
+                // "origin roi" : [5,262,1273,255]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    290,
-                    482,
-                    1,
-                    1
-                ]
+                "target": [290, 482, 1, 1]
             }
         },
         "next": [
@@ -287,12 +208,8 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/12_gatcha_start.png",
-                "roi": [
-                    1126,
-                    0,
-                    154,
-                    166
-                ], // "origin roi" : [1176,10,93,66]
+                "roi": [1126, 0, 154, 166],
+                // "origin roi" : [1176,10,93,66]
                 "threshold": 0.95
             }
         },
@@ -305,12 +222,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1261,
-                    16,
-                    1,
-                    1
-                ]
+                "target": [1261, 16, 1, 1]
             }
         }
     },
@@ -320,24 +232,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/7_headhunting_home.png",
-                "roi": [
-                    0,
-                    0,
-                    454,
-                    148
-                ], // "origin roi" : [17,15,354,48]
+                "roi": [0, 0, 454, 148],
+                // "origin roi" : [17,15,354,48]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1261,
-                    16,
-                    1,
-                    1
-                ]
+                "target": [1261, 16, 1, 1]
             }
         },
         "next": [
@@ -348,12 +251,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1261,
-                    16,
-                    1,
-                    1
-                ]
+                "target": [1261, 16, 1, 1]
             }
         },
         "next": [
@@ -365,24 +263,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/7_headhunting_home.png",
-                "roi": [
-                    0,
-                    0,
-                    454,
-                    148
-                ], // "origin roi" : [17,15,354,48]
+                "roi": [0, 0, 454, 148],
+                // "origin roi" : [17,15,354,48]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    897,
-                    648,
-                    1,
-                    1
-                ]
+                "target": [897, 648, 1, 1]
             }
         },
         "next": [
@@ -396,24 +285,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/10_gatcha_free.png",
-                "roi": [
-                    0,
-                    114,
-                    1280,
-                    467
-                ], // "origin roi" : [5,164,1274,367]
+                "roi": [0, 114, 1280, 467],
+                // "origin roi" : [5,164,1274,367]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    840,
-                    494,
-                    1,
-                    1
-                ]
+                "target": [840, 494, 1, 1]
             }
         },
         "next": [
@@ -425,24 +305,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/8_gatcha_orundum_roll.png",
-                "roi": [
-                    381,
-                    134,
-                    504,
-                    225
-                ], // "origin roi" : [431,184,404,125]
+                "roi": [381, 134, 504, 225],
+                // "origin roi" : [431,184,404,125]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    939,
-                    514,
-                    1,
-                    1
-                ]
+                "target": [939, 514, 1, 1]
             }
         },
         "next": [
@@ -454,24 +325,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/9_gatcha_originite_prime.png",
-                "roi": [
-                    331,
-                    144,
-                    602,
-                    226
-                ], // "origin roi" : [381,194,502,126]
+                "roi": [331, 144, 602, 226],
+                // "origin roi" : [381,194,502,126]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    937,
-                    506,
-                    1,
-                    1
-                ]
+                "target": [937, 506, 1, 1]
             }
         },
         "next": [
@@ -484,24 +346,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/11_gatcha_failed.png",
-                "roi": [
-                    0,
-                    212,
-                    1280,
-                    355
-                ], // "origin roi" : [5,262,1273,255]
+                "roi": [0, 212, 1280, 355],
+                // "origin roi" : [5,262,1273,255]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    290,
-                    482,
-                    1,
-                    1
-                ]
+                "target": [290, 482, 1, 1]
             }
         },
         "next": [
@@ -513,12 +366,8 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/12_gatcha_start.png",
-                "roi": [
-                    1126,
-                    0,
-                    154,
-                    166
-                ], // "origin roi" : [1176,10,93,66]
+                "roi": [1126, 0, 154, 166],
+                // "origin roi" : [1176,10,93,66]
                 "threshold": 0.95
             }
         },
@@ -531,12 +380,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1261,
-                    16,
-                    1,
-                    1
-                ]
+                "target": [1261, 16, 1, 1]
             }
         }
     },
@@ -544,12 +388,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    269,
-                    35,
-                    1,
-                    1
-                ]
+                "target": [269, 35, 1, 1]
             }
         },
         "next": [
@@ -561,20 +400,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "gatcha/13_operator.png",
-                "roi": [
-                    235,
-                    79,
-                    182,
-                    273
-                ], // "origin roi" : [285,129,82,173]
+                "roi": [235, 79, 182, 273],
+                // "origin roi" : [285,129,82,173]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "Start_Check"

@@ -1,40 +1,29 @@
 {
     "Clear_Start_04": {
         "focus": "▶ 0-4 클리어 시작",
-        "next": ["Start_04"]
+        "next": [
+            "Start_04"
+        ]
     },
     "04_Skip_Amiya_Dia": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    40,
-                    125,
-                    1,
-                    1
-                ]
+                "target": [40, 125, 1, 1]
             }
         }
     },
     "Start_04": {
-        "next": ["04_Move_Right"]
+        "next": [
+            "04_Move_Right"
+        ]
     },
     "04_Move_Right": {
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    845,
-                    372,
-                    1,
-                    1
-                ],
-                "end": [
-                    206,
-                    379,
-                    1,
-                    1
-                ],
+                "begin": [845, 372, 1, 1],
+                "end": [206, 379, 1, 1],
                 "duration": 300
             }
         },
@@ -49,53 +38,42 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_op_btn.png",
-                "roi": [
-                    575,
-                    208,
-                    123,
-                    40
-                ],
+                "roi": [575, 208, 123, 40],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 3000,
-        "next": ["04_Start_04"]
+        "next": [
+            "04_Start_04"
+        ]
     },
     "04_Start_04": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1150,
-                    650,
-                    1,
-                    1
-                ]
+                "target": [1150, 650, 1, 1]
             }
         },
-        "next": ["04_Find_Ami"]
+        "next": [
+            "04_Find_Ami"
+        ]
     },
     "04_Find_Ami": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_02/02_ami_dia.png",
-                "roi": [
-                    53,
-                    58,
-                    145,
-                    143
-                ],
+                "roi": [53, 58, 145, 143],
                 "threshold": 0.95
             }
         },
-        "next": ["04_Wait_Jes"]
+        "next": [
+            "04_Wait_Jes"
+        ]
     },
     "04_Wait_Jes": {
         "next": [
@@ -108,34 +86,24 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_02/02_add_hib.png",
-                "roi": [
-                    857,
-                    30,
-                    107,
-                    59
-                ],
+                "roi": [857, 30, 107, 59],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 3000,
-        "next": ["04_Click_Jes"]
+        "next": [
+            "04_Click_Jes"
+        ]
     },
     "04_Click_Jes": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1155,
-                    570,
-                    1,
-                    1
-                ]
+                "target": [1155, 570, 1, 1]
             }
         },
         "next": [
@@ -148,20 +116,13 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_jes_select.png",
-                "roi": [
-                    372,
-                    66,
-                    722,
-                    569
-                ],
+                "roi": [372, 66, 722, 569],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "04_Click_Jes2",
@@ -173,36 +134,26 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_jes_selected.png",
-                "roi": [
-                    372,
-                    66,
-                    722,
-                    569
-                ],
+                "roi": [372, 66, 722, 569],
                 "threshold": 0.95
             }
         },
-        "next": ["04_Click_Ad1"]
+        "next": [
+            "04_Click_Ad1"
+        ]
     },
     "04_Click_Ad1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_ad_select.png",
-                "roi": [
-                    372,
-                    66,
-                    722,
-                    569
-                ],
+                "roi": [372, 66, 722, 569],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "04_Click_Ad2",
@@ -214,200 +165,146 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_ad_selected.png",
-                "roi": [
-                    372,
-                    66,
-                    722,
-                    569
-                ],
+                "roi": [372, 66, 722, 569],
                 "threshold": 0.95
             }
         },
-        "next": ["04_Click_Ok"]
+        "next": [
+            "04_Click_Ok"
+        ]
     },
     "04_Click_Ok": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1120,
-                    690,
-                    1,
-                    1
-                ]
+                "target": [1120, 690, 1, 1]
             }
         },
-        "next": ["04_Op_Start"]
+        "next": [
+            "04_Op_Start"
+        ]
     },
     "04_Op_Start": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_02/02_op_start.png",
-                "roi": [
-                    1041,
-                    375,
-                    119,
-                    232
-                ],
+                "roi": [1041, 375, 119, 232],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
-        "next": ["04_Skp_01"]
+        "next": [
+            "04_Skp_01"
+        ]
     },
     "04_Skp_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_skip_01.png",
-                "roi": [
-                    1144,
-                    42,
-                    77,
-                    23
-                ],
+                "roi": [1144, 42, 77, 23],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
-        "next": ["04_Skpok_01"]
+        "next": [
+            "04_Skpok_01"
+        ]
     },
     "04_Skpok_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_skipok_01.png",
-                "roi": [
-                    780,
-                    444,
-                    35,
-                    35
-                ],
+                "roi": [780, 444, 35, 35],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
-        "next": ["04_Skp_02"]
+        "next": [
+            "04_Skp_02"
+        ]
     },
     "04_Skp_02": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_skip_02.png",
-                "roi": [
-                    52,
-                    63,
-                    142,
-                    138
-                ],
+                "roi": [52, 63, 142, 138],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1183,
-                    53,
-                    1,
-                    1
-                ]
+                "target": [1183, 53, 1, 1]
             }
         },
         "post_delay": 300,
-        "next": ["04_Skpok_02"]
+        "next": [
+            "04_Skpok_02"
+        ]
     },
     "04_Skpok_02": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_skipok_02.png",
-                "roi": [
-                    776,
-                    342,
-                    40,
-                    38
-                ],
+                "roi": [776, 342, 40, 38],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 500,
-        "next": ["04_2x_01"]
+        "next": [
+            "04_2x_01"
+        ]
     },
     "04_2x_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_1x.png",
-                "roi": [
-                    1065,
-                    23,
-                    62,
-                    59
-                ],
+                "roi": [1065, 23, 62, 59],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "timeout": 60000,
-        "next": ["04_Deploy_Jes"]
+        "next": [
+            "04_Deploy_Jes"
+        ]
     },
     "04_Deploy_Jes": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_deploy_jes.png",
-                "roi": [
-                    809,
-                    600,
-                    106,
-                    112
-                ],
+                "roi": [809, 600, 106, 112],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    864,
-                    649,
-                    1,
-                    1
-                ],
-                "end": [
-                    770,
-                    179,
-                    1,
-                    1
-                ],
+                "begin": [864, 649, 1, 1],
+                "end": [770, 179, 1, 1],
                 "duration": 500
             }
         },
@@ -421,65 +318,37 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_deployr_jes.png",
-                "roi": [
-                    572,
-                    30,
-                    64,
-                    50
-                ],
+                "roi": [572, 30, 64, 50],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    756,
-                    211,
-                    1,
-                    1
-                ],
-                "end": [
-                    367,
-                    229,
-                    1,
-                    1
-                ],
+                "begin": [756, 211, 1, 1],
+                "end": [367, 229, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["04_Deploy_Nko"]
+        "next": [
+            "04_Deploy_Nko"
+        ]
     },
     "04_Deploy_Nko": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_deploy_nko.png",
-                "roi": [
-                    927,
-                    601,
-                    112,
-                    114
-                ],
+                "roi": [927, 601, 112, 114],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    996,
-                    644,
-                    1,
-                    1
-                ],
-                "end": [
-                    872,
-                    255,
-                    1,
-                    1
-                ],
+                "begin": [996, 644, 1, 1],
+                "end": [872, 255, 1, 1],
                 "duration": 500
             }
         },
@@ -493,65 +362,37 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_deployr_nko.png",
-                "roi": [
-                    659,
-                    78,
-                    68,
-                    63
-                ],
+                "roi": [659, 78, 68, 63],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    853,
-                    266,
-                    1,
-                    1
-                ],
-                "end": [
-                    411,
-                    262,
-                    1,
-                    1
-                ],
+                "begin": [853, 266, 1, 1],
+                "end": [411, 262, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["04_Deploy_Ami"]
+        "next": [
+            "04_Deploy_Ami"
+        ]
     },
     "04_Deploy_Ami": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_deploy_ami.png",
-                "roi": [
-                    1169,
-                    603,
-                    107,
-                    108
-                ],
+                "roi": [1169, 603, 107, 108],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    1217,
-                    646,
-                    1,
-                    1
-                ],
-                "end": [
-                    662,
-                    321,
-                    1,
-                    1
-                ],
+                "begin": [1217, 646, 1, 1],
+                "end": [662, 321, 1, 1],
                 "duration": 600
             }
         },
@@ -565,65 +406,37 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_deployr_ami.png",
-                "roi": [
-                    483,
-                    165,
-                    56,
-                    57
-                ],
+                "roi": [483, 165, 56, 57],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    654,
-                    356,
-                    1,
-                    1
-                ],
-                "end": [
-                    655,
-                    98,
-                    1,
-                    1
-                ],
+                "begin": [654, 356, 1, 1],
+                "end": [655, 98, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["04_Deploy_Ad"]
+        "next": [
+            "04_Deploy_Ad"
+        ]
     },
     "04_Deploy_Ad": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_deploy_ad.png",
-                "roi": [
-                    1048,
-                    602,
-                    104,
-                    112
-                ],
+                "roi": [1048, 602, 104, 112],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    1099,
-                    654,
-                    1,
-                    1
-                ],
-                "end": [
-                    685,
-                    418,
-                    1,
-                    1
-                ],
+                "begin": [1099, 654, 1, 1],
+                "end": [685, 418, 1, 1],
                 "duration": 500
             }
         },
@@ -637,68 +450,45 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_04/04_deployr_ad.png",
-                "roi": [
-                    466,
-                    235,
-                    76,
-                    69
-                ],
+                "roi": [466, 235, 76, 69],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    598,
-                    439,
-                    1,
-                    1
-                ],
-                "end": [
-                    228,
-                    430,
-                    1,
-                    1
-                ],
+                "begin": [598, 439, 1, 1],
+                "end": [228, 430, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["04_Op_End"]
+        "next": [
+            "04_Op_End"
+        ]
     },
     "04_Op_End": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_01/01_end.png",
-                "roi": [
-                    72,
-                    294,
-                    58,
-                    59
-                ],
+                "roi": [72, 294, 58, 59],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
-        "next": ["04_Wait_End"]
+        "next": [
+            "04_Wait_End"
+        ]
     },
     "04_Wait_End": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    300,
-                    250,
-                    1,
-                    1
-                ]
+                "target": [300, 250, 1, 1]
             }
         },
         "next": [
@@ -711,15 +501,12 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_01/01_amiya_dia.png",
-                "roi": [
-                    58,
-                    55,
-                    139,
-                    147
-                ],
+                "roi": [58, 55, 139, 147],
                 "threshold": 0.95
             }
         },
-        "next": ["04_End_Tutorial"]
+        "next": [
+            "04_End_Tutorial"
+        ]
     }
 }

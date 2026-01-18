@@ -7,12 +7,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1055,
-                    355,
-                    1,
-                    1
-                ]
+                "target": [1055, 355, 1, 1]
             }
         },
         "next": [
@@ -25,12 +20,7 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "04_end_tuto/04_op_1.png",
-                "roi": [
-                    1049,
-                    23,
-                    102,
-                    31
-                ],
+                "roi": [1049, 23, 102, 31],
                 "threshold": 0.95
             }
         },
@@ -40,12 +30,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    90,
-                    300,
-                    1,
-                    1
-                ]
+                "target": [90, 300, 1, 1]
             }
         },
         "next": [
@@ -58,12 +43,7 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "04_end_tuto/04_op_3.png",
-                "roi": [
-                    984,
-                    125,
-                    76,
-                    31
-                ],
+                "roi": [984, 125, 76, 31],
                 "threshold": 0.95
             }
         },
@@ -73,12 +53,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    985,
-                    125,
-                    1,
-                    1
-                ]
+                "target": [985, 125, 1, 1]
             }
         },
         "next": [
@@ -91,12 +66,7 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "04_end_tuto/04_op_5.png",
-                "roi": [
-                    480,
-                    545,
-                    79,
-                    59
-                ],
+                "roi": [480, 545, 79, 59],
                 "threshold": 0.95
             }
         },
@@ -107,12 +77,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1147,
-                    181,
-                    1,
-                    1
-                ]
+                "target": [1147, 181, 1, 1]
             }
         },
         "next": [
@@ -125,12 +90,7 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "04_end_tuto/04_op_7.png",
-                "roi": [
-                    1132,
-                    471,
-                    83,
-                    36
-                ],
+                "roi": [1132, 471, 83, 36],
                 "threshold": 0.95
             }
         },
@@ -142,20 +102,13 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "04_end_tuto/04_op_7.png",
-                "roi": [
-                    1132,
-                    471,
-                    83,
-                    36
-                ],
+                "roi": [1132, 471, 83, 36],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 1000,
         "next": "04_Op_8"
@@ -164,12 +117,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1180,
-                    600,
-                    1,
-                    1
-                ]
+                "target": [1180, 600, 1, 1]
             }
         },
         "next": "04_Escape_Rec"
@@ -178,12 +126,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    270,
-                    35,
-                    1,
-                    1
-                ]
+                "target": [270, 35, 1, 1]
             }
         },
         "post_delay": 500,
@@ -197,20 +140,13 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "0-11-run/4_rp_story.png",
-                "roi": [
-                    498,
-                    55,
-                    60,
-                    157
-                ],
+                "roi": [498, 55, 60, 157],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 5000,
         "next": "04_Mission"
@@ -221,17 +157,13 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "04_end_tuto/04_mission.png",
-                "roi": [
-                    969,532,287,88
-                ],
+                "roi": [969, 532, 287, 88],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": "Clear_Start_TR4"
     }

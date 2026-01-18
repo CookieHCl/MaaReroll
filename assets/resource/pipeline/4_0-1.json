@@ -13,20 +13,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "0-1/1_story1.png",
-                "roi": [
-                    1098,
-                    0,
-                    174,
-                    119
-                ], // "origin roi" : [1148,43,74,19]
+                "roi": [1098, 0, 174, 119],
+                // "origin roi" : [1148,43,74,19]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "0-1_Story1_2"
@@ -36,12 +30,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    795,
-                    461,
-                    1,
-                    1
-                ]
+                "target": [795, 461, 1, 1]
             }
         },
         "timeout": 60000,
@@ -54,20 +43,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "0-1/2_battle.png",
-                "roi": [
-                    0,
-                    0,
-                    859,
-                    269
-                ], // "origin roi" : [50,36,759,169]
+                "roi": [0, 0, 859, 269],
+                // "origin roi" : [50,36,759,169]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "0-1_Retreat_1"
@@ -79,20 +62,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "0-1/r1_retreat_1.png",
-                "roi": [
-                    0,
-                    0,
-                    171,
-                    175
-                ], // "origin roi" : [47,16,71,75]
+                "roi": [0, 0, 171, 175],
+                // "origin roi" : [47,16,71,75]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "0-1_Retreat_2"
@@ -103,20 +80,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "0-1/r2_retreat_2.png",
-                "roi": [
-                    592,
-                    491,
-                    688,
-                    170
-                ], // "origin roi" : [642,541,635,70]
+                "roi": [592, 491, 688, 170],
+                // "origin roi" : [642,541,635,70]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "0-1_Retreat_Wait_Until_Home"
@@ -132,12 +103,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    518,
-                    183,
-                    1,
-                    1
-                ]
+                "target": [518, 183, 1, 1]
             }
         }
     },
@@ -146,20 +112,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "0-1/r3_home_1.png",
-                "roi": [
-                    117,
-                    0,
-                    305,
-                    148
-                ], // "origin roi" : [167,13,205,48]
+                "roi": [117, 0, 305, 148],
+                // "origin roi" : [167,13,205,48]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "0-1_Retreat_Go_Home_2"
@@ -170,20 +130,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "0-1/r4_home_2.png",
-                "roi": [
-                    15,
-                    102,
-                    153,
-                    251
-                ], // "origin roi" : [65,152,53,151]
+                "roi": [15, 102, 153, 251],
+                // "origin roi" : [65,152,53,151]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "Start_Home"

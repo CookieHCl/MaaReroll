@@ -13,20 +13,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/1_announcement.png",
-                "roi": [
-                    325,
-                    486,
-                    627,
-                    123
-                ], // "origin roi" : [375,536,527,23]
+                "roi": [325, 486, 627, 123],
+                // "origin roi" : [375,536,527,23]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "Login_Check_Already_Login",
@@ -38,24 +32,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/2_already_login.png",
-                "roi": [
-                    1156,
-                    287,
-                    124,
-                    238
-                ], // "origin roi" : [1206,337,59,138]
+                "roi": [1156, 287, 124, 238],
+                // "origin roi" : [1206,337,59,138]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1234,
-                    444,
-                    1,
-                    1
-                ]
+                "target": [1234, 444, 1, 1]
             }
         },
         "next": "Login_Change_Account"
@@ -65,20 +50,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/3_change_account.png",
-                "roi": [
-                    641,
-                    343,
-                    214,
-                    134
-                ], // "origin roi" : [691,393,114,34]
+                "roi": [641, 343, 214, 134],
+                // "origin roi" : [691,393,114,34]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": "Start_Login"
     },
@@ -87,20 +66,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/4_login.png",
-                "roi": [
-                    509,
-                    438,
-                    260,
-                    142
-                ], // "origin roi" : [559,488,160,42]
+                "roi": [509, 438, 260, 142],
+                // "origin roi" : [559,488,160,42]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": [
             "Login_Check_Previous_Account",
@@ -112,12 +85,8 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/5_previous_account.png",
-                "roi": [
-                    803,
-                    89,
-                    214,
-                    631
-                ], // "origin roi" : [853,139,114,580]
+                "roi": [803, 89, 214, 631],
+                // "origin roi" : [853,139,114,580]
                 "threshold": 0.95
             }
         },
@@ -127,12 +96,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    871,
-                    317,
-                    1,
-                    1
-                ]
+                "target": [871, 317, 1, 1]
             }
         },
         "next": "Login_Remove_Previous_Account_2"
@@ -141,12 +105,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    871,
-                    418,
-                    1,
-                    1
-                ]
+                "target": [871, 418, 1, 1]
             }
         },
         "next": "Login_Remove_Previous_Account_3"
@@ -156,20 +115,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/6_remove_previous_account_3.png",
-                "roi": [
-                    628,
-                    365,
-                    227,
-                    137
-                ], // "origin roi" : [678,415,127,37]
+                "roi": [628, 365, 227, 137],
+                // "origin roi" : [678,415,127,37]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": "Login_Create_Guest_Account_1"
     },
@@ -178,24 +131,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/7_create_guest_account.png",
-                "roi": [
-                    302,
-                    422,
-                    672,
-                    218
-                ], // "origin roi" : [352,472,572,118]
+                "roi": [302, 422, 672, 218],
+                // "origin roi" : [352,472,572,118]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    897,
-                    549,
-                    1,
-                    1
-                ]
+                "target": [897, 549, 1, 1]
             }
         },
         "next": "Login_Create_Guest_Account_2"
@@ -204,12 +148,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    581,
-                    208,
-                    1,
-                    1
-                ]
+                "target": [581, 208, 1, 1]
             }
         },
         "next": "Login_Check_Email_Consent"
@@ -219,24 +158,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/8_email_consent.png",
-                "roi": [
-                    306,
-                    31,
-                    687,
-                    287
-                ], // "origin roi" : [356,81,587,187]
+                "roi": [306, 31, 687, 287],
+                // "origin roi" : [356,81,587,187]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    919,
-                    101,
-                    1,
-                    1
-                ]
+                "target": [919, 101, 1, 1]
             }
         },
         "timeout": 4000,
@@ -251,24 +181,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/9_google_consent.png",
-                "roi": [
-                    335,
-                    82,
-                    611,
-                    561
-                ], // "origin roi" : [385,132,511,461]
+                "roi": [335, 82, 611, 561],
+                // "origin roi" : [385,132,511,461]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    633,
-                    558,
-                    1,
-                    1
-                ]
+                "target": [633, 558, 1, 1]
             }
         },
         "timeout": 4000,
@@ -280,24 +201,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "login/10_term_consent.png",
-                "roi": [
-                    189,
-                    80,
-                    903,
-                    613
-                ], // "origin roi" : [239,130,803,513]
+                "roi": [189, 80, 903, 613],
+                // "origin roi" : [239,130,803,513]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    284,
-                    238,
-                    1,
-                    1
-                ]
+                "target": [284, 238, 1, 1]
             }
         },
         "next": "Login_Term_Consent_2"
@@ -306,12 +218,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    283,
-                    294,
-                    1,
-                    1
-                ]
+                "target": [283, 294, 1, 1]
             }
         },
         "next": "Login_Term_Consent_3"
@@ -320,12 +227,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    284,
-                    348,
-                    1,
-                    1
-                ]
+                "target": [284, 348, 1, 1]
             }
         },
         "next": "Login_Term_Consent_4"
@@ -334,12 +236,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    743,
-                    608,
-                    1,
-                    1
-                ]
+                "target": [743, 608, 1, 1]
             }
         },
         "next": "Start_Prologue"

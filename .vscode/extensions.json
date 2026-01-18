@@ -2,6 +2,7 @@
     "recommendations": [
         "nekosu.maa-support",
         "charliermarsh.ruff",
-        "davidanson.vscode-markdownlint"
+        "davidanson.vscode-markdownlint",
+        "SwordofMorning.maapipeline-format"
     ]
 }

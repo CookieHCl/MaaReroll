@@ -1,40 +1,29 @@
 {
     "Clear_Start_TR7": {
         "focus": "▶ TR-7 클리어 시작",
-        "next": ["Start_TR7"]
+        "next": [
+            "Start_TR7"
+        ]
     },
     "TR7_Skip_Amiya_Dia": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    40,
-                    125,
-                    1,
-                    1
-                ]
+                "target": [40, 125, 1, 1]
             }
         }
     },
     "Start_TR7": {
-        "next": ["TR7_Move_Right"]
+        "next": [
+            "TR7_Move_Right"
+        ]
     },
     "TR7_Move_Right": {
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    629,
-                    590,
-                    1,
-                    1
-                ],
-                "end": [
-                    165,
-                    589,
-                    1,
-                    1
-                ],
+                "begin": [629, 590, 1, 1],
+                "end": [165, 589, 1, 1],
                 "duration": 300
             }
         },
@@ -49,163 +38,117 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_op_btn.png",
-                "roi": [
-                    604,
-                    204,
-                    70,
-                    29
-                ],
+                "roi": [604, 204, 70, 29],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 3000,
-        "next": ["TR7_Start_07"]
+        "next": [
+            "TR7_Start_07"
+        ]
     },
     "TR7_Start_07": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1150,
-                    650,
-                    1,
-                    1
-                ]
+                "target": [1150, 650, 1, 1]
             }
         },
-        "next": ["TR7_Op_Start"]
+        "next": [
+            "TR7_Op_Start"
+        ]
     },
     "TR7_Op_Start": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr2/tr2_op_start.png",
-                "roi": [
-                    1040,
-                    372,
-                    124,
-                    247
-                ],
+                "roi": [1040, 372, 124, 247],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
-        "next": ["TR7_2x"]
+        "next": [
+            "TR7_2x"
+        ]
     },
     "TR7_2x": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_1x.png",
-                "roi": [
-                    1065,
-                    25,
-                    61,
-                    55
-                ],
+                "roi": [1065, 25, 61, 55],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "timeout": 60000,
-        "next": ["TR7_Skp_01"]
+        "next": [
+            "TR7_Skp_01"
+        ]
     },
     "TR7_Skp_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_dobe.png",
-                "roi": [
-                    54,
-                    55,
-                    142,
-                    147
-                ],
+                "roi": [54, 55, 142, 147],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1183,
-                    53,
-                    1,
-                    1
-                ]
+                "target": [1183, 53, 1, 1]
             }
         },
         "post_delay": 300,
-        "next": ["TR7_Skpok_01"]
+        "next": [
+            "TR7_Skpok_01"
+        ]
     },
     "TR7_Skpok_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_skpok_1.png",
-                "roi": [
-                    778,
-                    338,
-                    41,
-                    45
-                ],
+                "roi": [778, 338, 41, 45],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 500,
-        "next": ["TR7_Deploy_Ad"]
+        "next": [
+            "TR7_Deploy_Ad"
+        ]
     },
     "TR7_Deploy_Ad": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_deploy_ad.png",
-                "roi": [
-                    1049,
-                    602,
-                    104,
-                    112
-                ],
+                "roi": [1049, 602, 104, 112],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    1110,
-                    660,
-                    1,
-                    1
-                ],
-                "end": [
-                    732,
-                    483,
-                    1,
-                    1
-                ],
+                "begin": [1110, 660, 1, 1],
+                "end": [732, 483, 1, 1],
                 "duration": 500
             }
         },
@@ -219,65 +162,37 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_deployr_ad.png",
-                "roi": [
-                    517,
-                    300,
-                    68,
-                    75
-                ],
+                "roi": [517, 300, 68, 75],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    728,
-                    480,
-                    1,
-                    1
-                ],
-                "end": [
-                    729,
-                    158,
-                    1,
-                    1
-                ],
+                "begin": [728, 480, 1, 1],
+                "end": [729, 158, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["TR7_Deploy_Ku"]
+        "next": [
+            "TR7_Deploy_Ku"
+        ]
     },
     "TR7_Deploy_Ku": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_deploy_ku.png",
-                "roi": [
-                    1166,
-                    605,
-                    110,
-                    109
-                ],
+                "roi": [1166, 605, 110, 109],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    1226,
-                    661,
-                    1,
-                    1
-                ],
-                "end": [
-                    549,
-                    340,
-                    1,
-                    1
-                ],
+                "begin": [1226, 661, 1, 1],
+                "end": [549, 340, 1, 1],
                 "duration": 500
             }
         },
@@ -291,101 +206,72 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_deployr_ku.png",
-                "roi": [
-                    362,
-                    181,
-                    66,
-                    51
-                ],
+                "roi": [362, 181, 66, 51],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    546,
-                    319,
-                    1,
-                    1
-                ],
-                "end": [
-                    870,
-                    321,
-                    1,
-                    1
-                ],
+                "begin": [546, 319, 1, 1],
+                "end": [870, 321, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["TR7_2x_01"]
+        "next": [
+            "TR7_2x_01"
+        ]
     },
     "TR7_2x_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_1x.png",
-                "roi": [
-                    1065,
-                    25,
-                    61,
-                    55
-                ],
+                "roi": [1065, 25, 61, 55],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "timeout": 60000,
-        "next": ["TR7_Kuora_Sk"]
+        "next": [
+            "TR7_Kuora_Sk"
+        ]
     },
     "TR7_Kuora_Sk": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr7/tr7_ku_sk.png",
-                "roi": [
-                    422,
-                    208,
-                    15,
-                    17
-                ],
+                "roi": [422, 208, 15, 17],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    430,
-                    310,
-                    1,
-                    1
-                ]
+                "target": [430, 310, 1, 1]
             }
         },
         "post_delay": 500,
-        "next": ["TR7_Kuora_Sk_On"]
+        "next": [
+            "TR7_Kuora_Sk_On"
+        ]
     },
     "TR7_Kuora_Sk_On": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    865,
-                    420,
-                    1,
-                    1
-                ]
+                "target": [865, 420, 1, 1]
             }
         },
         "timeout": 60000,
-        "next": ["TR7_Wait_Recruit"]
+        "next": [
+            "TR7_Wait_Recruit"
+        ]
     },
     "TR7_Wait_Recruit": {
         "timeout": 60000,
@@ -399,22 +285,17 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_01/01_end.png",
-                "roi": [
-                    72,
-                    294,
-                    58,
-                    59
-                ],
+                "roi": [72, 294, 58, 59],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
-        "next": ["TR7_Wait_End"]
+        "next": [
+            "TR7_Wait_End"
+        ]
     },
     "TR7_Wait_End": {
         "next": [
@@ -427,15 +308,12 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "01_end_tuto/TR1_end_main.png",
-                "roi": [
-                    164,
-                    15,
-                    204,
-                    45
-                ],
+                "roi": [164, 15, 204, 45],
                 "threshold": 0.95
             }
         },
-        "next": ["Clear_Start_10"]
+        "next": [
+            "Clear_Start_10"
+        ]
     }
 }

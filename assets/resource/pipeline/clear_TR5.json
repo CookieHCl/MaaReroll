@@ -1,40 +1,29 @@
 {
     "Clear_Start_TR5": {
         "focus": "▶ TR-5 클리어 시작",
-        "next": ["Start_TR5"]
+        "next": [
+            "Start_TR5"
+        ]
     },
     "TR5_Skip_Amiya_Dia": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    40,
-                    125,
-                    1,
-                    1
-                ]
+                "target": [40, 125, 1, 1]
             }
         }
     },
     "Start_TR5": {
-        "next": ["TR5_Move_Right"]
+        "next": [
+            "TR5_Move_Right"
+        ]
     },
     "TR5_Move_Right": {
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    629,
-                    590,
-                    1,
-                    1
-                ],
-                "end": [
-                    165,
-                    589,
-                    1,
-                    1
-                ],
+                "begin": [629, 590, 1, 1],
+                "end": [165, 589, 1, 1],
                 "duration": 300
             }
         },
@@ -49,163 +38,117 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_op_btn.png",
-                "roi": [
-                    602,
-                    438,
-                    76,
-                    29
-                ],
+                "roi": [602, 438, 76, 29],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 3000,
-        "next": ["TR5_Start_05"]
+        "next": [
+            "TR5_Start_05"
+        ]
     },
     "TR5_Start_05": {
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1150,
-                    650,
-                    1,
-                    1
-                ]
+                "target": [1150, 650, 1, 1]
             }
         },
-        "next": ["TR5_Op_Start"]
+        "next": [
+            "TR5_Op_Start"
+        ]
     },
     "TR5_Op_Start": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr2/tr2_op_start.png",
-                "roi": [
-                    1040,
-                    372,
-                    124,
-                    247
-                ],
+                "roi": [1040, 372, 124, 247],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
-        "next": ["TR5_Skp_01"]
+        "next": [
+            "TR5_Skp_01"
+        ]
     },
     "TR5_Skp_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_jes.png",
-                "roi": [
-                    55,
-                    52,
-                    147,
-                    146
-                ],
+                "roi": [55, 52, 147, 146],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1183,
-                    53,
-                    1,
-                    1
-                ]
+                "target": [1183, 53, 1, 1]
             }
         },
         "post_delay": 300,
-        "next": ["TR5_Skpok_01"]
+        "next": [
+            "TR5_Skpok_01"
+        ]
     },
     "TR5_Skpok_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_skpok_1.png",
-                "roi": [
-                    780,
-                    344,
-                    35,
-                    35
-                ],
+                "roi": [780, 344, 35, 35],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 500,
-        "next": ["TR5_2x_01"]
+        "next": [
+            "TR5_2x_01"
+        ]
     },
     "TR5_2x_01": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_1x.png",
-                "roi": [
-                    1066,
-                    28,
-                    61,
-                    53
-                ],
+                "roi": [1066, 28, 61, 53],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "timeout": 60000,
-        "next": ["TR5_Deploy_Fe"]
+        "next": [
+            "TR5_Deploy_Fe"
+        ]
     },
     "TR5_Deploy_Fe": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_deploy_fe.png",
-                "roi": [
-                    1048,
-                    599,
-                    107,
-                    111
-                ],
+                "roi": [1048, 599, 107, 111],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    1086,
-                    657,
-                    1,
-                    1
-                ],
-                "end": [
-                    731,
-                    379,
-                    1,
-                    1
-                ],
+                "begin": [1086, 657, 1, 1],
+                "end": [731, 379, 1, 1],
                 "duration": 500
             }
         },
@@ -219,139 +162,93 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_deployr_fe.png",
-                "roi": [
-                    526,
-                    194,
-                    64,
-                    64
-                ],
+                "roi": [526, 194, 64, 64],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    727,
-                    371,
-                    1,
-                    1
-                ],
-                "end": [
-                    728,
-                    107,
-                    1,
-                    1
-                ],
+                "begin": [727, 371, 1, 1],
+                "end": [728, 107, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["TR5_Skp_02"]
+        "next": [
+            "TR5_Skp_02"
+        ]
     },
     "TR5_Skp_02": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_jes.png",
-                "roi": [
-                    55,
-                    52,
-                    147,
-                    146
-                ],
+                "roi": [55, 52, 147, 146],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    1183,
-                    53,
-                    1,
-                    1
-                ]
+                "target": [1183, 53, 1, 1]
             }
         },
         "post_delay": 300,
-        "next": ["TR5_Skpok_02"]
+        "next": [
+            "TR5_Skpok_02"
+        ]
     },
     "TR5_Skpok_02": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_skpok_1.png",
-                "roi": [
-                    780,
-                    344,
-                    35,
-                    35
-                ],
+                "roi": [780, 344, 35, 35],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 500,
-        "next": ["TR5_2x_02"]
+        "next": [
+            "TR5_2x_02"
+        ]
     },
     "TR5_2x_02": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_1x.png",
-                "roi": [
-                    1066,
-                    28,
-                    61,
-                    53
-                ],
+                "roi": [1066, 28, 61, 53],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "timeout": 60000,
-        "next": ["TR5_Deploy_Du"]
+        "next": [
+            "TR5_Deploy_Du"
+        ]
     },
     "TR5_Deploy_Du": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_deploy_du.png",
-                "roi": [
-                    1048,
-                    602,
-                    104,
-                    108
-                ],
+                "roi": [1048, 602, 104, 108],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    1102,
-                    657,
-                    1,
-                    1
-                ],
-                "end": [
-                    819,
-                    265,
-                    1,
-                    1
-                ],
+                "begin": [1102, 657, 1, 1],
+                "end": [819, 265, 1, 1],
                 "duration": 500
             }
         },
@@ -365,65 +262,37 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_deployr_du.png",
-                "roi": [
-                    619,
-                    117,
-                    61,
-                    60
-                ],
+                "roi": [619, 117, 61, 60],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    826,
-                    267,
-                    1,
-                    1
-                ],
-                "end": [
-                    463,
-                    274,
-                    1,
-                    1
-                ],
+                "begin": [826, 267, 1, 1],
+                "end": [463, 274, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["TR5_Deploy_Hib"]
+        "next": [
+            "TR5_Deploy_Hib"
+        ]
     },
     "TR5_Deploy_Hib": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_deploy_hib.png",
-                "roi": [
-                    1170,
-                    602,
-                    100,
-                    108
-                ],
+                "roi": [1170, 602, 100, 108],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    1226,
-                    647,
-                    1,
-                    1
-                ],
-                "end": [
-                    938,
-                    344,
-                    1,
-                    1
-                ],
+                "begin": [1226, 647, 1, 1],
+                "end": [938, 344, 1, 1],
                 "duration": 500
             }
         },
@@ -437,35 +306,22 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_tr5/tr5_deployr_hib.png",
-                "roi": [
-                    702,
-                    177,
-                    69,
-                    66
-                ],
+                "roi": [702, 177, 69, 66],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "begin": [
-                    936,
-                    340,
-                    1,
-                    1
-                ],
-                "end": [
-                    526,
-                    336,
-                    1,
-                    1
-                ],
+                "begin": [936, 340, 1, 1],
+                "end": [526, 336, 1, 1],
                 "duration": 500
             }
         },
         "timeout": 60000,
-        "next": ["TR5_Wait_Recruit"]
+        "next": [
+            "TR5_Wait_Recruit"
+        ]
     },
     "TR5_Wait_Recruit": {
         "timeout": 60000,
@@ -479,22 +335,17 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_01/01_end.png",
-                "roi": [
-                    72,
-                    294,
-                    58,
-                    59
-                ],
+                "roi": [72, 294, 58, 59],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
-        "next": ["TR5_Wait_End"]
+        "next": [
+            "TR5_Wait_End"
+        ]
     },
     "TR5_Wait_End": {
         "next": [
@@ -507,15 +358,12 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "01_end_tuto/TR1_end_main.png",
-                "roi": [
-                    164,
-                    15,
-                    204,
-                    45
-                ],
+                "roi": [164, 15, 204, 45],
                 "threshold": 0.95
             }
         },
-        "next": ["Clear_Start_07"]
+        "next": [
+            "Clear_Start_07"
+        ]
     }
 }

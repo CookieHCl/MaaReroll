@@ -12,24 +12,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "reset/1_operator.png",
-                "roi": [
-                    1085,
-                    0,
-                    195,
-                    101
-                ], // "origin roi" : [1110, 15, 168, 51]
+                "roi": [1085, 0, 195, 101],
+                // "origin roi" : [1110, 15, 168, 51]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    268,
-                    37,
-                    1,
-                    1
-                ]
+                "target": [268, 37, 1, 1]
             }
         },
         "next": "Reset_Close_Operator_2"
@@ -39,20 +30,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "reset/2_go_to_home.png",
-                "roi": [
-                    24,
-                    105,
-                    135,
-                    247
-                ], // "origin roi" : [74,155,35,147]
+                "roi": [24, 105, 135, 247],
+                // "origin roi" : [74,155,35,147]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": "Reset_Remove_Account_1"
     },
@@ -61,24 +46,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "reset/3_home.png",
-                "roi": [
-                    20,
-                    15,
-                    50,
-                    47
-                ],
+                "roi": [20, 15, 50, 47],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    46,
-                    40,
-                    1,
-                    1
-                ]
+                "target": [46, 40, 1, 1]
             }
         },
         "next": "Reset_Remove_Account_2"
@@ -88,20 +63,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "reset/4_remove_account_1.png",
-                "roi": [
-                    0,
-                    506,
-                    299,
-                    181
-                ], // "origin roi" : [30,556,199,81]
+                "roi": [0, 506, 299, 181],
+                // "origin roi" : [30,556,199,81]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": "Reset_Remove_Account_3"
     },
@@ -110,24 +79,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "reset/5_remove_account_2.png",
-                "roi": [
-                    188,
-                    104,
-                    274,
-                    157
-                ], // "origin roi" : [238,154,174,57]
+                "roi": [188, 104, 274, 157],
+                // "origin roi" : [238,154,174,57]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    319,
-                    493,
-                    1,
-                    1
-                ]
+                "target": [319, 493, 1, 1]
             }
         },
         "next": "Reset_Remove_Account_4"
@@ -136,12 +96,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    278,
-                    317,
-                    1,
-                    1
-                ]
+                "target": [278, 317, 1, 1]
             }
         },
         "next": "Reset_Remove_Account_5"
@@ -150,12 +105,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    538,
-                    576,
-                    1,
-                    1
-                ]
+                "target": [538, 576, 1, 1]
             }
         },
         "next": "Reset_Remove_Account_6"
@@ -164,12 +114,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    306,
-                    250,
-                    1,
-                    1
-                ]
+                "target": [306, 250, 1, 1]
             }
         },
         "next": "Reset_Remove_Account_7"
@@ -177,9 +122,7 @@
     "Reset_Remove_Account_7": {
         "action": {
             "type": "InputText",
-            "param": {
-                "input_text": "DELETE"
-            }
+            "param": {"input_text": "DELETE"}
         },
         "next": "Reset_Remove_Account_8"
     },
@@ -187,12 +130,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    538,
-                    579,
-                    1,
-                    1
-                ]
+                "target": [538, 579, 1, 1]
             }
         },
         "next": "Reset_Remove_Account_9"
@@ -202,24 +140,15 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "reset/6_confirm_removal.png",
-                "roi": [
-                    319,
-                    260,
-                    639,
-                    353
-                ], // "origin roi" : [369,310,539,253]
+                "roi": [319, 260, 639, 353],
+                // "origin roi" : [369,310,539,253]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    640,
-                    522,
-                    1,
-                    1
-                ]
+                "target": [640, 522, 1, 1]
             }
         },
         "next": "Start_Login"

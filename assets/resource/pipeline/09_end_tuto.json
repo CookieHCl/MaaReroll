@@ -8,24 +8,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "09_end_tuto/09_ami_dia.png",
-                "roi": [
-                    60,
-                    64,
-                    136,
-                    136
-                ],
+                "roi": [60, 64, 136, 136],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    750,
-                    600,
-                    1,
-                    1
-                ]
+                "target": [750, 600, 1, 1]
             }
         },
         "post_delay": 500,
@@ -39,24 +29,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "09_end_tuto/09_ami_dia_2.png",
-                "roi": [
-                    87,
-                    496,
-                    142,
-                    145
-                ],
+                "roi": [87, 496, 142, 145],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    270,
-                    40,
-                    1,
-                    1
-                ]
+                "target": [270, 40, 1, 1]
             }
         },
         "post_delay": 500,
@@ -69,12 +49,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [
-                    270,
-                    40,
-                    1,
-                    1
-                ]
+                "target": [270, 40, 1, 1]
             }
         },
         "post_delay": 500,
@@ -88,20 +63,13 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "0-11-run/4_rp_story.png",
-                "roi": [
-                    498,
-                    55,
-                    60,
-                    157
-                ],
+                "roi": [498, 55, 60, 157],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "post_delay": 5000,
         "next": "09_Mission"
@@ -112,17 +80,13 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "09_end_tuto/09_mission.png",
-                "roi": [
-                    966,558,288,62
-                ],
+                "roi": [966, 558, 288, 62],
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": true
-            }
+            "param": {"target": true}
         },
         "next": "Clear_Start_TR7"
     }

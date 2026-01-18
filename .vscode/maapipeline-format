@@ -1,0 +1,35 @@
+{
+    "version": "1.0",
+    "indent": {"style": "space", "width": 4},
+    "posix": {"insert_final_newline": false},
+    "formatting": {
+        "simple_array_threshold": 50,
+        "coordinate_fields": [
+            "roi",
+            "roi_offset",
+            "target",
+            "target_offset",
+            "begin",
+            "begin_offset",
+            "end",
+            "end_offset",
+            "lower",
+            "upper"
+        ],
+        "control_flow_fields": ["next", "interrupt", "on_error", "template"],
+        "always_multiline_fields": [
+            "custom_action_param",
+            "custom_param",
+            "parameters",
+            "params",
+            "options",
+            "config"
+        ]
+    },
+    "file_handling": {
+        "preserve_comments": true,
+        "output_suffix": "",
+        "encoding": "utf-8",
+        "newline": "LF"
+    }
+}

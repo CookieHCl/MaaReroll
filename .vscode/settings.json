@@ -28,7 +28,7 @@
         "**/assets/interface.json": "json"
     },
     "[json][jsonc]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.insertSpaces": true,
         "editor.tabSize": 4,
         "editor.indentSize": "tabSize"
@@ -40,5 +40,6 @@
     "[markdown]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    }
+    },
+    "maapipeline-format.enableFormatOnSave": true
 }
