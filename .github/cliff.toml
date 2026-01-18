@@ -1,12 +1,12 @@
 [remote.github]
-owner = "MaaXYZ"
-repo = "MaaPracticeBoilerplate"
-#自用时换成自己的仓库owner和repo
-#注意，本地git user需与github一致才能实现成功@
+owner = "CookieHCl"
+repo = "MaaReroll"
+# Replace with your own owner and repo
+# Ensure local git user matches github for successful @ mentions
 [changelog]
-# 标题
+# Header
 header = """
-# 更新日志
+# Changelog
 """
 
 body = """
@@ -31,7 +31,7 @@ body = """
 {% if version %}\
     ## {{ version | trim_start_matches(pat="v") }} ({{ timestamp | date(format="%Y-%m-%d") }})
 {% else %}\
-    ## 未发布
+    ## Unreleased
 {% endif %}\
 
 {% for group, commits in commits | group_by(attribute="group") %}
@@ -49,7 +49,7 @@ body = """
 {% endfor -%}
 {%- if github -%}
 {% if github.contributors | filter(attribute="is_first_time", value=true) | length != 0 %}
-  ## 新贡献者 ❤️
+  ## New Contributors ❤️
 {% endif %}\
 {% for contributor in github.contributors | filter(attribute="is_first_time", value=true) %}
   * @{{ contributor.username }} made their first contribution
@@ -60,39 +60,39 @@ body = """
 {%- endif %}
 """
 
-# 尾部
+# Footer
 footer = """
 """
 
 [git]
-# 过滤提交
-conventional_commits = true # 使用约定式提交格式
-filter_unconventional = false # 不过滤非约定式提交
-# 启用完整的 commit 信息
+# Filter commits
+conventional_commits = true
+filter_unconventional = false
+# Enable full commit message
 split_commits = false
-# 保留完整的 commit body
+# Keep full commit body
 protect_breaking_commits = false
 commit_parsers = [
-    { message = "^feat", group = "<!-- 0 -->✨ 新功能" },
-    { message = "^fix", group = "<!-- 1 -->🐛 Bug修复" },
-    { message = "^docs", group = "<!-- 4 -->📚 文档" },
-    { message = "^perf", group = "<!-- 3 -->🚀 性能优化" },
-    { message = "^refactor", group = "<!-- 2 -->🚜 代码重构" },
-    { message = "^style", group = "<!-- 5 -->🎨 样式" },
-    { message = "^test", group = "<!-- 6 -->🧪 测试" },
-    { message = "^chore\\(deps\\)", group = "📦 依赖更新" },
-    { message = "^chore", group = "<!-- 8 -->🔧 日常维护" },
-    { message = "^ci", group = "<!-- 7 -->⚙️ 持续集成" },
-    { body = ".*security", group = "<!-- 9 -->🔒 安全" },
-    { message = "^revert", group = "<!-- 10 -->◀️ 撤销" },
+    { message = "^feat", group = "<!-- 0 -->✨ Features" },
+    { message = "^fix", group = "<!-- 1 -->🐛 Bug Fixes" },
+    { message = "^docs", group = "<!-- 4 -->📚 Documentation" },
+    { message = "^perf", group = "<!-- 3 -->🚀 Performance" },
+    { message = "^refactor", group = "<!-- 2 -->🚜 Refactor" },
+    { message = "^style", group = "<!-- 5 -->🎨 Styling" },
+    { message = "^test", group = "<!-- 6 -->🧪 Testing" },
+    { message = "^chore\\(deps\\)", group = "📦 Dependency Updates" },
+    { message = "^chore", group = "<!-- 8 -->🔧 Maintenance" },
+    { message = "^ci", group = "<!-- 7 -->⚙️ CI" },
+    { body = ".*security", group = "<!-- 9 -->🔒 Security" },
+    { message = "^revert", group = "<!-- 10 -->◀️ Revert" },
 ]
 
-# 忽略这些提交
+# Ignore tags
 ignore_tags = "rc"
 
-# 排序规则
+# Sort rules
 sort_commits = "oldest"
 
-# 启用GitHub集成
+# Enable GitHub integration
 [git.github]
 commits = true
