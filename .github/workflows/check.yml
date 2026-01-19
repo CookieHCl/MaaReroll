@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  resource:
+  check-resource:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
