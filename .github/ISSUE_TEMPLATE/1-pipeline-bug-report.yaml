@@ -47,14 +47,22 @@ body:
       label: Configuration information
       description: >-
         사용하는 환경을 최대한 자세하게 적어주세요.
-        
+
         1. OS, OS 버전
+
         2. MaaReroll 실행방법 (CLI의 경우 MaaPiCli, GUI의 경우 MAAvalonia)
+
         3. 앱플레이어, 앱플레이어 버전, 앱플레이어 설정 (DPI, FPS 등등)
-        
+
         USAGE.md에서 사용하는 MuMuPlayer와 설정이 똑같다면 "MuMuPlayer 기본 설정 사용중"이라고 적어주셔도 됩니다.
-      value: |
-        Windows, MAAvalonia, MuMuPlayer 기본 설정 사용중
+      value: >-
+        OS: Windows  
+
+
+        Interface: MAAvalonia  
+
+
+        Emulator: MuMuPlayer 기본 설정 사용중
     validations:
       required: true
   - type: textarea
@@ -62,6 +70,8 @@ body:
     attributes:
       label: Screenshots or recordings
       description: 버그와 관련된 스크린샷이나 녹화 영상을 올려주시면 도움이 정말 많이 됩니다.
+      placeholder: |
+        여기에 파일들을 올려주세요.
     validations:
       required: false
   - type: textarea
@@ -72,6 +82,7 @@ body:
         **MaaReroll을 종료한 후**, 아래 파일들을 올려주시면 도움이 많이 됩니다.
 
         1. `debug/maa.log`, `debug/maa.bak.log` 파일 (버그가 발생한 시간도 적어주시면 더 좋습니다.)
+
         2. `config/maa_pi_config.json`, `config/maa_option.json` 파일
       placeholder: |
         반드시 MaaReroll을 종료한 후 파일들을 올려주세요.
