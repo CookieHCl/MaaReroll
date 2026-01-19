@@ -1,0 +1,6 @@
+blank_issues_enabled: false  # '빈 이슈' 생성 버튼 숨김 (템플릿 강제)
+
+contact_links:
+  - name: Question
+    url: https://github.com/CookieHCl/MaaReroll/discussions
+    about: 질문은 Issues 대신 Discussions 탭을 이용해주세요.
