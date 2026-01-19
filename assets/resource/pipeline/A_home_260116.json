@@ -4,6 +4,27 @@
         "focus": "▶ 홈화면 시작",
         "timeout": 60000,
         "next": [
+            "Home_Birthday",
+            "Home_Daily_Plan_1"
+        ]
+    },
+    "Home_Birthday": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/1_daily_plan_1.png",
+                "roi": [238, 236, 791, 218],
+                // "origin roi" : [263, 261, 741, 168]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1169, 118, 1, 1]
+            }
+        },
+        "next": [
             "Home_Daily_Plan_1"
         ]
     },
@@ -171,6 +192,7 @@
                 "threshold": 0.95
             }
         },
+        "post_delay": 1000,
         "action": {
             "type": "Click",
             "param": {
