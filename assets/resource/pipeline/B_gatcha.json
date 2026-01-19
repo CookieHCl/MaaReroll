@@ -213,6 +213,7 @@
                 "threshold": 0.95
             }
         },
+        "pre_delay": 1000,
         "next": [
             "Gatcha_Tap_More_10roll",
             "[JumpBack]Gatcha_Tap_Until_10roll"

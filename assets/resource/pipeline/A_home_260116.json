@@ -146,16 +146,16 @@
             }
         },
         "next": [
-            "Home_Handle_Events"
+            "Home_Handle_Popups"
         ]
     },
-    "Home_Handle_Events": {
+    "Home_Handle_Popups": {
         "pre_wait_freezes": 2000,
         "next": [
             "[JumpBack]Home_260116_Wait_Until_Ticket_Received",
             "[JumpBack]Home_Notice",
-            "[JumpBack]Home_Any_Event",
-            "Home_Get_Mail_1"
+            "[JumpBack]Home_Any_Popup",
+            "Home_Handle_Events"
         ]
     },
     "Home_260116_Wait_Until_Ticket_Received": {
@@ -217,7 +217,7 @@
             }
         }
     },
-    "Home_Any_Event": {
+    "Home_Any_Popup": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -233,16 +233,93 @@
             "param": {"target": true}
         }
     },
+    "Home_Handle_Events": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "11_end_tuto/11_main.png",
+                "roi": [392, 179, 91, 67],
+                "threshold": 0.95
+            }
+        },
+        "pre_delay": 1000,
+        "next": [
+            "Home_260116_Lottery_1",
+            "Home_Get_Mail_1"
+        ]
+    },
+    "Home_260116_Lottery_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/260116/260116_lottery.png",
+                "roi": [0, 69, 163, 163],
+                // 이벤트 전체 범위
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [80, 200, 1, 1]
+            }
+        },
+        "post_delay": 3000,
+        "next": "Home_260116_Lottery_2"
+    },
+    "Home_260116_Lottery_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [300, 280, 1, 1]
+            }
+        },
+        "post_delay": 2000,
+        "next": "Home_260116_Lottery_3"
+    },
+    "Home_260116_Lottery_3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [300, 410, 1, 1]
+            }
+        },
+        "post_delay": 2000,
+        "next": "Home_260116_Lottery_4"
+    },
+    "Home_260116_Lottery_4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1120, 540, 1, 1]
+            }
+        },
+        "post_delay": 2000,
+        "next": "Home_260116_Lottery_5"
+    },
+    "Home_260116_Lottery_5": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1233, 83, 1, 1]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "Home_Get_Mail_1",
+            "Home_260116_Lottery_5"
+        ]
+    },
     "Home_Get_Mail_1": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "home/4.5_is_main.png",
-                "roi": [263, 547, 1017, 173],
-                // "origin roi" : [288, 572, 981, 148]
+                "template": "11_end_tuto/11_main.png",
+                "roi": [392, 179, 91, 67],
                 "threshold": 0.95
             }
         },
+        "pre_delay": 1000,
         "action": {
             "type": "Click",
             "param": {
@@ -311,9 +388,8 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "home/4.5_is_main.png",
-                "roi": [263, 547, 1017, 173],
-                // "origin roi" : [288, 572, 981, 148]
+                "template": "11_end_tuto/11_main.png",
+                "roi": [392, 179, 91, 67],
                 "threshold": 0.95
             }
         },
