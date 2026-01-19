@@ -1,37 +1,5 @@
 {
-    "Clear_Start_01": {"focus": "▶ 0-1 클리어 시작", "next": "Start_01"},
-    "Start_01": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "clear_01/start-01.png",
-                "roi": [850, 72, 138, 89],
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [1144, 660, 1, 1]
-            }
-        },
-        "next": "OP_01_Start"
-    },
-    "OP_01_Start": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "clear_01/op_start.png",
-                "roi": [1038, 367, 131, 276],
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {"target": true}
-        },
-        "next": "01_Dobe_01"
-    },
+    "Clear_Start_01": {"focus": "▶ 0-1 클리어 시작", "next": "01_Dobe_01"},
     "01_Dobe_01": {
         "pre_delay": 1000,
         "recognition": {

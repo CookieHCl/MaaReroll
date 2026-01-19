@@ -56,7 +56,6 @@
             "0-1_Retreat_1"
         ]
     },
-    /* 퇴각런시 */
     "0-1_Retreat_1": {
         "recognition": {
             "type": "TemplateMatch",
@@ -95,7 +94,7 @@
     },
     "0-1_Retreat_Wait_Until_Home": {
         "next": [
-            "0-1_Retreat_Go_Home_1",
+            "0-1_Check_Home",
             "[JumpBack]0-1_Retreat_Tap_Until_Home"
         ]
     },
@@ -107,6 +106,21 @@
             }
         }
     },
+    "0-1_Check_Home": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "0-1/level_0-1.png",
+                "roi": [534, 291, 197, 94],
+                // "origin roi" : [559, 316, 147, 44]
+                "threshold": 0.95
+            }
+        },
+        "next": [
+            "Restart_0-1"
+        ]
+    },
+    /* 퇴각런시 */
     "0-1_Retreat_Go_Home_1": {
         "recognition": {
             "type": "TemplateMatch",
