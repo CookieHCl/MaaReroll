@@ -349,6 +349,7 @@
                 "threshold": 0.95
             }
         },
+        "pre_delay": 500,
         "action": {
             "type": "Click",
             "param": {"target": true}
