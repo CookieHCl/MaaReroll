@@ -1,4 +1,4 @@
-blank_issues_enabled: false  # '빈 이슈' 생성 버튼 숨김 (템플릿 강제)
+blank_issues_enabled: false
 
 contact_links:
   - name: Question
