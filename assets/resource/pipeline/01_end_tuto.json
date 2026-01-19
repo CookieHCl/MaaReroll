@@ -30,7 +30,7 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "01_end_tuto/01_mission_list.png",
-                "roi": [182, 242, 161, 136],
+                "roi": [0, 518, 522, 133],
                 "threshold": 0.95
             }
         },
@@ -46,63 +46,8 @@
             }
         },
         "next": [
-            "01_Check_Reward",
-            "01_Wait_Reward"
-        ]
-    },
-    "01_Check_Reward": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "01_end_tuto/01_got_reward.png",
-                "roi": [271, 610, 205, 80],
-                "threshold": 0.95
-            }
-        },
-        "next": [
-            "01_TStage_Tuto_Start"
-        ]
-    },
-    "01_TStage_Tuto_Start": {
-        "type": "Click",
-        "param": {
-            "target": [300, 635, 1, 1]
-        },
-        "post_delay": 500,
-        "next": [
-            "01_Back_Battle_01",
-            "01_TStage_Tuto_Start"
-        ]
-    },
-    "01_Back_Battle_01": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "01_end_tuto/01_prts_dia.png",
-                "roi": [50, 51, 153, 148],
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [470, 400, 1, 1]
-            }
-        },
-        "next": [
-            "01_Back_Battle_02"
-        ]
-    },
-    "01_Back_Battle_02": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [470, 400, 1, 1]
-            }
-        },
-        "next": [
             "01_Starting_TR1",
-            "01_Back_Battle_02"
+            "01_Wait_Reward"
         ]
     },
     "01_Starting_TR1": {
@@ -111,13 +56,9 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "01_end_tuto/01_TR1.png",
-                "roi": [397, 362, 376, 156],
+                "roi": [976, 548, 304, 172],
                 "threshold": 0.95
             }
-        },
-        "action": {
-            "type": "Click",
-            "param": {"target": true}
         },
         "post_delay": 2000,
         "next": [
