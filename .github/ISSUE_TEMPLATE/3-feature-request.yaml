@@ -1,7 +1,7 @@
 name: Feature Request
 description: >-
   새로운 기능이나 개선사항을 제안하고 싶을 때 골라주세요.
-labels: ["enhancement"]
+labels: ["Issue-Enhancement"]
 body:
   - type: checkboxes
     id: checks

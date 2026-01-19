@@ -2,7 +2,7 @@ name: Bug Report
 description: >-
   매크로와 상관없는 버그의 경우 골라주세요.
   (실행이 안 됨, 에러 발생, 연결이 안 됨 등등)
-labels: ["bug", "pipeline"]
+labels: ["Issue-Bug"]
 body:
   - type: checkboxes
     id: checks

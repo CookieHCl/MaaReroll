@@ -1,7 +1,7 @@
 name: Pipeline Bug Report
 description: >-
   매크로가 멈춰버리거나 이상한 행동을 하거나 무한반복 하는 경우 골라주세요.
-labels: ["bug", "pipeline"]
+labels: ["Issue-Bug", "Area-Pipeline"]
 body:
   - type: checkboxes
     id: checks
