@@ -3,5 +3,5 @@ if (Test-Path -Path '.\install') {
 }
 python '.\install.py'
 Copy-Item -Recurse -Force '.\deps\MFAAvalonia\*' '.\install\'
-New-Item -Path '.\install\config\config.json' -Value '{"CurrentLanguage":"en-US","CurrentTasks":["리세마라<|||>Main"]}' -Force
+Get-Content -Path 'MAAvalonia_config.json' -Raw | New-Item -Path '.\install\config\config.json' -Force
 .\install\MFAAvalonia.exe

@@ -1,0 +1,10 @@
+{
+  "CurrentLanguage":"en-US",
+  "TaskItems": [
+    {
+      "name": "리세마라",
+      "entry": "Main",
+      "default_check": true
+    }
+  ]
+}
