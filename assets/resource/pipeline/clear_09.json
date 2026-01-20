@@ -73,7 +73,7 @@
             "type": "Click",
             "param": {"target": true}
         },
-        "post_delay": 500,
+        "post_delay": 1000,
         "next": [
             "09_Check_Lava",
             "09_Select_Lava"

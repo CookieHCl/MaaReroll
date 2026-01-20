@@ -124,6 +124,7 @@
             "type": "Click",
             "param": {"target": true}
         },
+        "post_delay": 1000,
         "next": [
             "05_Click_Fe2",
             "05_Click_Fe1"

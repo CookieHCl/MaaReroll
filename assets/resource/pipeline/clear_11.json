@@ -76,7 +76,7 @@
             "type": "Click",
             "param": {"target": true}
         },
-        "post_delay": 500,
+        "post_delay": 1000,
         "next": [
             "11_Check_Beagle",
             "11_Select_Beagle"

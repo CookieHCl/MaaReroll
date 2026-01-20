@@ -124,6 +124,7 @@
             "type": "Click",
             "param": {"target": true}
         },
+        "post_delay": 1000,
         "next": [
             "04_Click_Jes2",
             "04_Click_Jes1"
@@ -155,6 +156,7 @@
             "type": "Click",
             "param": {"target": true}
         },
+        "post_delay": 1000,
         "next": [
             "04_Click_Ad2",
             "04_Click_Ad1"
