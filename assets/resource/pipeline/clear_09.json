@@ -94,6 +94,7 @@
                 "target": [1100, 680, 1, 1]
             }
         },
+        "post_delay": 1000,
         "next": [
             "09_Op_Start",
             "09_Check_Lava"
