@@ -1,4 +1,5 @@
-name: Contributors
+name: contributors
+
 on:
   push:
     branches:

@@ -17,9 +17,10 @@ jobs:
   meta:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
-          fetch-depth: 0
+          fetch-tags: true
+
       - id: set_tag
         run: |
           # 检查标签格式
@@ -64,7 +65,7 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: true
 
@@ -120,7 +121,7 @@ jobs:
           mkdir -p install/config
           cat MAAvalonia_config.json > install/config/config.json
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: MaaXXX-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
@@ -132,7 +133,7 @@ jobs:
       release_body: ${{ steps.git-cliff.outputs.content }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -151,7 +152,7 @@ jobs:
     needs: [meta, install, changelog]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         with:
           path: assets
 
