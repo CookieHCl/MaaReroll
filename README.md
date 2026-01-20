@@ -10,7 +10,7 @@
 
 ### 요구사항
 
-1. [Python](https://www.python.org/downloads/) 설치 후 `pip install MaaFw`
+1. [Python](https://www.python.org/downloads/) 설치
 1. [MaaFramework](https://github.com/MaaXYZ/MaaFramework/releases) 받아서 deps 아래에 **폴더 풀어서** 복사  
   즉, deps/bin, deps/docs ... 등등의 폴더가 있어야 함
 1. [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/releases) 받아서 deps 아래에 **폴더 그대로** 복사  
@@ -19,6 +19,7 @@
 다 됐으면 아래 코드 실행
 
 ```powershell
+pip install MaaFw==5.4.2 --force-reinstall
 git submodule update --init --recursive
 python ./configure.py
 ```
@@ -39,3 +40,23 @@ New-Item -Path '.\install\config\config.json' -Value '{"CurrentLanguage":"en-US"
 
 프로세스가 똑바로 안 꺼지면 `Remove-Item -Recurse -Force .\install\*`가 실패하던데 (로그파일을 다른 프로세스가 쓰고 있다는 에러) 그냥 install 폴더를 직접 지워도 되긴 합니다.  
 아니면 해봤자 로그파일이니까 에러를 무시하시고 그대로 쓰셔도 됩니다.
+
+## Acknowledgements
+
+### Open Source Projects
+
+- [MaaFramework](https://github.com/MaaXYZ/MaaFramework/releases)  
+  매크로 백엔드
+- [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/releases)  
+  매크로 프론트엔드
+
+### Inspiration
+
+- [fm-reroll](https://github.com/maynut02/fm-reroll)  
+  신월동행 매크로
+
+### Contributors
+
+MaaReroll에 기여해주신 모든 분들께 감사드립니다!
+
+[![Contributors](https://contrib.rocks/image?repo=CookieHCl/MaaReroll)](https://github.com/CookieHCl/MaaReroll/graphs/contributors)
