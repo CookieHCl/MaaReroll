@@ -98,6 +98,7 @@
             }
         },
         "repeat": 10,
+        "repeat_delay": 500,
         "next": [
             "Home_Claim_Rookie_Mission_2"
         ]
@@ -110,6 +111,7 @@
             }
         },
         "repeat": 10,
+        "repeat_delay": 500,
         "next": [
             "Home_Claim_Rookie_Mission_3"
         ]
@@ -122,6 +124,7 @@
             }
         },
         "repeat": 10,
+        "repeat_delay": 500,
         "next": [
             "Home_Claim_Rookie_Mission_4"
         ]
@@ -134,6 +137,7 @@
             }
         },
         "repeat": 10,
+        "repeat_delay": 500,
         "next": [
             "Home_Exit_Rookie_Mission"
         ]
