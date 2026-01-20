@@ -59,4 +59,4 @@ Get-Content -Path 'MAAvalonia_config.json' -Raw | New-Item -Path '.\install\conf
 
 MaaReroll에 기여해주신 모든 분들께 감사드립니다!
 
-[![Contributors](https://contrib.rocks/image?repo=CookieHCl/MaaReroll)](https://github.com/CookieHCl/MaaReroll/graphs/contributors)
+[![Contributors](CONTRIBUTORS.svg)](https://github.com/CookieHCl/MaaReroll/graphs/contributors)
