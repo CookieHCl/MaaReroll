@@ -45,9 +45,9 @@ New-Item -Path '.\install\config\config.json' -Value '{"CurrentLanguage":"en-US"
 
 ### Open Source Projects
 
-- [MaaFramework](https://github.com/MaaXYZ/MaaFramework/releases)  
+- [MaaFramework](https://github.com/MaaXYZ/MaaFramework)  
   매크로 백엔드
-- [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia/releases)  
+- [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia)  
   매크로 프론트엔드
 
 ### Inspiration
