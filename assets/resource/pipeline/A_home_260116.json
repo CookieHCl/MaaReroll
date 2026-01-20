@@ -237,8 +237,9 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "11_end_tuto/11_main.png",
-                "roi": [392, 179, 91, 67],
+                "template": "home/4.5_is_main.png",
+                "roi": [665, 298, 563, 125],
+                // "origin roi" : [690, 323, 513, 75]
                 "threshold": 0.95
             }
         },
@@ -314,8 +315,9 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "11_end_tuto/11_main.png",
-                "roi": [392, 179, 91, 67],
+                "template": "home/4.5_is_main.png",
+                "roi": [665, 298, 563, 125],
+                // "origin roi" : [690, 323, 513, 75]
                 "threshold": 0.95
             }
         },
@@ -388,8 +390,9 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "11_end_tuto/11_main.png",
-                "roi": [392, 179, 91, 67],
+                "template": "home/4.5_is_main.png",
+                "roi": [665, 298, 563, 125],
+                // "origin roi" : [690, 323, 513, 75]
                 "threshold": 0.95
             }
         },
