@@ -41,7 +41,7 @@
                 {
                     "name": "0-1 퇴각런 (7~8분)",
                     "pipeline_override": {
-                        "0-1_Check_Home": {"next": "0-1_Retreat_Go_Home_1"},
+                        "0-1_Battle": {"next": "Start_Retreat"},
                         "Home_Enter_Rookie_Mission": {"next": "Home_Exit_Rookie_Mission"}
                     }
                 },

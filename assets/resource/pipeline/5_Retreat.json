@@ -41,16 +41,16 @@
             "param": {"target": true}
         },
         "next": [
-            "Retreat_Wait_Until_Home"
+            "Retreat_Wait_Until_Exit"
         ]
     },
-    "Retreat_Wait_Until_Home": {
+    "Retreat_Wait_Until_Exit": {
         "next": [
             "Retreat_Go_Home_1",
-            "[JumpBack]Retreat_Tap_Until_Home"
+            "[JumpBack]Retreat_Tap_Until_Exit"
         ]
     },
-    "Retreat_Tap_Until_Home": {
+    "Retreat_Tap_Until_Exit": {
         "action": {
             "type": "Click",
             "param": {
