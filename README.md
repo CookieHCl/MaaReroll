@@ -19,7 +19,7 @@
 다 됐으면 아래 코드 실행
 
 ```powershell
-pip install MaaFw==5.4.2 --force-reinstall
+python -m pip install MaaFw==5.4.2 --force-reinstall
 git submodule update --init --recursive
 python ./configure.py
 ```
