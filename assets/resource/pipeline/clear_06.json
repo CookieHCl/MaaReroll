@@ -331,13 +331,13 @@
                 "threshold": 0.95
             }
         },
+        "pre_delay": 1000,
         "action": {
             "type": "Click",
             "param": {"target": true}
         },
         "next": [
-            "06_Skip_Chk2",
-            "06_Skip_EStory"
+            "06_Skip_Chk2"
         ]
     },
     "06_Skip_Chk2": {
@@ -352,7 +352,9 @@
         "pre_delay": 500,
         "action": {
             "type": "Click",
-            "param": {"target": true}
+            "param": {
+                "target": [795, 461, 1, 1]
+            }
         },
         "post_delay": 3000,
         "next": "06_Op_End"

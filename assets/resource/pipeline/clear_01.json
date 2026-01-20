@@ -138,7 +138,9 @@
         "pre_delay": 500,
         "action": {
             "type": "Click",
-            "param": {"target": true}
+            "param": {
+                "target": [795, 461, 1, 1]
+            }
         },
         "post_delay": 3000,
         "next": "01_Op_End"

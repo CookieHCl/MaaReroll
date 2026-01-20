@@ -175,7 +175,9 @@
         },
         "action": {
             "type": "Click",
-            "param": {"target": true}
+            "param": {
+                "target": [795, 461, 1, 1]
+            }
         },
         "next": "08_Skp_02"
     },

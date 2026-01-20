@@ -93,7 +93,9 @@
         },
         "action": {
             "type": "Click",
-            "param": {"target": true}
+            "param": {
+                "target": [795, 461, 1, 1]
+            }
         },
         "next": "10_Skp_02"
     },

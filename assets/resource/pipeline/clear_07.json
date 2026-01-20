@@ -182,7 +182,9 @@
         },
         "action": {
             "type": "Click",
-            "param": {"target": true}
+            "param": {
+                "target": [795, 461, 1, 1]
+            }
         },
         "next": [
             "07_2x_01"
@@ -478,13 +480,13 @@
                 "threshold": 0.95
             }
         },
+        "pre_delay": 1000,
         "action": {
             "type": "Click",
             "param": {"target": true}
         },
         "next": [
-            "07_Skip_Chk2",
-            "07_Skip_EStory"
+            "07_Skip_Chk2"
         ]
     },
     "07_Skip_Chk2": {
@@ -499,7 +501,9 @@
         "pre_delay": 500,
         "action": {
             "type": "Click",
-            "param": {"target": true}
+            "param": {
+                "target": [795, 461, 1, 1]
+            }
         },
         "post_delay": 3000,
         "next": [

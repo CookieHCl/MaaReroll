@@ -232,7 +232,9 @@
         },
         "action": {
             "type": "Click",
-            "param": {"target": true}
+            "param": {
+                "target": [795, 461, 1, 1]
+            }
         },
         "next": [
             "04_Skp_02"
