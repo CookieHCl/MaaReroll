@@ -49,7 +49,9 @@
         },
         "action": {
             "type": "Click",
-            "param": {"target": true}
+            "param": {
+                "target": [1196, 396, 1, 1]
+            }
         },
         "post_delay": 1000,
         "next": "06_Sk_4"

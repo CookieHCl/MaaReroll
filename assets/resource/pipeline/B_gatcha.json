@@ -244,7 +244,8 @@
                 "target": [1261, 16, 1, 1]
             }
         },
-        "repeat": 5,
+        "repeat": 4,
+        "repeat_delay": 500,
         "next": [
             "Gatcha_Try_10roll"
         ]
