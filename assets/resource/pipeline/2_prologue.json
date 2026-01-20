@@ -313,7 +313,8 @@
         "action": {
             "type": "Click",
             "param": {"target": true}
-        }
+        },
+        "post_delay": 500
     },
     "Prologue_Battle2_Wait_Until_Texas_Ready": {
         "next": [
