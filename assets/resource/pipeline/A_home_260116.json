@@ -12,7 +12,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "home/1_daily_plan_1.png",
+                "template": "home/birthday.png",
                 "roi": [238, 236, 791, 218],
                 // "origin roi" : [263, 261, 741, 168]
                 "threshold": 0.95
@@ -89,55 +89,32 @@
             "Home_Claim_Rookie_Mission_1"
         ]
     },
-    // 너무 반짝거려서 사진 인식 포기하고 걍 무지성 클릭으로 바꿈
     "Home_Claim_Rookie_Mission_1": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [1051, 189, 1, 1]
-            }
-        },
-        "repeat": 10,
-        "repeat_delay": 500,
-        "next": [
-            "Home_Claim_Rookie_Mission_2"
-        ]
-    },
-    "Home_Claim_Rookie_Mission_2": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [1038, 303, 1, 1]
-            }
-        },
-        "repeat": 10,
-        "repeat_delay": 500,
-        "next": [
-            "Home_Claim_Rookie_Mission_3"
-        ]
-    },
-    "Home_Claim_Rookie_Mission_3": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [1045, 416, 1, 1]
-            }
-        },
-        "repeat": 10,
-        "repeat_delay": 500,
-        "next": [
-            "Home_Claim_Rookie_Mission_4"
-        ]
-    },
-    "Home_Claim_Rookie_Mission_4": {
         "action": {
             "type": "Click",
             "param": {
                 "target": [1047, 532, 1, 1]
             }
         },
-        "repeat": 10,
-        "repeat_delay": 500,
+        "next": [
+            "Home_Claim_Rookie_Mission_2",
+            "Home_Claim_Rookie_Mission_1"
+        ]
+    },
+    "Home_Claim_Rookie_Mission_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/rookie_mission_claimed.png",
+                "roi": [901, 110, 296, 152],
+                // "origin roi" : [926, 135, 246, 102]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
+        },
         "next": [
             "Home_Exit_Rookie_Mission"
         ]
@@ -146,7 +123,7 @@
         "action": {
             "type": "Click",
             "param": {
-                "target": [1246, 74, 1, 1]
+                "target": [1246, 55, 1, 1]
             }
         },
         "next": [
@@ -265,9 +242,7 @@
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": [80, 200, 1, 1]
-            }
+            "param": {"target": true}
         },
         "post_delay": 3000,
         "next": "Home_260116_Lottery_2"
