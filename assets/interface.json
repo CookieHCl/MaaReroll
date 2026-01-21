@@ -21,7 +21,7 @@
             "name": "리세마라",
             "entry": "Main",
             "check": true,
-            "doc": "[color:red]리세 진행시 기존 계정은 삭제합니다.[/color]\n로그인 화면에서 계정은 [color:red]1개 이하[/color]로 남겨주세요.\n\n**[앱플레이어 디스플레이 설정]**\n해상도 - 1280x720, DPI - 180dpi, 프레임 - 60\n※ 확인 필수!",
+            "doc": "[color:red]리세 진행시 기존 계정은 삭제합니다.[/color]\n로그인 화면에서 계정은 [color:red]1개 이하[/color]로 남겨주세요.\n\n**[앱플레이어 설정]**\n해상도 - 1280x720, DPI - 180, 프레임 - 60fps\nadb, root 권한 확인 필수!",
             "option": [
                 "리세 방식",
                 "현재 화면",
