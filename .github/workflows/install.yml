@@ -123,7 +123,7 @@ jobs:
 
       - uses: actions/upload-artifact@v6
         with:
-          name: MaaXXX-${{ matrix.os }}-${{ matrix.arch }}
+          name: MaaReroll-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   changelog:
