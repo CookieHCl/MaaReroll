@@ -7,6 +7,7 @@
             "Home_Popup_Daily_Plan_1"
         ]
     },
+    // 출석체크랑 신입 임무는 움직여서 빼놓음
     // 출석체크
     "Home_Popup_Daily_Plan_1": {
         "recognition": {
@@ -46,17 +47,7 @@
             }
         },
         "next": [
-            "Home_Popup_Handle_Popup"
-        ]
-    },
-    "Home_Popup_Handle_Popup": {
-        "pre_wait_freezes": 2000,
-        "next": [
-            "[JumpBack]Home_Popup_Rookie_Mission",
-            "[JumpBack]260116_Popup_10roll_ticket",
-            "[JumpBack]Home_Popup_Notice",
-            "[JumpBack]Home_Popup_Any_Popup",
-            "Home_Popup_Check_Home"
+            "Home_Popup_Rookie_Mission"
         ]
     },
     // 신입 임무
@@ -75,7 +66,19 @@
             "param": {
                 "target": [1246, 74, 1, 1]
             }
-        }
+        },
+        "next": [
+            "Home_Popup_Handle_Popup"
+        ]
+    },
+    "Home_Popup_Handle_Popup": {
+        "pre_wait_freezes": 2000,
+        "next": [
+            "[JumpBack]260116_Popup_10roll_ticket",
+            "[JumpBack]Home_Popup_Notice",
+            "[JumpBack]Home_Popup_Any_Popup",
+            "Home_Popup_Check_Home"
+        ]
     },
     // 업데이트 공지
     "Home_Popup_Notice": {
