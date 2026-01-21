@@ -1,0 +1,206 @@
+{
+    /* 홈 화면부터 보상 다 받고 홈 화면으로 돌아올 때까지 */
+    "Start_Home_Reward": {
+        "focus": "▶ 홈 보상 시작",
+        "timeout": 60000,
+        "next": [
+            "[JumpBack]Home_Reward_Birthday",
+            "Home_Reward_Handle_Reward"
+        ]
+    },
+    "Home_Reward_Birthday": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/birthday.png",
+                "roi": [238, 236, 791, 218],
+                // "origin roi" : [263, 261, 741, 168]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1169, 118, 1, 1]
+            }
+        }
+    },
+    "Home_Reward_Handle_Reward": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/4.5_is_main.png",
+                "roi": [665, 298, 563, 125],
+                // "origin roi" : [690, 323, 513, 75]
+                "threshold": 0.95
+            }
+        },
+        "pre_delay": 1000,
+        "next": [
+            "260116_Reward_Lottery",
+            "Home_Reward_Get_Mail_1"
+        ]
+    },
+    "Home_Reward_Get_Mail_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/4.5_is_main.png",
+                "roi": [665, 298, 563, 125],
+                // "origin roi" : [690, 323, 513, 75]
+                "threshold": 0.95
+            }
+        },
+        "pre_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [193, 41, 1, 1]
+            }
+        },
+        "next": [
+            "Home_Reward_Get_Mail_2"
+        ]
+    },
+    "Home_Reward_Get_Mail_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/5_get_mail.png",
+                "roi": [1040, 35, 240, 685],
+                // "origin roi" : [1090,85,145,610]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1140, 665, 1, 1]
+            }
+        },
+        "next": [
+            "Home_Reward_Wait_Until_Mail_Received"
+        ]
+    },
+    "Home_Reward_Wait_Until_Mail_Received": {
+        "next": [
+            "Home_Reward_Mail_Received",
+            "[JumpBack]Home_Reward_Tap_Until_Mail_Received"
+        ]
+    },
+    "Home_Reward_Tap_Until_Mail_Received": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1192, 44, 1, 1]
+            }
+        }
+    },
+    "Home_Reward_Mail_Received": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/6_received_mail.png",
+                "roi": [1041, 36, 239, 684],
+                // "origin roi" : [1091,86,144,609]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [89, 46, 1, 1]
+            }
+        },
+        "next": [
+            "Home_Reward_Check_Home"
+        ]
+    },
+    "Home_Reward_Check_Home": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/4.5_is_main.png",
+                "roi": [665, 298, 563, 125],
+                // "origin roi" : [690, 323, 513, 75]
+                "threshold": 0.95
+            }
+        },
+        "pre_delay": 1000,
+        "next": [
+            "Home_Reward_Enter_Rookie_Mission"
+        ]
+    },
+    "Home_Reward_Enter_Rookie_Mission": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [416, 38, 1, 1]
+            }
+        },
+        "next": [
+            "Home_Reward_Claim_Rookie_Mission_1"
+        ]
+    },
+    "Home_Reward_Claim_Rookie_Mission_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/3_rookie_mission.png",
+                "roi": [238, 208, 499, 305],
+                // "origin roi" : [288,258,399,205]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [118, 222, 1, 1]
+            }
+        },
+        "next": [
+            "Home_Reward_Claim_Rookie_Mission_2"
+        ]
+    },
+    "Home_Reward_Claim_Rookie_Mission_2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1047, 532, 1, 1]
+            }
+        },
+        "next": [
+            "Home_Reward_Claim_Rookie_Mission_3",
+            "Home_Reward_Claim_Rookie_Mission_2"
+        ]
+    },
+    "Home_Reward_Claim_Rookie_Mission_3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/rookie_mission_claimed.png",
+                "roi": [901, 110, 296, 152],
+                // "origin roi" : [926, 135, 246, 102]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
+        },
+        "next": [
+            "Home_Reward_Exit_Rookie_Mission"
+        ]
+    },
+    "Home_Reward_Exit_Rookie_Mission": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1246, 55, 1, 1]
+            }
+        },
+        "next": [
+            "Start_Gatcha"
+        ]
+    }
+}

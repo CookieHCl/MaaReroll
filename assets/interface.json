@@ -42,18 +42,21 @@
                     "name": "0-1 퇴각런 (7~8분)",
                     "pipeline_override": {
                         "0-1_Battle": {"next": "Start_Retreat"},
-                        "Home_Enter_Rookie_Mission": {"next": "Home_Exit_Rookie_Mission"}
+                        "Home_Reward_Check_Home": {"next": "Start_Gatcha"}
                     }
                 },
                 {
                     "name": "0-1 클리어런",
                     "pipeline_override": {
-                        "TR1_Skip_Chk": {"next": "Start_Retreat"}
+                        "TR1_Skip_Chk": {"next": "Start_Retreat"},
+                        "Home_Popup_Check_Home": {"next": "Restart_0-1"}
                     }
                 },
                 {
                     "name": "0-11 클리어런",
-                    "pipeline_override": {}
+                    "pipeline_override": {
+                        "Home_Popup_Check_Home": {"next": "Restart_0-1"}
+                    }
                 }
             ]
         },

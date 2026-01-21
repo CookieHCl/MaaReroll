@@ -1,0 +1,130 @@
+{
+    /* 홈 화면 처음 왔을 때부터 홈 화면으로 돌아올 때까지 */
+    "Start_Home_Popup": {
+        "focus": "▶ 홈화면 시작",
+        "timeout": 60000,
+        "next": [
+            "Home_Popup_Daily_Plan_1"
+        ]
+    },
+    // 출석체크
+    "Home_Popup_Daily_Plan_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/1_daily_plan_1.png",
+                // 진짜 안 될 것처럼 보이지만 개잘되니까 웬만하면 건드리지 말기
+                "roi": [513, 0, 258, 720],
+                // "origin roi" : [563,36,158,641]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [638, 636, 1, 1]
+            }
+        },
+        "next": [
+            "Home_Popup_Daily_Plan_2"
+        ]
+    },
+    "Home_Popup_Daily_Plan_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/2_daily_plan_2.png",
+                "roi": [48, 116, 151, 151],
+                // "origin roi" : [73, 141, 101, 101]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1214, 67, 1, 1]
+            }
+        },
+        "next": [
+            "Home_Popup_Handle_Popup"
+        ]
+    },
+    "Home_Popup_Handle_Popup": {
+        "pre_wait_freezes": 2000,
+        "next": [
+            "[JumpBack]Home_Popup_Rookie_Mission",
+            "[JumpBack]260116_Popup_10roll_ticket",
+            "[JumpBack]Home_Popup_Notice",
+            "[JumpBack]Home_Popup_Any_Popup",
+            "Home_Popup_Check_Home"
+        ]
+    },
+    // 신입 임무
+    "Home_Popup_Rookie_Mission": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/3_rookie_mission.png",
+                "roi": [238, 208, 499, 305],
+                // "origin roi" : [288,258,399,205]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1246, 74, 1, 1]
+            }
+        }
+    },
+    // 업데이트 공지
+    "Home_Popup_Notice": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/4_notice.png",
+                "roi": [296, 42, 756, 160],
+                // "origin roi" : [346,92,656,60]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1204, 68, 1, 1]
+            }
+        }
+    },
+    // 인식 못 한 팝업 있으면 일단 닫아보기
+    "Home_Popup_Any_Popup": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/X.png",
+                "roi": [0, 0, 1280, 720],
+                // 화면 전체
+                "threshold": 0.9,
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
+        }
+    },
+    "Home_Popup_Check_Home": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/4.5_is_main.png",
+                "roi": [665, 298, 563, 125],
+                // "origin roi" : [690, 323, 513, 75]
+                "threshold": 0.95
+            }
+        },
+        "pre_delay": 1000,
+        "next": [
+            "Start_Home_Reward"
+        ]
+    }
+}
