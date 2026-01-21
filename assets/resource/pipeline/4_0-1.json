@@ -53,7 +53,92 @@
             "param": {"target": true}
         },
         "next": [
-            "[JumpBack]Start_Retreat",
+            "0-1_Retreat_Click_Pause"
+        ]
+    },
+    "0-1_Retreat_Click_Pause": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "retreat/pause_0-1.png",
+                "roi": [0, 0, 171, 175],
+                // "origin roi" : [47,16,71,75]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
+        },
+        "next": [
+            "0-1_Retreat_Give_Up"
+        ]
+    },
+    "0-1_Retreat_Give_Up": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "retreat/give_up.png",
+                "roi": [592, 491, 688, 170],
+                // "origin roi" : [642,541,635,70]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
+        },
+        "next": [
+            "0-1_Retreat_Wait_Until_Exit"
+        ]
+    },
+    "0-1_Retreat_Wait_Until_Exit": {
+        "next": [
+            "0-1_Retreat_Go_Home_1",
+            "[JumpBack]0-1_Retreat_Tap_Until_Exit"
+        ]
+    },
+    "0-1_Retreat_Tap_Until_Exit": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [518, 183, 1, 1]
+            }
+        }
+    },
+    "0-1_Retreat_Go_Home_1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "retreat/home_1.png",
+                "roi": [117, 0, 305, 148],
+                // "origin roi" : [167,13,205,48]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
+        },
+        "next": [
+            "0-1_Retreat_Go_Home_2"
+        ]
+    },
+    "0-1_Retreat_Go_Home_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "retreat/home_2.png",
+                "roi": [15, 102, 153, 251],
+                // "origin roi" : [65,152,53,151]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
+        },
+        "next": [
             "Start_Home_Popup"
         ]
     }

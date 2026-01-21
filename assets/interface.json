@@ -47,12 +47,7 @@
                 {
                     "name": "0-1 클리어런",
                     "pipeline_override": {
-                        "TR1_Skip_Chk": {
-                            "next": [
-                                "[JumpBack]Start_Retreat",
-                                "Start_Home_Reward"
-                            ]
-                        },
+                        "TR1_Skip_Chk": {"next": "TR1_Retreat_Click_Pause"},
                         "Home_Popup_Check_Home": {"next": "Restart_0-1"}
                     }
                 },
