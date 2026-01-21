@@ -90,6 +90,7 @@
                 "threshold": 0.95
             }
         },
+        "pre_delay": 1000,
         "action": {
             "type": "Click",
             "param": {"target": true}
@@ -147,7 +148,7 @@
             "param": {
                 "template": "clear_02/02_hib_selected.png",
                 "roi": [659, 76, 324, 556],
-                "threshold": 0.98
+                "threshold": 0.95
             }
         },
         "action": {
