@@ -47,10 +47,10 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "check/operator/exusiai_the_new_covenant.png",
+                "template": "check/operator/hoshiguma_the_breacher.png",
                 "roi": [9, 77, 1270, 620],
                 // 화면 전체
-                "threshold": 0.95
+                "threshold": 0.925
             }
         },
         "focus": "- 6성 요원 확인",
