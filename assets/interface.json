@@ -97,15 +97,9 @@
                     }
                 },
                 {
-                    "name": "0-1",
-                    "pipeline_override": {
-                        "Main": {"next": "Start_0-1"}
-                    }
-                },
-                {
                     "name": "홈 (가챠 진행)",
                     "pipeline_override": {
-                        "Main": {"next": "Gatcha_Goto_Headhunting"}
+                        "Main": {"next": "Start_Gatcha"}
                     }
                 },
                 {
