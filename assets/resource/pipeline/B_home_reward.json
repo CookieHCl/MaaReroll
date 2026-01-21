@@ -199,6 +199,7 @@
                 "target": [1246, 55, 1, 1]
             }
         },
+        "post_delay": 500,
         "next": [
             "Start_Gatcha"
         ]
