@@ -1,4 +1,5 @@
 {
+    /* JumpBack으로 사용하면 퇴각한 다음 Home까지 가줌 */
     "Start_Retreat": {
         "focus": "▶ 퇴각",
         "next": [
@@ -89,9 +90,6 @@
         "action": {
             "type": "Click",
             "param": {"target": true}
-        },
-        "next": [
-            "Start_Home_Popup"
-        ]
+        }
     }
 }

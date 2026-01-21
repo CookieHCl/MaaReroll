@@ -53,71 +53,8 @@
             "param": {"target": true}
         },
         "next": [
-            "0-1_Retreat_1"
-        ]
-    },
-    "0-1_Retreat_1": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "0-1/r1_retreat_1.png",
-                "roi": [0, 0, 171, 175],
-                // "origin roi" : [47,16,71,75]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {"target": true}
-        },
-        "next": [
-            "0-1_Retreat_2"
-        ]
-    },
-    "0-1_Retreat_2": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "0-1/r2_retreat_2.png",
-                "roi": [592, 491, 688, 170],
-                // "origin roi" : [642,541,635,70]
-                "threshold": 0.95
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {"target": true}
-        },
-        "next": [
-            "0-1_Wait_Until_Exit"
-        ]
-    },
-    "0-1_Wait_Until_Exit": {
-        "next": [
-            "0-1_Check_Exit",
-            "[JumpBack]0-1_Tap_Until_Exit"
-        ]
-    },
-    "0-1_Tap_Until_Exit": {
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [518, 183, 1, 1]
-            }
-        }
-    },
-    "0-1_Check_Exit": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "0-1/level_0-1.png",
-                "roi": [534, 291, 197, 94],
-                // "origin roi" : [559, 316, 147, 44]
-                "threshold": 0.95
-            }
-        },
-        "next": [
-            "Restart_0-1"
+            "[JumpBack]Start_Retreat",
+            "Start_Home_Popup"
         ]
     }
 }
