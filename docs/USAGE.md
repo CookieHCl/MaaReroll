@@ -20,10 +20,10 @@
 
 목표: 명일방주 리세 매크로 다운로드 및 실행
 
-[설명서](/docs/3_download_MaaReroll.md)
+[설명서](/docs/3_download_maareroll.md)
 
 ## 4. MaaReroll 설정
 
 목표: 명일방주 리세 매크로 옵션들 이해하기
 
-[설명서](/docs/4_setup_MaaReroll.md)
+[설명서](/docs/4_setup_maareroll.md)
