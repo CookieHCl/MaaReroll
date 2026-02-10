@@ -181,16 +181,14 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "interlude/7_story.png",
-                "roi": [436, 183, 503, 489],
-                // "origin roi" : [486,233,403,389]
+                "roi": [720, 251, 351, 351],
+                // "origin roi" : [745, 276, 301, 301]
                 "threshold": 0.95
             }
         },
         "action": {
             "type": "Click",
-            "param": {
-                "target": [687, 419, 1, 1]
-            }
+            "param": {"target": true}
         },
         "next": [
             "Interlude_0-1_1"
