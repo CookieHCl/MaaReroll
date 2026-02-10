@@ -21,7 +21,7 @@
             "name": "리세마라",
             "entry": "Main",
             "check": true,
-            "doc": "[color:red]리세 진행시 기존 계정은 삭제합니다.[/color]\n\n로그인 화면에서 계정은 [color:red]1개 이하[/color]로 남겨주세요.\n\n**[앱플레이어 설정]**\n해상도 - 1280x720, DPI - 180, 프레임 - 60fps\nadb, root 권한 확인 필수!\n\n자세한 사항은 [설명서](https://github.com/CookieHCl/MaaReroll/blob/main/docs/USAGE.md)를 읽어주세요.",
+            "doc": "앱플레이어 해상도 1280x720, DPI 180, 프레임 60fps, adb, root 권한 확인 필수!\n\nPython에 MaaFw를 설치해주세요! python -m pip install MaaFw==[color:red]5.4.2[/color] --force-reinstall\n\n자세한 사항은 [설명서](https://github.com/CookieHCl/MaaReroll/blob/main/docs/USAGE.md)를 읽어주세요.",
             "option": [
                 "리세 방식",
                 "현재 화면",
