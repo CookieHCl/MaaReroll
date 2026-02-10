@@ -160,6 +160,16 @@
             "doc": "리세를 종료할 오퍼레이터를 골라주세요.",
             "cases": [
                 {
+                    "name": "토가와 사키코",
+                    "pipeline_override": {
+                        "Check_Operator_Name_Success": {
+                            "recognition": {
+                                "param": {"template": "check/operator/togawa_sakiko.png"}
+                            }
+                        }
+                    }
+                },
+                {
                     "name": "수구마 (호시구마 더 브리처)",
                     "pipeline_override": {
                         "Check_Operator_Name_Success": {

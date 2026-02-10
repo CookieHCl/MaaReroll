@@ -47,7 +47,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "check/operator/hoshiguma_the_breacher.png",
+                "template": "check/operator/togawa_sakiko.png",
                 "roi": [9, 77, 1270, 620],
                 // 화면 전체
                 "threshold": 0.925
