@@ -7,7 +7,30 @@
                 "target": [790, 355, 1, 1]
             }
         },
-        "next": "Unselect_Squad"
+        "next": [
+            "Handle_No_Voice",
+            "Unselect_Squad"
+        ]
+    },
+    "Handle_No_Voice": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "gatcha/6_handle_no_voice.png",
+                "roi": [41, 148, 1150, 403],
+                // [66, 173, 1100, 353]
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [446, 495, 1, 1]
+            }
+        },
+        "next": [
+            "Unselect_Squad"
+        ]
     },
     "Unselect_Squad": {
         "recognition": {
