@@ -87,7 +87,8 @@
             "type": "TemplateMatch",
             "param": {
                 "template": "clear_07/07_fr_re.png",
-                "roi": [1095, 17, 117, 42],
+                "roi": [1095, 0, 167, 92],
+                // [1120, 17, 117, 42]
                 "threshold": 0.95
             }
         },

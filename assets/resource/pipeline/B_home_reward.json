@@ -2,6 +2,7 @@
     /* 홈 화면부터 보상 다 받고 홈 화면으로 돌아올 때까지 */
     "Start_Home_Reward": {
         "focus": "▶ 홈 보상 시작",
+        "pre_wait_freezes": 2000,
         "timeout": 60000,
         "next": [
             "[JumpBack]Home_Reward_Birthday",
@@ -26,17 +27,9 @@
         }
     },
     "Home_Reward_Handle_Reward": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "home/4.5_is_main.png",
-                "roi": [665, 298, 563, 125],
-                // "origin roi" : [690, 323, 513, 75]
-                "threshold": 0.95
-            }
-        },
-        "pre_delay": 1000,
+        "pre_wait_freezes": 1000,
         "next": [
+            "260210_Reward_10roll_ticket",
             "Home_Reward_Get_Mail_1"
         ]
     },

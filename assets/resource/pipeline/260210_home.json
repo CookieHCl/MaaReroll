@@ -1,11 +1,31 @@
 {
     /* Home_Popup, Home_Reward에서 부르는 이벤트들 */
     // 아베뮤지카 10연뽑 팝업
-    "260210_Popup_10roll_ticket": {
+    "260210_Reward_10roll_ticket": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": "home/260210/260210_ticket.png",
+                "roi": [0, 69, 163, 163],
+                // 이벤트 전체 범위
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {"target": true}
+        },
+        "post_delay": 3000,
+        "next": [
+            "[JumpBack]260210_Popup_10roll_ticket",
+            "Home_Reward_Get_Mail_1"
+        ]
+    },
+    "260210_Popup_10roll_ticket": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/260210/260210_ticket_popup.png",
                 "roi": [6, 83, 1267, 600],
                 // "origin roi" : [31, 108, 1217, 550]
                 "threshold": 0.95
