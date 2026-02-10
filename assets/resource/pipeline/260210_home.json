@@ -1,0 +1,70 @@
+{
+    /* Home_Popup, Home_Reward에서 부르는 이벤트들 */
+    // 아베뮤지카 10연뽑 팝업
+    "260210_Popup_10roll_ticket": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/260210/260210_ticket.png",
+                "roi": [6, 83, 1267, 600],
+                // "origin roi" : [31, 108, 1217, 550]
+                "threshold": 0.95
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "260210_Ticket_Wait_Until_Received"
+        ]
+    },
+    "260210_Ticket_Wait_Until_Received": {
+        "next": [
+            "260210_Ticket_Received",
+            "[JumpBack]260210_Ticket_Tap_Until_Received"
+        ]
+    },
+    "260210_Ticket_Tap_Until_Received": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [555, 521, 1, 1]
+            }
+        }
+    },
+    "260210_Ticket_Received": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/260210/260210_ticket_received.png",
+                "roi": [436, 221, 223, 396],
+                // "origin roi" : [461, 246, 173, 346]
+                "threshold": 0.95
+            }
+        },
+        "post_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1251, 104, 1, 1]
+            }
+        }
+    },
+    // 아베뮤지카 이벤트 팝업
+    "260210_Popup_Event": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "home/260210/260210_event.png",
+                "roi": [6, 53, 1267, 630],
+                // "origin roi" : [31, 78, 1217, 580]
+                "threshold": 0.95
+            }
+        },
+        "post_delay": 1000,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [1239, 79, 1, 1]
+            }
+        }
+    }
+}

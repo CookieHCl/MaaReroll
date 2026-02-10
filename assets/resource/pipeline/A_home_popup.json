@@ -74,7 +74,8 @@
     "Home_Popup_Handle_Popup": {
         "pre_wait_freezes": 2000,
         "next": [
-            "[JumpBack]260116_Popup_10roll_ticket",
+            "[JumpBack]260210_Popup_10roll_ticket",
+            "[JumpBack]260210_Popup_Event",
             "[JumpBack]Home_Popup_Notice",
             "[JumpBack]Home_Popup_Any_Popup",
             "Home_Popup_Check_Home"

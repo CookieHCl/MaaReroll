@@ -37,7 +37,6 @@
         },
         "pre_delay": 1000,
         "next": [
-            "260116_Reward_Lottery",
             "Home_Reward_Get_Mail_1"
         ]
     },
